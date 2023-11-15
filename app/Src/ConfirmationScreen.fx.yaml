@@ -355,69 +355,8 @@ ConfirmationScreen As screen:
         Y: =484
         ZIndex: =13
 
-    GalleryNavigation_5 As gallery.galleryVertical:
-        AccessibleLabel: ="Select a gallery item to navigate to it's respective page"
-        DisabledBorderColor: =GalleryNavigation_5.BorderColor
-        DisabledFill: =GalleryNavigation_5.Fill
-        Fill: =RGBA(249, 249, 249, 1)
-        Height: =688
-        HoverBorderColor: =GalleryNavigation_5.BorderColor
-        HoverFill: =GalleryNavigation_5.Fill
-        Items: |
-            =If(_managerView, ManagerNavigation, EmployeeNavigation)
-        Layout: =Layout.Vertical
-        LoadingSpinnerColor: =GalleryNavigation_5.BorderColor
-        OnSelect: |-
-            =Set(_navMenuSelect, ThisItem.MenuItem);
-            If(
-                "Requests" in ThisItem.MenuItem, Navigate(HomeScreen, BorderStyle.None),
-                "Balance" in ThisItem.MenuItem, Navigate(LeaveBalanceScreen, BorderStyle.None),
-                "Holidays" in ThisItem.MenuItem, Navigate(CompanyHolidaysScreen, BorderStyle.None),
-                ThisItem.MenuItem = "About", Navigate(AboutScreen, BorderStyle.None),
-                ThisItem.MenuItem = "Log out", Navigate(LoginScreen, BorderStyle.None)
-            )
-        PressedBorderColor: =GalleryNavigation_5.BorderColor
-        PressedFill: =GalleryNavigation_5.Fill
-        ShowScrollbar: =false
-        TemplateFill: =If(ThisItem.MenuItem = _navMenuSelect, RGBA(255,255,255,1), RGBA(245,245,245,1))
-        TemplatePadding: =0
-        TemplateSize: =72
-        Width: =231
+    Navigation_7 As Navigation:
+        X: =1
         Y: =80
-        ZIndex: =14
-
-        LeftMenuSeparator_5 As rectangle:
-            AccessibleLabel: =ThisItem.MenuItem
-            DisabledFill: =LeftMenuSeparator_5.Fill
-            Fill: =RGBA(205, 205, 205, 1)
-            FocusedBorderColor: =LeftMenuSeparator_5.BorderColor
-            Height: =1
-            HoverFill: =LeftMenuSeparator_5.Fill
-            OnSelect: =Select(Parent)
-            PressedFill: =LeftMenuSeparator_5.Fill
-            Width: =GalleryNavigation_5.TemplateWidth
-            Y: =Parent.TemplateHeight - LeftMenuSeparator_5.Height
-            ZIndex: =1
-
-        Label2_5 As label:
-            Align: =TextPosition.Left
-            Color: =If(ThisItem.MenuItem = _navMenuSelect, RGBA(47,41,43,1), RGBA(10,100,204,1))
-            FocusedBorderColor: =Label2_5.BorderColor
-            FocusedBorderThickness: =2
-            Font: =Font.Lato
-            FontWeight: =FontWeight.Bold
-            Height: =72
-            HoverBorderColor: =Label2_5.BorderColor
-            HoverColor: =Label2_5.Color
-            HoverFill: =Label2_5.Fill
-            OnSelect: =Select(Parent)
-            PaddingLeft: =30
-            PressedBorderColor: =Label2_5.BorderColor
-            PressedColor: =Label2_5.Color
-            PressedFill: =Label2_5.Fill
-            Size: =13.5
-            TabIndex: =0
-            Text: =ThisItem.MenuItem
-            Width: =231
-            ZIndex: =2
+        ZIndex: =15
 
