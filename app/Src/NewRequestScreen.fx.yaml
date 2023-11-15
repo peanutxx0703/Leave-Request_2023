@@ -649,72 +649,6 @@ NewRequestScreen As screen:
             Y: =503
             ZIndex: =24
 
-    GalleryNavigation_12 As gallery.galleryVertical:
-        AccessibleLabel: ="Select a gallery item to navigate to it's respective page"
-        DisabledBorderColor: =GalleryNavigation_12.BorderColor
-        DisabledFill: =GalleryNavigation_12.Fill
-        Fill: =RGBA(249, 249, 249, 1)
-        Height: =688
-        HoverBorderColor: =GalleryNavigation_12.BorderColor
-        HoverFill: =GalleryNavigation_12.Fill
-        Items: |
-            =If(_managerView, ManagerNavigation, EmployeeNavigation)
-        Layout: =Layout.Vertical
-        LoadingSpinnerColor: =GalleryNavigation_12.BorderColor
-        OnSelect: |-
-            =Set(_navMenuSelect, ThisItem.MenuItem);
-            If(
-                "Requests" in ThisItem.MenuItem, Navigate(HomeScreen, BorderStyle.None),
-                "Balance" in ThisItem.MenuItem, Navigate(LeaveBalanceScreen, BorderStyle.None),
-                "Holidays" in ThisItem.MenuItem, Navigate(CompanyHolidaysScreen, BorderStyle.None),
-                ThisItem.MenuItem = "About", Navigate(AboutScreen, BorderStyle.None),
-                ThisItem.MenuItem = "Log out", Navigate(LoginScreen, BorderStyle.None)
-            )
-        PressedBorderColor: =GalleryNavigation_12.BorderColor
-        PressedFill: =GalleryNavigation_12.Fill
-        ShowScrollbar: =false
-        TemplateFill: =If(ThisItem.MenuItem = _navMenuSelect, RGBA(255,255,255,1), RGBA(245,245,245,1))
-        TemplatePadding: =0
-        TemplateSize: =72
-        Width: =231
-        Y: =80
-        ZIndex: =47
-
-        LeftMenuSeparator_12 As rectangle:
-            AccessibleLabel: =ThisItem.MenuItem
-            DisabledFill: =LeftMenuSeparator_12.Fill
-            Fill: =RGBA(205, 205, 205, 1)
-            FocusedBorderColor: =LeftMenuSeparator_12.BorderColor
-            Height: =1
-            HoverFill: =LeftMenuSeparator_12.Fill
-            OnSelect: =Select(Parent)
-            PressedFill: =LeftMenuSeparator_12.Fill
-            Width: =GalleryNavigation_12.TemplateWidth
-            Y: =Parent.TemplateHeight - LeftMenuSeparator_12.Height
-            ZIndex: =1
-
-        Label2_12 As label:
-            Align: =TextPosition.Left
-            Color: =If(ThisItem.MenuItem = _navMenuSelect, RGBA(47,41,43,1), RGBA(10,100,204,1))
-            FocusedBorderColor: =Label2_12.BorderColor
-            FocusedBorderThickness: =2
-            Font: =Font.Lato
-            FontWeight: =FontWeight.Bold
-            Height: =72
-            HoverBorderColor: =Label2_12.BorderColor
-            HoverColor: =Label2_12.Color
-            HoverFill: =Label2_12.Fill
-            OnSelect: =Select(Parent)
-            PaddingLeft: =30
-            PressedBorderColor: =Label2_12.BorderColor
-            PressedColor: =Label2_12.Color
-            PressedFill: =Label2_12.Fill
-            Size: =13.5
-            TabIndex: =0
-            Text: =ThisItem.MenuItem
-            Width: =231
-            ZIndex: =2
-
     GroupLeaveType As group:
         Height: =5
         Width: =5
@@ -869,4 +803,70 @@ NewRequestScreen As screen:
             X: =260
             Y: =294
             ZIndex: =46
+
+    GalleryNavigation_12 As gallery.galleryVertical:
+        AccessibleLabel: ="Select a gallery item to navigate to it's respective page"
+        DisabledBorderColor: =GalleryNavigation_12.BorderColor
+        DisabledFill: =GalleryNavigation_12.Fill
+        Fill: =RGBA(249, 249, 249, 1)
+        Height: =688
+        HoverBorderColor: =GalleryNavigation_12.BorderColor
+        HoverFill: =GalleryNavigation_12.Fill
+        Items: |
+            =If(_managerView, ManagerNavigation, EmployeeNavigation)
+        Layout: =Layout.Vertical
+        LoadingSpinnerColor: =GalleryNavigation_12.BorderColor
+        OnSelect: |-
+            =Set(_navMenuSelect, ThisItem.MenuItem);
+            If(
+                "Requests" in ThisItem.MenuItem, Navigate(HomeScreen, BorderStyle.None),
+                "Balance" in ThisItem.MenuItem, Navigate(LeaveBalanceScreen, BorderStyle.None),
+                "Holidays" in ThisItem.MenuItem, Navigate(CompanyHolidaysScreen, BorderStyle.None),
+                ThisItem.MenuItem = "About", Navigate(AboutScreen, BorderStyle.None),
+                ThisItem.MenuItem = "Log out", Navigate(LoginScreen, BorderStyle.None)
+            )
+        PressedBorderColor: =GalleryNavigation_12.BorderColor
+        PressedFill: =GalleryNavigation_12.Fill
+        ShowScrollbar: =false
+        TemplateFill: =If(ThisItem.MenuItem = _navMenuSelect, RGBA(255,255,255,1), RGBA(245,245,245,1))
+        TemplatePadding: =0
+        TemplateSize: =72
+        Width: =231
+        Y: =80
+        ZIndex: =47
+
+        LeftMenuSeparator_12 As rectangle:
+            AccessibleLabel: =ThisItem.MenuItem
+            DisabledFill: =LeftMenuSeparator_12.Fill
+            Fill: =RGBA(205, 205, 205, 1)
+            FocusedBorderColor: =LeftMenuSeparator_12.BorderColor
+            Height: =1
+            HoverFill: =LeftMenuSeparator_12.Fill
+            OnSelect: =Select(Parent)
+            PressedFill: =LeftMenuSeparator_12.Fill
+            Width: =GalleryNavigation_12.TemplateWidth
+            Y: =Parent.TemplateHeight - LeftMenuSeparator_12.Height
+            ZIndex: =1
+
+        Label2_12 As label:
+            Align: =TextPosition.Left
+            Color: =If(ThisItem.MenuItem = _navMenuSelect, RGBA(47,41,43,1), RGBA(10,100,204,1))
+            FocusedBorderColor: =Label2_12.BorderColor
+            FocusedBorderThickness: =2
+            Font: =Font.Lato
+            FontWeight: =FontWeight.Bold
+            Height: =72
+            HoverBorderColor: =Label2_12.BorderColor
+            HoverColor: =Label2_12.Color
+            HoverFill: =Label2_12.Fill
+            OnSelect: =Select(Parent)
+            PaddingLeft: =30
+            PressedBorderColor: =Label2_12.BorderColor
+            PressedColor: =Label2_12.Color
+            PressedFill: =Label2_12.Fill
+            Size: =13.5
+            TabIndex: =0
+            Text: =ThisItem.MenuItem
+            Width: =231
+            ZIndex: =2
 

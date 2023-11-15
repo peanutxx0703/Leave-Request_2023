@@ -175,7 +175,6 @@ TodayOnLeaveScreen As screen:
 
     Navigation_1 As Navigation:
         CurrentScreen: ="Today's On Leave"
-        X: =1
         Y: =80
         ZIndex: =32
 
