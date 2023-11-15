@@ -337,7 +337,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "GalleryHolidays",
-      "ParentIndex": 10,
+      "ParentIndex": 11,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -561,7 +561,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Header_2",
-      "ParentIndex": 11,
+      "ParentIndex": 12,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -2438,7 +2438,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "LblHolidaysHeader",
-      "ParentIndex": 9,
+      "ParentIndex": 10,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
