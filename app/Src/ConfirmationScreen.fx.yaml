@@ -355,8 +355,3 @@ ConfirmationScreen As screen:
         Y: =484
         ZIndex: =13
 
-    Navigation_7 As Navigation:
-        X: =1
-        Y: =80
-        ZIndex: =15
-

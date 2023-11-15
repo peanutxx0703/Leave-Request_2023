@@ -354,8 +354,3 @@ TodayOnLeaveScreen As screen:
         Y: =316
         ZIndex: =31
 
-    Navigation_2 As Navigation:
-        X: =1
-        Y: =80
-        ZIndex: =32
-

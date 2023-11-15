@@ -325,7 +325,3 @@ LeaveBalanceScreen As screen:
             Y: =235
             ZIndex: =7
 
-    Navigation_6 As Navigation:
-        Y: =80
-        ZIndex: =32
-
