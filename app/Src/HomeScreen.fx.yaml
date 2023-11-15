@@ -840,7 +840,7 @@ HomeScreen As screen:
             HoverFill: =LeftMenuSeparator_14.Fill
             OnSelect: =Select(Parent)
             PressedFill: =LeftMenuSeparator_14.Fill
-            Width: =GalleryNavigation_14.TemplateWidth
+            Width: =231
             Y: =Parent.TemplateHeight - LeftMenuSeparator_14.Height
             ZIndex: =1
 
