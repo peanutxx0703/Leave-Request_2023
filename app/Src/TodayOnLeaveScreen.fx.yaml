@@ -23,14 +23,15 @@ TodayOnLeaveScreen As screen:
 
     "Gallery1 As gallery.'BrowseLayout_Vertical_TwoTextVariant_ver5.0'":
         DelayItemLoading: =true
+        Height: =552
         Items: =CustomGallerySample
         Layout: =Layout.Vertical
         LoadingSpinner: =LoadingSpinner.Data
         TemplatePadding: =0
-        TemplateSize: =126
+        TemplateSize: =102
         Width: =1134
         X: =232
-        Y: =155
+        Y: =138
         ZIndex: =1
 
         Title4 As label:
@@ -87,6 +88,33 @@ TodayOnLeaveScreen As screen:
             Y: =Parent.TemplateHeight - Self.Height
             ZIndex: =4
 
+    RectNavSep_5 As rectangle:
+        DisabledFill: =RectNavSep_5.Fill
+        Fill: =RGBA(204, 204, 204, 1)
+        FocusedBorderColor: =RectNavSep_5.BorderColor
+        Height: =688
+        HoverFill: =RectNavSep_5.Fill
+        PressedFill: =RectNavSep_5.Fill
+        Width: =1
+        X: =231
+        Y: =80
+        ZIndex: =9
+
+    Navigation_1 As Navigation:
+        CurrentScreen: ="Today's On Leave"
+        Y: =80
+        ZIndex: =10
+
+    Rectangle12 As rectangle:
+        BorderColor: =RGBA(62, 96, 170, 1)
+        BorderThickness: =7
+        Fill: =RGBA(255, 255, 255, 1)
+        Height: =56
+        Width: =1134
+        X: =232
+        Y: =80
+        ZIndex: =11
+
     Header_6 As group:
         Height: =5
         Width: =5
@@ -102,7 +130,7 @@ TodayOnLeaveScreen As screen:
             HoverFill: =Rectangle1_6.Fill
             PressedFill: =Rectangle1_6.Fill
             Width: =1366
-            ZIndex: =4
+            ZIndex: =2
 
         LblHeaderTItle1_6 As label:
             Color: =RGBA(255, 255, 255, 1)
@@ -119,7 +147,7 @@ TodayOnLeaveScreen As screen:
             Text: =Upper("Request")
             Width: =117
             X: =30
-            ZIndex: =5
+            ZIndex: =3
 
         LblHeaderTitle2_6 As label:
             Color: =RGBA(255, 255, 255, 1)
@@ -135,7 +163,7 @@ TodayOnLeaveScreen As screen:
             Text: =Upper("Leave")
             Width: =138
             X: =178
-            ZIndex: =6
+            ZIndex: =4
 
         icon2_6 As icon.ArrowRight:
             Color: =Color.White
@@ -151,7 +179,7 @@ TodayOnLeaveScreen As screen:
             Width: =32
             X: =143
             Y: =9
-            ZIndex: =7
+            ZIndex: =5
 
         CircleHeaderCreateNew_5 As circle:
             DisabledFill: =CircleHeaderCreateNew_5.Fill
@@ -164,7 +192,7 @@ TodayOnLeaveScreen As screen:
             Width: =46
             X: =1155
             Y: =17
-            ZIndex: =8
+            ZIndex: =6
 
         IconHeaderCreateNew_5 As icon.Add:
             AccessibleLabel: ="Create new leave request"
@@ -192,7 +220,7 @@ TodayOnLeaveScreen As screen:
             Width: =46
             X: =CircleHeaderCreateNew_5.X
             Y: =CircleHeaderCreateNew_5.Y
-            ZIndex: =9
+            ZIndex: =7
 
         LblHeaderCreateNew_5 As label:
             Color: =RGBA(255, 255, 255, 1)
@@ -217,30 +245,16 @@ TodayOnLeaveScreen As screen:
             Visible: =!_managerView
             Width: =155
             X: =1211
-            ZIndex: =10
-
-    RectNavSep_5 As rectangle:
-        DisabledFill: =RectNavSep_5.Fill
-        Fill: =RGBA(204, 204, 204, 1)
-        FocusedBorderColor: =RectNavSep_5.BorderColor
-        Height: =688
-        HoverFill: =RectNavSep_5.Fill
-        PressedFill: =RectNavSep_5.Fill
-        Width: =1
-        X: =231
-        Y: =80
-        ZIndex: =30
+            ZIndex: =8
 
     Label1 As label:
+        Font: =Font.Georgia
+        FontWeight: =FontWeight.Bold
         Height: =55
+        Size: =16
         Text: ="Today on leave"
-        Width: =166
-        X: =264
-        Y: =100
-        ZIndex: =31
-
-    Navigation_1 As Navigation:
-        CurrentScreen: ="Today's On Leave"
-        Y: =80
-        ZIndex: =32
+        Width: =229
+        X: =258
+        Y: =81
+        ZIndex: =12
 
