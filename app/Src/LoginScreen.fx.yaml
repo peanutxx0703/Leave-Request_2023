@@ -166,7 +166,7 @@ LoginScreen As screen:
             FocusedBorderColor: =LeaveLabel.BorderColor
             Font: =Font.Georgia
             FontWeight: =FontWeight.Semibold
-            Height: =56
+            Height: =57
             HoverBorderColor: =LeaveLabel.BorderColor
             HoverColor: =LeaveLabel.Color
             HoverFill: =LeaveLabel.Fill
@@ -181,7 +181,7 @@ LoginScreen As screen:
             Text: ="LEAVE"
             Width: =264
             X: =762
-            Y: =157
+            Y: =161
             ZIndex: =4
 
         RequestLabel As label:
@@ -189,7 +189,7 @@ LoginScreen As screen:
             FocusedBorderColor: =RequestLabel.BorderColor
             Font: =Font.Georgia
             FontWeight: =FontWeight.Semibold
-            Height: =56
+            Height: =57
             HoverBorderColor: =RequestLabel.BorderColor
             HoverColor: =RequestLabel.Color
             HoverFill: =RequestLabel.Fill
@@ -204,6 +204,6 @@ LoginScreen As screen:
             Text: ="REQUEST"
             Width: =356
             X: =377
-            Y: =157
+            Y: =161
             ZIndex: =5
 
