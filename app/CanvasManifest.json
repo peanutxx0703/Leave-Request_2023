@@ -133,6 +133,7 @@
     "NewRequestScreen",
     "CompanyHolidaysScreen",
     "AboutScreen",
+    "LeaveInformationScreen",
     "LeaveBalanceScreen",
     "ConfirmationScreen",
     "ChangeApproverScreen",

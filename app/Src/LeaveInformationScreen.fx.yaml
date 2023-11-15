@@ -1,0 +1,868 @@
+LeaveInformationScreen As screen:
+    Fill: |
+        =RGBA(255,255,255,1)
+    Height: =Max(App.Height, App.DesignHeight)
+    OnHidden: =Set(_showDetails, false)
+    OnVisible: |-
+        =Concurrent(
+            Set(_navMenuSelect, "My Leave Requests"),
+            //if not manager view, refresh my balance collection when on this screen
+            If(!_managerView, Set(_requesterBalanceRecord, LookUp(BalanceCollection, Year = Text(Year(Now())) && EmployeeEmail = _myProfile.UserPrincipalName));
+                ClearCollect(RequesterBalanceCollection, 
+                { type: "Vacation", balance: Value(_requesterBalanceRecord.Vacation) - Value(_requesterBalanceRecord.VacationUsed)},
+                {type:"Sick Leave", balance:Value(_requesterBalanceRecord.Sick)-Value(_requesterBalanceRecord.SickUsed)},
+                {type:"Floating Holiday", balance:Value(_requesterBalanceRecord.Floating)-Value(_requesterBalanceRecord.FloatingUsed)},
+                {type:"Jury Duty", balance:Value(_requesterBalanceRecord.JuryDuty)-Value(_requesterBalanceRecord.JuryDutyUsed)},
+                {type:"Bereavement", balance:Value(_requesterBalanceRecord.Bereavement)-Value(_requesterBalanceRecord.BereavementUsed)})
+            ),
+            Set(_showDetails, false)
+        );
+    Orientation: =If(LeaveInformationScreen.Width < LeaveInformationScreen.Height, Layout.Vertical, Layout.Horizontal)
+    Size: =1 + CountRows(App.SizeBreakpoints) - CountIf(App.SizeBreakpoints, Value >= LeaveInformationScreen.Width)
+    Width: =Max(App.Width, App.DesignWidth)
+
+    GalleryNavigation_9 As gallery.galleryVertical:
+        AccessibleLabel: ="Select a gallery item to navigate to it's respective page"
+        DisabledBorderColor: =GalleryNavigation_9.BorderColor
+        DisabledFill: =GalleryNavigation_9.Fill
+        Fill: =RGBA(249, 249, 249, 1)
+        Height: =688
+        HoverBorderColor: =GalleryNavigation_9.BorderColor
+        HoverFill: =GalleryNavigation_9.Fill
+        Items: |
+            =If(_managerView, ManagerNavigation, EmployeeNavigation)
+        Layout: =Layout.Vertical
+        LoadingSpinnerColor: =GalleryNavigation_9.BorderColor
+        OnSelect: |-
+            =Set(_navMenuSelect, ThisItem.MenuItem);
+            If(
+                "Requests" in ThisItem.MenuItem, Navigate(LeaveInformationScreen, BorderStyle.None),
+                "Balance" in ThisItem.MenuItem, Navigate(LeaveBalanceScreen, BorderStyle.None),
+                "Holidays" in ThisItem.MenuItem, Navigate(CompanyHolidaysScreen, BorderStyle.None),
+                ThisItem.MenuItem = "About", Navigate(AboutScreen, BorderStyle.None),
+                ThisItem.MenuItem = "Log out", Navigate(LoginScreen, BorderStyle.None)
+            )
+        PressedBorderColor: =GalleryNavigation_9.BorderColor
+        PressedFill: =GalleryNavigation_9.Fill
+        ShowScrollbar: =false
+        TemplateFill: =If(ThisItem.MenuItem = _navMenuSelect, RGBA(255,255,255,1), RGBA(245,245,245,1))
+        TemplatePadding: =0
+        TemplateSize: =72
+        Width: =231
+        Y: =80
+        ZIndex: =1
+
+        LeftMenuSeparator_9 As rectangle:
+            AccessibleLabel: =ThisItem.MenuItem
+            DisabledFill: =LeftMenuSeparator_9.Fill
+            Fill: =RGBA(205, 205, 205, 1)
+            FocusedBorderColor: =LeftMenuSeparator_9.BorderColor
+            Height: =1
+            HoverFill: =LeftMenuSeparator_9.Fill
+            OnSelect: =Select(Parent)
+            PressedFill: =LeftMenuSeparator_9.Fill
+            Width: =GalleryNavigation_9.TemplateWidth
+            Y: =Parent.TemplateHeight - LeftMenuSeparator_9.Height
+            ZIndex: =1
+
+        Label2_9 As label:
+            Align: =TextPosition.Left
+            Color: =If(ThisItem.MenuItem = _navMenuSelect, RGBA(47,41,43,1), RGBA(10,100,204,1))
+            FocusedBorderColor: =Label2_9.BorderColor
+            FocusedBorderThickness: =2
+            Font: =Font.Lato
+            FontWeight: =FontWeight.Bold
+            Height: =72
+            HoverBorderColor: =Label2_9.BorderColor
+            HoverColor: =Label2_9.Color
+            HoverFill: =Label2_9.Fill
+            OnSelect: =Select(Parent)
+            PaddingLeft: =30
+            PressedBorderColor: =Label2_9.BorderColor
+            PressedColor: =Label2_9.Color
+            PressedFill: =Label2_9.Fill
+            Size: =13.5
+            TabIndex: =0
+            Text: =ThisItem.MenuItem
+            Width: =231
+            ZIndex: =2
+
+    Rectangle3_9 As rectangle:
+        DisabledFill: =Rectangle3_9.Fill
+        Fill: =RGBA(249, 249, 249, 1)
+        FocusedBorderColor: =Rectangle3_9.BorderColor
+        Height: =695
+        HoverFill: =Rectangle3_9.Fill
+        PressedFill: =Rectangle3_9.Fill
+        Width: =360
+        X: =1002
+        Y: =73
+        ZIndex: =3
+
+    Header_9 As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =11
+
+        Rectangle1_9 As rectangle:
+            DisabledFill: =Rectangle1_9.Fill
+            Fill: =RGBA(0, 71, 144, 1)
+            FocusedBorderColor: =Rectangle1_9.BorderColor
+            Height: =80
+            HoverFill: =Rectangle1_9.Fill
+            PressedFill: =Rectangle1_9.Fill
+            Width: =1366
+            ZIndex: =4
+
+        LblHeaderTItle1_9 As label:
+            Color: =RGBA(255, 255, 255, 1)
+            FocusedBorderColor: =LblHeaderTItle1_9.BorderColor
+            Font: =Font.Lato
+            Height: =80
+            HoverBorderColor: =LblHeaderTItle1_9.BorderColor
+            HoverColor: =LblHeaderTItle1_9.Color
+            HoverFill: =LblHeaderTItle1_9.Fill
+            PressedBorderColor: =LblHeaderTItle1_9.BorderColor
+            PressedColor: =LblHeaderTItle1_9.Color
+            PressedFill: =LblHeaderTItle1_9.Fill
+            Size: =18
+            Text: =Upper("Request")
+            Width: =117
+            X: =30
+            ZIndex: =5
+
+        LblHeaderTitle2_9 As label:
+            Color: =RGBA(255, 255, 255, 1)
+            FocusedBorderColor: =LblHeaderTitle2_9.BorderColor
+            Height: =80
+            HoverBorderColor: =LblHeaderTitle2_9.BorderColor
+            HoverColor: =LblHeaderTitle2_9.Color
+            HoverFill: =LblHeaderTitle2_9.Fill
+            PressedBorderColor: =LblHeaderTitle2_9.BorderColor
+            PressedColor: =LblHeaderTitle2_9.Color
+            PressedFill: =LblHeaderTitle2_9.Fill
+            Size: =18
+            Text: =Upper("Leave")
+            Width: =138
+            X: =178
+            ZIndex: =6
+
+        icon2_9 As icon.ArrowRight:
+            Color: =Color.White
+            DisabledFill: =icon2_9.Fill
+            FocusedBorderColor: =icon2_9.BorderColor
+            HoverBorderColor: =ColorFade(icon2_9.BorderColor, 20%)
+            HoverColor: =ColorFade(icon2_9.Color, 20%)
+            HoverFill: =icon2_9.Fill
+            Icon: =Icon.ArrowRight
+            PressedBorderColor: =ColorFade(icon2_9.BorderColor, -20%)
+            PressedColor: =ColorFade(icon2_9.Color, -20%)
+            PressedFill: =icon2_9.Fill
+            Width: =32
+            X: =143
+            Y: =9
+            ZIndex: =7
+
+        CircleHeaderCreateNew_7 As circle:
+            DisabledFill: =CircleHeaderCreateNew_7.Fill
+            Fill: =Color.White
+            FocusedBorderColor: =CircleHeaderCreateNew_7.BorderColor
+            Height: =46
+            HoverFill: =CircleHeaderCreateNew_7.Fill
+            PressedFill: =CircleHeaderCreateNew_7.Fill
+            Visible: =!_managerView
+            Width: =46
+            X: =1155
+            Y: =17
+            ZIndex: =8
+
+        IconHeaderCreateNew_7 As icon.Add:
+            AccessibleLabel: ="Create new leave request"
+            Color: =Rectangle1_9.Fill
+            DisabledFill: =IconHeaderCreateNew_7.Fill
+            FocusedBorderColor: =IconHeaderCreateNew_7.BorderColor
+            Height: =46
+            HoverBorderColor: =ColorFade(IconHeaderCreateNew_7.BorderColor, 20%)
+            HoverColor: =ColorFade(IconHeaderCreateNew_7.Color, 20%)
+            HoverFill: =IconHeaderCreateNew_7.Fill
+            Icon: =Icon.Add
+            OnSelect: |
+                =Set(_editingRequest, false);
+                Set(_selectedLeaveType, Blank());
+                Navigate(NewRequestScreen, BorderStyle.None)
+            PaddingBottom: =7
+            PaddingLeft: =7
+            PaddingRight: =7
+            PaddingTop: =7
+            PressedBorderColor: =ColorFade(IconHeaderCreateNew_7.BorderColor, -20%)
+            PressedColor: =ColorFade(IconHeaderCreateNew_7.Color, -20%)
+            PressedFill: =IconHeaderCreateNew_7.Fill
+            TabIndex: =
+            Visible: =!_managerView
+            Width: =46
+            X: =CircleHeaderCreateNew_7.X
+            Y: =CircleHeaderCreateNew_7.Y
+            ZIndex: =9
+
+        LblHeaderCreateNew_7 As label:
+            Color: =RGBA(255, 255, 255, 1)
+            FocusedBorderColor: =LblHeaderCreateNew_7.BorderColor
+            FocusedBorderThickness: =02
+            Font: =Font.Lato
+            FontWeight: =FontWeight.Bold
+            Height: =80
+            HoverBorderColor: =LblHeaderCreateNew_7.BorderColor
+            HoverColor: =LblHeaderCreateNew_7.Color
+            HoverFill: =LblHeaderCreateNew_7.Fill
+            OnSelect: =
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            PressedBorderColor: =LblHeaderCreateNew_7.BorderColor
+            PressedColor: =LblHeaderCreateNew_7.Color
+            PressedFill: =LblHeaderCreateNew_7.Fill
+            Size: =13.5
+            Text: ="Create Request"
+            Visible: =!_managerView
+            Width: =155
+            X: =1211
+            ZIndex: =10
+
+    "GalleryRequests_2 As gallery.'BrowseLayout_Vertical_TwoTextVariant_ver4.0'":
+        AccessibleLabel: ="Leave request gallery"
+        Default: =Blank()
+        DisabledBorderColor: =GalleryRequests_2.BorderColor
+        DisabledFill: =GalleryRequests_2.Fill
+        Height: =606
+        HoverBorderColor: =GalleryRequests_2.BorderColor
+        HoverFill: =GalleryRequests_2.Fill
+        Items: |-
+            =//Filter values based on _requestTypeFilter, set by selecting item in GalleryFilters. Sort by StartDate, descending.
+            Sort(
+                If(_requestTypeFilter="All",
+                  Filter(LeaveCollection, If(_managerView, Approver = _myProfile.UserPrincipalName, Requester = _myProfile.UserPrincipalName)), 
+                  Filter(LeaveCollection, Status=_requestTypeFilter && If(_managerView, Approver = _myProfile.UserPrincipalName, Requester = _myProfile.UserPrincipalName)) ), StartDate, SortOrder.Descending)
+        Layout: =Layout.Vertical
+        LoadingSpinnerColor: =GalleryRequests_2.BorderColor
+        OnSelect: |-
+            =Set(_selectedLeaveItem, ThisItem);
+            
+            If(_managerView, 
+                //If manager view, get user's leave balance record and determine any overlaps this request has from other people I manage
+                Set(_requesterBalanceRecord, LookUp(BalanceCollection, Year = Text(Year(Now())) && EmployeeEmail = ThisItem.Requester));
+                ClearCollect(RequestOverlaps, Filter(LeaveCollection, EndDate >= _selectedLeaveItem.StartDate && StartDate <= _selectedLeaveItem.EndDate 
+                && Requester <>_selectedLeaveItem.Requester));
+                
+                If(CountRows(RequestOverlaps) > 0, Set(_requestOverlapMessage, Concat(ForAll(Distinct(RequestOverlaps, Requester), {Result: ThisRecord.Value}), Result, ", ")))
+            );
+            
+            Concurrent(
+                //gather requester or approver info depending on view
+                If(_managerView, 
+                    Set(_requester, Office365Users.UserProfile(ThisItem.Requester)), 
+                    Set(_selectedApprover, Office365Users.UserProfile(ThisItem.Approver)); If(Office365Users.UserPhotoMetadata(_selectedApprover.Id).HasPhoto, Set(_selectedApproverPhoto, Office365Users.UserPhoto(_selectedApprover.Id)))),
+                //**** CALCULATION USED TO DETERMINE TOTAL WORK DAYS REQUESTED ****
+                 Set(_inclusiveTotalDaysRequested, DateDiff(ThisItem.StartDate, ThisItem.EndDate, TimeUnit.Days) + 1);
+                    Set(_numFullWeeks, RoundDown(_inclusiveTotalDaysRequested / 7, 0));
+                    Set(_numFullDaysPartialWeek, _inclusiveTotalDaysRequested - _numFullWeeks * 7);
+                    Set(_startWeekday, Weekday(ThisItem.StartDate)); 
+                    Set(_endWeekday, Weekday(ThisItem.EndDate));
+            
+            
+                   //calculates the number of business days in the partial week left over after whole weeks are subtracted out of total days requested
+                If(_numFullDaysPartialWeek = 6, 
+                    If(_startWeekday <= 2, Set(_numPartialWeekdays, 5), Set(_numPartialWeekdays, 4)
+                    ),
+                  _numFullDaysPartialWeek = 5,
+                    If(_startWeekday = 2, Set(_numPartialWeekdays, 5), _startWeekday = 1 || _startWeekday = 3 || _startWeekday = 4, Set(_numPartialWeekdays, 4), Set(_numPartialWeekdays, 3)
+                    ),
+                  _numFullDaysPartialWeek = 4,
+                    If(_startWeekday = 2 || _startWeekday = 3, Set(_numPartialWeekdays, 4), _startWeekday = 1 || _startWeekday = 4, Set(_numPartialWeekdays, 3), Set(_numPartialWeekdays, 2)
+                    ),
+                  _numFullDaysPartialWeek = 3,
+                    If(_startWeekday = 6 || _startWeekday = 7, Set(_numPartialWeekdays, 1), _startWeekday = 1 || _startWeekday = 5, Set(_numPartialWeekdays, 2), Set(_numPartialWeekdays, 3)
+                    ),
+                  _numFullDaysPartialWeek = 2,
+                    If(_startWeekday = 7, Set(_numPartialWeekdays, 0), _startWeekday = 1 || _startWeekday = 6, Set(_numPartialWeekdays, 1), Set(_numPartialWeekdays, 2)),
+                  _numFullDaysPartialWeek = 1,
+                    If(_startWeekday = 1 || _startWeekday = 7, Set(_numPartialWeekdays, 0), Set(_numPartialWeekdays, 1)
+                    ),
+                  _numFullDaysPartialWeek = 0, Set(_numPartialWeekdays, 0)
+                );
+                  Set(_workDaysInRequest, _numFullWeeks * 5 + _numPartialWeekdays),
+                  Set(_holidaysInRequest, CountIf(HolidaysCollection, StartDate >= ThisItem.StartDate, StartDate <= ThisItem.EndDate))
+            );
+            Set(_requestedDays, _workDaysInRequest - _holidaysInRequest);
+            //**** END CALCULATION ****
+            Set(_showDetails, true);
+        PressedBorderColor: =GalleryRequests_2.BorderColor
+        PressedFill: =GalleryRequests_2.Fill
+        ShowScrollbar: =false
+        TemplateFill: =If(ThisItem.IsSelected, RGBA(249, 249, 249, 1))
+        TemplateSize: =128
+        Visible: =CountRows(GalleryRequests_2.AllItems) > 0
+        Width: =775
+        X: =232
+        Y: =162
+        ZIndex: =12
+
+        Label3_2 As label:
+            Color: =RGBA(10, 106, 204, 1)
+            FocusedBorderColor: =Label3_2.BorderColor
+            FocusedBorderThickness: =2
+            Font: =Font.Lato
+            FontWeight: =FontWeight.Bold
+            Height: =Label3_2.Size * 1.7
+            HoverBorderColor: =Label3_2.BorderColor
+            HoverColor: =Label3_2.Color
+            HoverFill: =Label3_2.Fill
+            OnSelect: =Select(Parent)
+            PressedBorderColor: =Label3_2.BorderColor
+            PressedColor: =Label3_2.Color
+            PressedFill: =Label3_2.Fill
+            Size: =18
+            Text: =ThisItem.Title
+            Width: =620
+            X: =6
+            Y: =15
+            ZIndex: =1
+
+        Label5_2 As label:
+            FocusedBorderColor: =Label5_2.BorderColor
+            FocusedBorderThickness: =2
+            Font: =Font.'Lato Light'
+            Height: =Label5_2.Size * 1.8
+            HoverBorderColor: =Label5_2.BorderColor
+            HoverColor: =Label5_2.Color
+            HoverFill: =Label5_2.Fill
+            OnSelect: =Select(Parent)
+            PressedBorderColor: =Label5_2.BorderColor
+            PressedColor: =Label5_2.Color
+            PressedFill: =Label5_2.Fill
+            Size: =13.5
+            Text: =Text(ThisItem.StartDate,"[$-en-US]dddd, mmm. dd, yyyy") & If(DateDiff(ThisItem.StartDate, ThisItem.EndDate, TimeUnit.Days) <> 0, " - " & Text(ThisItem.EndDate,"[$-en-US]dddd, mmm. dd, yyyy"))
+            Width: =658
+            X: =6
+            Y: =57
+            ZIndex: =2
+
+        Label6_2 As label:
+            FocusedBorderColor: =Label6_2.BorderColor
+            FocusedBorderThickness: =2
+            Font: =Font.Lato
+            Height: =30
+            HoverBorderColor: =Label6_2.BorderColor
+            HoverColor: =Label6_2.Color
+            HoverFill: =Label6_2.Fill
+            OnSelect: =Select(Parent)
+            PressedBorderColor: =Label6_2.BorderColor
+            PressedColor: =Label6_2.Color
+            PressedFill: =Label6_2.Fill
+            Size: =10.5
+            Text: =If(_managerView, ThisItem.Requester, ThisItem.Detail)
+            Width: =381
+            X: =6
+            Y: =88
+            ZIndex: =3
+
+        RequestStatus_2 As button:
+            BorderColor: =RequestStatus_2.Color
+            Color: |-
+                =If(Upper(ThisItem.Status)="PENDING",RGBA(0, 71, 144, 1),
+                Upper(ThisItem.Status)="DECLINED",RGBA(213, 0, 0, 1),
+                Upper(ThisItem.Status)="APPROVED",RGBA(0, 128, 0, 1))
+            DisabledBorderColor: =ColorFade(RequestStatus_2.BorderColor, 70%)
+            Fill: =RGBA(255, 255, 255, 1)
+            FocusedBorderColor: =RequestStatus_2.BorderColor
+            Font: =Font.Lato
+            Height: =30
+            HoverBorderColor: =RequestStatus_2.BorderColor
+            HoverColor: =RequestStatus_2.Color
+            HoverFill: =ColorFade(RequestStatus_2.Fill, 20%)
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            PressedBorderColor: =RequestStatus_2.BorderColor
+            PressedColor: =RequestStatus_2.Fill
+            PressedFill: =RequestStatus_2.Color
+            RadiusBottomLeft: =4
+            RadiusBottomRight: =4
+            RadiusTopLeft: =4
+            RadiusTopRight: =4
+            Size: =10.5
+            Text: =Upper(ThisItem.Status)
+            Width: =88
+            X: =638
+            Y: =16
+            ZIndex: =4
+
+        Rectangle2_4 As rectangle:
+            AccessibleLabel: =ThisItem.Title
+            DisabledFill: =Rectangle2_4.Fill
+            Fill: =RGBA(202, 202, 202, 1)
+            FocusedBorderColor: =Rectangle2_4.BorderColor
+            Height: =1.5
+            HoverFill: =Rectangle2_4.Fill
+            OnSelect: =Select(Parent)
+            PressedFill: =Rectangle2_4.Fill
+            Width: =Parent.TemplateWidth
+            Y: =Parent.TemplateHeight - Rectangle2_4.Height
+            ZIndex: =5
+
+    RectNavSep_8 As rectangle:
+        DisabledFill: =RectNavSep_8.Fill
+        Fill: =RGBA(204, 204, 204, 1)
+        FocusedBorderColor: =RectNavSep_8.BorderColor
+        Height: =688
+        HoverFill: =RectNavSep_8.Fill
+        PressedFill: =RectNavSep_8.Fill
+        Width: =1
+        X: =231
+        Y: =80
+        ZIndex: =30
+
+    Rectangle2_5 As rectangle:
+        DisabledFill: =Rectangle2_5.Fill
+        Fill: =RGBA(202, 202, 202, 1)
+        FocusedBorderColor: =Rectangle2_5.BorderColor
+        Height: =1
+        HoverFill: =Rectangle2_5.Fill
+        OnSelect: =
+        PressedFill: =Rectangle2_5.Fill
+        Width: =GalleryRequests_2.TemplateWidth
+        X: =GalleryRequests_2.X + 5
+        Y: =GalleryRequests_2.Y + 4
+        ZIndex: =35
+
+    GroupEmptyState_2 As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =36
+
+        LblFirstRequest_2 As label:
+            Align: =LayoutAlignItems.Center
+            FocusedBorderColor: =LblFirstRequest_2.BorderColor
+            Font: =Font.Lato
+            Height: =100
+            HoverBorderColor: =LblFirstRequest_2.BorderColor
+            HoverColor: =LblFirstRequest_2.Color
+            HoverFill: =LblFirstRequest_2.Fill
+            PressedBorderColor: =LblFirstRequest_2.BorderColor
+            PressedColor: =LblFirstRequest_2.Color
+            PressedFill: =LblFirstRequest_2.Fill
+            Size: =20
+            Text: ="Make your first leave request!"
+            Visible: =!_managerView && !GalleryRequests_2.Visible && _requestTypeFilter = "All"
+            Width: =400
+            X: =(Parent.Width - GalleryNavigation_9.Width - Rectangle3_9.Width)/2 + GalleryNavigation_9.Width - LblFirstRequest_2.Width/2
+            Y: =Parent.Height / 2 - LblFirstRequest_2.Height / 2
+            ZIndex: =31
+
+        Circle1_2 As circle:
+            AccessibleLabel: ="Create new leave request"
+            DisabledFill: =Circle1_2.Fill
+            Fill: =RGBA(12, 132, 255, 1)
+            FocusedBorderColor: =Circle1_2.BorderColor
+            Height: =icon7_2.Height
+            HoverFill: =Circle1_2.Fill
+            OnSelect: =Select(IconHeaderCreateNew_7)
+            PressedFill: =Circle1_2.Fill
+            Visible: =!_managerView && !GalleryRequests_2.Visible && _requestTypeFilter = "All"
+            Width: =icon7_2.Width
+            X: =icon7_2.X
+            Y: =icon7_2.Y
+            ZIndex: =32
+
+        icon7_2 As icon.Add:
+            AccessibleLabel: ="Create new leave request"
+            Color: =Color.White
+            DisabledFill: =icon7_2.Fill
+            FocusedBorderColor: =icon7_2.BorderColor
+            HoverBorderColor: =ColorFade(icon7_2.BorderColor, 20%)
+            HoverColor: =ColorFade(icon7_2.Color, 20%)
+            HoverFill: =icon7_2.Fill
+            Icon: =Icon.Add
+            OnSelect: =Select(IconHeaderCreateNew_7)
+            PaddingBottom: =10
+            PaddingLeft: =10
+            PaddingRight: =10
+            PaddingTop: =10
+            PressedBorderColor: =ColorFade(icon7_2.BorderColor, -20%)
+            PressedColor: =ColorFade(icon7_2.Color, -20%)
+            PressedFill: =icon7_2.Fill
+            TabIndex: =0
+            Visible: =!_managerView && !GalleryRequests_2.Visible && _requestTypeFilter = "All"
+            X: =589
+            Y: =433
+            ZIndex: =33
+
+        LblEmptyRequests_2 As label:
+            FocusedBorderColor: =LblEmptyRequests_2.BorderColor
+            Font: =Font.Lato
+            FontWeight: =FontWeight.Semibold
+            HoverBorderColor: =LblEmptyRequests_2.BorderColor
+            HoverColor: =LblEmptyRequests_2.Color
+            HoverFill: =LblEmptyRequests_2.Fill
+            PressedBorderColor: =LblEmptyRequests_2.BorderColor
+            PressedColor: =LblEmptyRequests_2.Color
+            PressedFill: =LblEmptyRequests_2.Fill
+            Text: ="No " & If(_requestTypeFilter <> "All", Lower(_requestTypeFilter)) & " requests"
+            Visible: =!GalleryRequests_2.Visible
+            Width: =190
+            X: =248
+            Y: =166
+            ZIndex: =34
+
+    GroupRequestDetails_2 As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =36
+
+        LblRequestDetailsHeader_2 As label:
+            Color: =RGBA(0, 71, 144, 1)
+            FocusedBorderColor: =LblRequestDetailsHeader_2.BorderColor
+            Font: =Font.Lato
+            FontWeight: =FontWeight.Bold
+            Height: =24
+            HoverBorderColor: =LblRequestDetailsHeader_2.BorderColor
+            HoverColor: =LblRequestDetailsHeader_2.Color
+            HoverFill: =LblRequestDetailsHeader_2.Fill
+            PressedBorderColor: =LblRequestDetailsHeader_2.BorderColor
+            PressedColor: =LblRequestDetailsHeader_2.Color
+            PressedFill: =LblRequestDetailsHeader_2.Fill
+            Size: =13.5
+            Text: ="Request Details"
+            Width: =316
+            X: =1037
+            Y: =119
+            ZIndex: =13
+
+        GalleryRequestDetails_2 As gallery.galleryVertical:
+            AccessibleLabel: ="Selected request details"
+            DisabledBorderColor: =GalleryRequestDetails_2.BorderColor
+            DisabledFill: =GalleryRequestDetails_2.Fill
+            Height: =CountRows(GalleryRequestDetails_2.AllItems)*75
+            HoverBorderColor: =GalleryRequestDetails_2.BorderColor
+            HoverFill: =GalleryRequestDetails_2.Fill
+            Items: |-
+                = //table of data specific to selected leave request item. Dynamically updates based on user selection from GalleryRequests
+                If(_managerView, 
+                    Table(
+                        {Header: "Total time requested", 
+                         Value: _requestedDays & " day(s)",
+                         Image:Basel_Clock}, 
+                        {Header: "Leave type", 
+                         Value: _selectedLeaveItem.LeaveType,
+                         Image: LookUp(LeaveTypeCollection, type=_selectedLeaveItem.LeaveType).icon},
+                         {Header: "Leave details", 
+                         Value: _selectedLeaveItem.Detail,
+                         Image: Basel_detail_list},
+                         If(CountRows(RequestOverlaps) > 0, 
+                         {Header: Upper("Overlaps with other requests (" & CountRows(RequestOverlaps) & ")"),
+                          Value: _requestOverlapMessage,
+                          Image: "null"})
+                         ), 
+                    Table(
+                        {Header: "Total time requested", 
+                         Value: _requestedDays & " day(s)",
+                         Image: Basel_Clock}, 
+                        {Header: "Leave type", 
+                         Value: _selectedLeaveItem.LeaveType,
+                         Image: LookUp(LeaveTypeCollection, type=_selectedLeaveItem.LeaveType).icon},
+                        {Header: "Request sent to", 
+                         Value: _selectedApprover.DisplayName,
+                         Image: _selectedApproverPhoto}))
+            Layout: =Layout.Vertical
+            LoadingSpinnerColor: =GalleryRequestDetails_2.BorderColor
+            PressedBorderColor: =GalleryRequestDetails_2.BorderColor
+            PressedFill: =GalleryRequestDetails_2.Fill
+            ShowScrollbar: =false
+            TemplateSize: =68
+            Visible: =_showDetails
+            Width: =360
+            X: =1006
+            Y: =154
+            ZIndex: =24
+
+            Label11_2 As label:
+                FocusedBorderColor: =Label11_2.BorderColor
+                FocusedBorderThickness: =2
+                Height: =15
+                HoverBorderColor: =Label11_2.BorderColor
+                HoverColor: =Label11_2.Color
+                HoverFill: =Label11_2.Fill
+                Live: =Live.Polite
+                OnSelect: =Select(Parent)
+                PressedBorderColor: =Label11_2.BorderColor
+                PressedColor: =Label11_2.Color
+                PressedFill: =Label11_2.Fill
+                Size: =9
+                Text: =Upper(ThisItem.Header)
+                Width: =235
+                X: =71
+                Y: =5
+                ZIndex: =1
+
+            Label9_5 As label:
+                FocusedBorderColor: =Label9_5.BorderColor
+                Font: =Font.Lato
+                FontWeight: =FontWeight.Bold
+                Height: =43
+                HoverBorderColor: =Label9_5.BorderColor
+                HoverColor: =Label9_5.Color
+                HoverFill: =Label9_5.Fill
+                LineHeight: =1.1
+                Live: =Live.Polite
+                PressedBorderColor: =Label9_5.BorderColor
+                PressedColor: =Label9_5.Color
+                PressedFill: =Label9_5.Fill
+                Size: =12
+                Text: =ThisItem.Value
+                VerticalAlign: =VerticalAlign.Top
+                Visible: =_showDetails
+                Width: =266
+                X: =71
+                Y: =25
+                ZIndex: =2
+
+            Image1_3 As image:
+                AccessibleLabel: =ThisItem.Header & " icon"
+                FocusedBorderColor: =Image1_3.BorderColor
+                Height: =35
+                HoverBorderColor: =ColorFade(Image1_3.BorderColor, 20%)
+                HoverFill: =ColorFade(Image1_3.Fill, 20%)
+                Image: =ThisItem.Image
+                PressedBorderColor: =ColorFade(Image1_3.BorderColor, -20%)
+                PressedFill: =ColorFade(Image1_3.Fill, -20%)
+                RadiusBottomLeft: =If(ThisItem.Header = "Request sent to", 25)
+                RadiusBottomRight: =If(ThisItem.Header = "Request sent to", 25)
+                RadiusTopLeft: =If(ThisItem.Header = "Request sent to", 25)
+                RadiusTopRight: =If(ThisItem.Header = "Request sent to", 25)
+                Visible: =ThisItem.Image <> "null"
+                Width: =35
+                X: =26
+                Y: =10
+                ZIndex: =3
+
+        BtnEmailRequester_2 As icon.Mail:
+            AccessibleLabel: ="Email requester"
+            Color: =RGBA(12, 132, 255, 1)
+            DisabledFill: =BtnEmailRequester_2.Fill
+            FocusedBorderColor: =BtnEmailRequester_2.BorderColor
+            Height: =22
+            HoverBorderColor: =ColorFade(BtnEmailRequester_2.BorderColor, 20%)
+            HoverColor: =ColorFade(BtnEmailRequester_2.Color, 20%)
+            HoverFill: =BtnEmailRequester_2.Fill
+            Icon: =Icon.Mail
+            OnSelect: =Navigate(ManagerSendEmailScreen, BorderStyle.None)
+            PaddingRight: =0.00
+            PaddingTop: =0.00
+            PressedBorderColor: =ColorFade(BtnEmailRequester_2.BorderColor, -20%)
+            PressedColor: =ColorFade(BtnEmailRequester_2.Color, -20%)
+            PressedFill: =BtnEmailRequester_2.Fill
+            TabIndex: =0
+            Visible: =_showDetails && _managerView && Upper(GalleryRequests_2.Selected.Status) = Upper("Pending")
+            Width: =24
+            X: =1245
+            Y: =BtnManagerApprove_2.Y + BtnManagerApprove_2.Height/2 - BtnEmailRequester_2.Height/2
+            ZIndex: =25
+
+        BtnManagerDecline_2 As button:
+            BorderColor: =RGBA(202, 202, 202, 1)
+            BorderThickness: =1
+            Color: =RGBA(213, 0, 0, 1)
+            DisabledBorderColor: =ColorFade(BtnManagerDecline_2.BorderColor, 70%)
+            Fill: =RGBA(255, 255, 255, 1)
+            FocusedBorderColor: =BtnManagerDecline_2.BorderColor
+            FocusedBorderThickness: =2
+            Font: =Font.Lato
+            Height: =26
+            HoverBorderColor: =ColorFade(BtnManagerDecline_2.BorderColor, 20%)
+            HoverColor: =BtnManagerDecline_2.Color
+            HoverFill: =BtnManagerDecline_2.Fill
+            OnSelect: |
+                =Concurrent(
+                    Patch(LeaveCollection, LookUp(LeaveCollection, LeaveID = GalleryRequests_2.Selected.LeaveID), {Status: "Declined"}),
+                    Set(_managerApprove, false));
+                Navigate(ManagerChangeRequestScreen, BorderStyle.None)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            PressedBorderColor: =BtnManagerDecline_2.Fill
+            PressedColor: =BtnManagerDecline_2.Color
+            PressedFill: =BtnManagerDecline_2.Fill
+            RadiusBottomLeft: =13
+            RadiusBottomRight: =13
+            RadiusTopLeft: =13
+            RadiusTopRight: =13
+            Size: =10.5
+            Text: ="Decline"
+            Visible: =_showDetails && _managerView && Upper(GalleryRequests_2.Selected.Status) = Upper("Pending")
+            Width: =91
+            X: =1137
+            Y: =GalleryRequestDetails_2.Y + GalleryRequestDetails_2.Height + 5
+            ZIndex: =26
+
+        BtnManagerApprove_2 As button:
+            BorderColor: =RGBA(202, 202, 202, 1)
+            BorderThickness: =1
+            Color: =RGBA(0, 128, 0, 1)
+            DisabledBorderColor: =ColorFade(BtnManagerApprove_2.BorderColor, 70%)
+            Fill: =RGBA(255, 255, 255, 1)
+            FocusedBorderColor: =BtnManagerApprove_2.BorderColor
+            FocusedBorderThickness: =2
+            Font: =Font.Lato
+            Height: =26
+            HoverBorderColor: =ColorFade(BtnManagerApprove_2.BorderColor, 20%)
+            HoverColor: =BtnManagerApprove_2.Color
+            HoverFill: =BtnManagerApprove_2.Fill
+            OnSelect: |-
+                =Concurrent(
+                    Set(_submittingRequest, true),
+                    //when approving leave, add the respective days used to the respective used days field
+                    Patch(BalanceCollection, LookUp(BalanceCollection, BalanceID =  _requesterBalanceRecord.BalanceID),
+                        If(Upper(GalleryRequests_2.Selected.LeaveType) = Upper("Vacation"), {VacationUsed: _requesterBalanceRecord.VacationUsed + _requestedDays},
+                        Upper(GalleryRequests_2.Selected.LeaveType) = Upper("Sick leave"), {SickUsed: _requesterBalanceRecord.SickUsed + _requestedDays},
+                        Upper(GalleryRequests_2.Selected.LeaveType) = Upper("Floating holiday"), {FloatingUsed: _requesterBalanceRecord.FloatingUsed + _requestedDays},
+                        Upper(GalleryRequests_2.Selected.LeaveType) = Upper("Jury duty"), {JuryDutyUsed: _requesterBalanceRecord.JuryDutyUsed + _requestedDays},
+                        Upper(GalleryRequests_2.Selected.LeaveType) = Upper("Bereavement"), {BereavementUsed: _requesterBalanceRecord.BereavementUsed + _requestedDays}
+                        )
+                    ),
+                    Set(_managerApprove, true));
+                Patch(LeaveCollection, LookUp(LeaveCollection, LeaveID = GalleryRequests_2.Selected.LeaveID), {Status: "Approved"});
+                Set(_submittingRequest, false);
+                Navigate(ManagerChangeRequestScreen, BorderStyle.None);
+                      
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            PressedBorderColor: =BtnManagerApprove_2.Fill
+            PressedColor: =BtnManagerApprove_2.Color
+            PressedFill: =BtnManagerApprove_2.Fill
+            RadiusBottomLeft: =13
+            RadiusBottomRight: =13
+            RadiusTopLeft: =13
+            RadiusTopRight: =13
+            Size: =10.5
+            Text: ="Approve"
+            Visible: =_showDetails && _managerView && Upper(GalleryRequests_2.Selected.Status) = Upper("Pending")
+            Width: =91
+            X: =1037
+            Y: =GalleryRequestDetails_2.Y + GalleryRequestDetails_2.Height + 5
+            ZIndex: =27
+
+        LblRequesterEdit_2 As label:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            Color: =RGBA(10, 106, 204, 1)
+            FocusedBorderColor: =LblRequesterEdit_2.BorderColor
+            FocusedBorderThickness: =2
+            Font: =Font.Lato
+            FontWeight: =FontWeight.Bold
+            Height: =20
+            HoverBorderColor: =LblRequesterEdit_2.BorderColor
+            HoverColor: =LblRequesterEdit_2.Color
+            HoverFill: =LblRequesterEdit_2.Fill
+            LineHeight: =1
+            Live: =Live.Polite
+            OnSelect: |
+                =Set(_editingRequest, true);
+                Navigate(NewRequestScreen, BorderStyle.None)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            PressedBorderColor: =LblRequesterEdit_2.BorderColor
+            PressedColor: =LblRequesterEdit_2.Color
+            PressedFill: =LblRequesterEdit_2.Fill
+            Size: =10.5
+            Text: ="Edit"
+            Visible: =!_managerView && _showDetails && Upper(GalleryRequests_2.Selected.Status) = Upper("Pending")
+            Width: =68
+            X: =1075
+            Y: =378
+            ZIndex: =28
+
+        IconRequesterEdit_2 As icon.Edit:
+            AccessibleLabel: ="Edit request"
+            Color: =RGBA(10, 106, 204, 1)
+            DisabledFill: =IconRequesterEdit_2.Fill
+            FocusedBorderColor: =IconRequesterEdit_2.BorderColor
+            Height: =20
+            HoverBorderColor: =ColorFade(IconRequesterEdit_2.BorderColor, 20%)
+            HoverColor: =ColorFade(IconRequesterEdit_2.Color, 20%)
+            HoverFill: =IconRequesterEdit_2.Fill
+            Icon: =Icon.Edit
+            OnSelect: |
+                =Set(_editingRequest, true);
+                Navigate(NewRequestScreen, BorderStyle.None)
+            PressedBorderColor: =ColorFade(IconRequesterEdit_2.BorderColor, -20%)
+            PressedColor: =ColorFade(IconRequesterEdit_2.Color, -20%)
+            PressedFill: =IconRequesterEdit_2.Fill
+            TabIndex: =0
+            Visible: =!_managerView && _showDetails && Upper(GalleryRequests_2.Selected.Status) = Upper("Pending")
+            Width: =20
+            X: =1043
+            Y: =378
+            ZIndex: =29
+
+    "FilterGallery_2 As gallery.'BrowseLayout_Horizontal_TwoTextOneImageVariant_ver4.0'":
+        DisabledBorderColor: =FilterGallery_2.BorderColor
+        DisabledFill: =FilterGallery_2.Fill
+        Height: =46
+        HoverBorderColor: =FilterGallery_2.BorderColor
+        HoverFill: =FilterGallery_2.Fill
+        Items: |-
+            =Table({Filter: "All"}, {Filter: "Pending"}, {Filter: "Approved"}, {Filter: "Declined"})
+        LoadingSpinnerColor: =FilterGallery_2.BorderColor
+        PressedBorderColor: =FilterGallery_2.BorderColor
+        PressedFill: =FilterGallery_2.Fill
+        ShowScrollbar: =false
+        TemplatePadding: =0
+        TemplateSize: =140
+        Width: =564
+        X: =302
+        Y: =97
+        ZIndex: =42
+
+        FilterButton_2 As button:
+            BorderColor: =RGBA(10, 106, 204, 1)
+            Color: =If(_requestTypeFilter=ThisItem.Filter,RGBA(255, 255, 255, 1),RGBA(10, 106, 204, 1))
+            DisabledBorderColor: =ColorFade(FilterButton_2.BorderColor, 70%)
+            Fill: =If(_requestTypeFilter=ThisItem.Filter,RGBA(0, 71, 144, 1),RGBA(255, 255, 255, 1))
+            FocusedBorderColor: =FilterButton_2.BorderColor
+            FocusedBorderThickness: =2
+            Font: =Font.Lato
+            FontWeight: =FontWeight.Bold
+            Height: =36
+            HoverBorderColor: =ColorFade(FilterButton_2.BorderColor, 20%)
+            HoverColor: =FilterButton_2.Color
+            HoverFill: =ColorFade(FilterButton_2.Fill, 20%)
+            OnSelect: |-
+                =If(ThisItem.Filter <> _requestTypeFilter,
+                Set(_showDetails, false); 
+                Set(_requestTypeFilter, ThisItem.Filter))
+            PressedBorderColor: =FilterButton_2.Fill
+            PressedColor: =If(_requestTypeFilter=ThisItem.Filter,RGBA(255, 255, 255, 1),RGBA(10, 106, 204, 1))
+            PressedFill: =FilterButton_2.Color
+            RadiusBottomLeft: =25
+            RadiusBottomRight: =25
+            RadiusTopLeft: =25
+            RadiusTopRight: =25
+            Size: =14
+            Text: =ThisItem.Filter
+            Width: =116
+            X: =12
+            Y: =6
+            ZIndex: =1
+
