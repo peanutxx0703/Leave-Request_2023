@@ -184,9 +184,9 @@ LeaveBalanceScreen As screen:
         ShowScrollbar: =false
         TemplatePadding: =20
         TemplateSize: =290
-        Width: =885
+        Width: =926
         WrapCount: =4
-        X: =241
+        X: =258
         Y: =80
         ZIndex: =31
 
@@ -201,7 +201,7 @@ LeaveBalanceScreen As screen:
             HoverFill: =Rectangle6.Fill
             OnSelect: =
             PressedFill: =Rectangle6.Fill
-            Width: =196.25
+            Width: =206
             ZIndex: =1
 
         Image3 As image:
