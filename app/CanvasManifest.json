@@ -137,7 +137,6 @@
     "ChangeApproverScreen",
     "ManagerChangeRequestScreen",
     "ManagerSendEmailScreen",
-    "Collections and Variables",
-    "Screen1"
+    "Collections and Variables"
   ]
 }
