@@ -395,8 +395,8 @@ HomeScreen As screen:
             Text: ="Make your first leave request!"
             Visible: =!_managerView && !GalleryRequests.Visible && _requestTypeFilter = "All"
             Width: =400
-            X: =(Parent.Width - GalleryNavigation.Width - Rectangle3.Width)/2 + GalleryNavigation.Width - LblFirstRequest.Width/2
-            Y: =Parent.Height / 2 - LblFirstRequest.Height / 2
+            X: =425
+            Y: =333
             ZIndex: =31
 
         Circle1 As circle:
