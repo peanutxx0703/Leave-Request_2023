@@ -3788,7 +3788,7 @@
           "Category": "Data",
           "NameMap": "{\"TargetScreen\":\"TargetScreen\",\"Title\":\"Title\"}",
           "PropertyName": "NavItem",
-          "RuleProviderType": "Unknown"
+          "RuleProviderType": "System"
         },
         {
           "Category": "Data",
