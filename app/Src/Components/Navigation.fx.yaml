@@ -3,7 +3,7 @@ Navigation As CanvasComponent:
     Fill: =RGBA(0, 0, 0, 0)
     Height: =688
     NavItem: |-
-        =Table({Title: "My Leave Requests", TargetScreen: HomeScreen},{Title: "My Leave Balance", TargetScreen: LeaveBalanceScreen},{Title: "Today's On Leave", TargetScreen: TodayOnLeaveScreen},{Title: "My Leave Balance", TargetScreen: LeaveBalanceScreen},{Title: "Leave Information", TargetScreen: LeaveInformationScreen},{Title: "Company Holidays", TargetScreen: CompanyHolidaysScreen},{Title: "About", TargetScreen: AboutScreen},{Title: "Log Out", TargetScreen: LoginScreen})
+        =Table({Title: "My Leave Requests", TargetScreen: HomeScreen},{Title: "My Leave Balance", TargetScreen: LeaveBalanceScreen},{Title: "Today's On Leave", TargetScreen: TodayOnLeaveScreen},{Title: "Leave Information", TargetScreen: LeaveInformationScreen},{Title: "Company Holidays", TargetScreen: CompanyHolidaysScreen},{Title: "About", TargetScreen: AboutScreen},{Title: "Log Out", TargetScreen: LoginScreen})
     Width: =231
     X: =0
     Y: =0
