@@ -162,11 +162,6 @@ AboutScreen As screen:
         Y: =80
         ZIndex: =30
 
-    Navigation_5 As Navigation:
-        CurrentScreen: ="About"
-        Y: =80
-        ZIndex: =47
-
     AboutLeaveMiddle As group:
         Height: =5
         Width: =5
@@ -358,4 +353,9 @@ AboutScreen As screen:
             X: =AboutTitle.X
             Y: =AboutLeaveTypeGallery.Y+AboutLeaveTypeGallery.Height+5
             ZIndex: =46
+
+    Navigation_5 As Navigation:
+        CurrentScreen: ="About"
+        Y: =80
+        ZIndex: =47
 
