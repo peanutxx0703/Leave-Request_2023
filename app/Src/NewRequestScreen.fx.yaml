@@ -83,7 +83,6 @@ NewRequestScreen As screen:
         RadiusBottomRight: =0
         RadiusTopLeft: =0
         RadiusTopRight: =0
-        Size: =13.5
         Text: ="Submit request"
         Width: =904
         X: =232
@@ -786,7 +785,7 @@ NewRequestScreen As screen:
                 RadiusTopRight: =15
                 Size: =14
                 Text: =""
-                Width: =232
+                Width: =238.66666666666669
                 ZIndex: =2
 
             NRLeaveTypeLabel As label:
@@ -808,6 +807,7 @@ NewRequestScreen As screen:
                 PressedFill: =NRLeaveTypeLabel.Fill
                 Size: =14
                 Text: =ThisItem.type
+                Width: =133
                 X: =63
                 ZIndex: =3
 
