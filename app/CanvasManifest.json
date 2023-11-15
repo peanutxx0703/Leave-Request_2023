@@ -139,7 +139,6 @@
     "ManagerChangeRequestScreen",
     "ManagerSendEmailScreen",
     "Collections and Variables",
-    "LeaveInformationScreen",
-    "Aboutscreen2"
+    "LeaveInformationScreen"
   ]
 }
