@@ -2023,7 +2023,7 @@
         {
           "AFDDataSourceName": "",
           "AutoRuleBindingEnabled": false,
-          "AutoRuleBindingString": "\"Text\"",
+          "AutoRuleBindingString": "",
           "InvariantPropertyName": "CurrentScreen",
           "IsLockable": false,
           "NameMapSourceSchema": "?"
