@@ -51,7 +51,7 @@
               },
               {
                 "Category": "Behavior",
-                "InvariantScript": "true; Nav",
+                "InvariantScript": "true; Navigate(ThisItem.TargetScreen,Fade)",
                 "Property": "OnSelect",
                 "RuleProviderType": "Unknown"
               }
@@ -596,7 +596,7 @@
       },
       "CurrentScreen"
     ],
-    "LastModifiedTimestamp": "638356281419386075",
+    "LastModifiedTimestamp": "638356291988679401",
     "Name": "Navigation",
     "Rules": [
       {
@@ -604,7 +604,7 @@
         "InvariantScript": "Table({Title: \"My Leave Requests\", TargetScreen: HomeScreen},{Title: \"My Leave Balance\", TargetScreen: LeaveBalanceScreen},{Title: \"Today's On Leave\", TargetScreen: TodayOnLeaveScreen},{Title: \"Company Holidays\", TargetScreen: CompanyHolidaysScreen},{Title: \"About\", TargetScreen: AboutScreen},{Title: \"Log Out\", TargetScreen: LoginScreen})",
         "NameMap": "{\"TargetScreen\":\"TargetScreen\",\"Title\":\"Title\"}",
         "Property": "NavItem",
-        "RuleProviderType": "System"
+        "RuleProviderType": "Unknown"
       },
       {
         "Category": "Data",
@@ -687,7 +687,7 @@
   "IsPcfControl": false,
   "IsPremiumPcfControl": false,
   "IsWidgetTemplate": false,
-  "LastModifiedTimestamp": "638356281419386075",
+  "LastModifiedTimestamp": "638356291988679401",
   "Name": "b6b5e691fc474668b7b6312386d8a5c2",
   "OverridableProperties": {},
   "Version": "1.0"
