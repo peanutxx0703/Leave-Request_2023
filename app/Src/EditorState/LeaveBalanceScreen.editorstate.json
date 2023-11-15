@@ -266,7 +266,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "GalleryLeaveBalance",
-      "ParentIndex": 10,
+      "ParentIndex": 9,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -495,7 +495,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Header_4",
-      "ParentIndex": 11,
+      "ParentIndex": 10,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -3845,7 +3845,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "RectNavSep_3",
-      "ParentIndex": 9,
+      "ParentIndex": 8,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
