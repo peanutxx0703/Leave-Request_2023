@@ -11,22 +11,9 @@
             "AllowAccessToGlobals": true,
             "Children": [],
             "ControlPropertyState": [
-              {
-                "AFDDataSourceName": "",
-                "AutoRuleBindingEnabled": false,
-                "AutoRuleBindingString": "RGBA(0, 0, 0, 0)",
-                "InvariantPropertyName": "TemplateFill",
-                "IsLockable": false,
-                "NameMapSourceSchema": "?"
-              },
-              {
-                "AFDDataSourceName": "",
-                "AutoRuleBindingEnabled": false,
-                "AutoRuleBindingString": "false",
-                "InvariantPropertyName": "OnSelect",
-                "IsLockable": false,
-                "NameMapSourceSchema": "?"
-              }
+              "ItemAccessibleLabel",
+              "TemplateFill",
+              "OnSelect"
             ],
             "ControlUniqueId": "6",
             "HasDynamicProperties": false,
@@ -44,6 +31,12 @@
             "PublishOrderIndex": 3,
             "Rules": [
               {
+                "Category": "Data",
+                "InvariantScript": "\"\"",
+                "Property": "ItemAccessibleLabel",
+                "RuleProviderType": "Unknown"
+              },
+              {
                 "Category": "Design",
                 "InvariantScript": "If(ThisItem.Title=Navigation.CurrentScreen,Color.White, RGBA(240, 240, 240, 1))",
                 "Property": "TemplateFill",
@@ -51,12 +44,12 @@
               },
               {
                 "Category": "Behavior",
-                "InvariantScript": "true; Nav",
+                "InvariantScript": "true; Navigate(ThisItem.TargetScreen,ScreenTransition.Fade)",
                 "Property": "OnSelect",
                 "RuleProviderType": "Unknown"
               }
             ],
-            "StyleName": "",
+            "StyleName": "defaultGalleryTemplateStyle",
             "Template": {
               "CustomGroupControlTemplateName": "",
               "FirstParty": true,
@@ -596,7 +589,7 @@
       },
       "CurrentScreen"
     ],
-    "LastModifiedTimestamp": "638356281419386075",
+    "LastModifiedTimestamp": "638356306485543020",
     "Name": "Navigation",
     "Rules": [
       {
@@ -687,7 +680,7 @@
   "IsPcfControl": false,
   "IsPremiumPcfControl": false,
   "IsWidgetTemplate": false,
-  "LastModifiedTimestamp": "638356281419386075",
+  "LastModifiedTimestamp": "638356306485543020",
   "Name": "b6b5e691fc474668b7b6312386d8a5c2",
   "OverridableProperties": {},
   "Version": "1.0"
