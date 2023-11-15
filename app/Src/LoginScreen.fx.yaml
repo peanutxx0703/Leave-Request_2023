@@ -34,7 +34,7 @@ LoginScreen As screen:
             PressedBorderColor: =LblEmployeeLogin.BorderColor
             PressedColor: =LblEmployeeLogin.Color
             PressedFill: =LblEmployeeLogin.Fill
-            Size: =10
+            Size: =12
             Text: ="TO SUBMIT A LEAVE REQUEST"
             Width: =236
             X: =300
@@ -66,7 +66,7 @@ LoginScreen As screen:
             RadiusBottomRight: =15
             RadiusTopLeft: =15
             RadiusTopRight: =15
-            Size: =18
+            Size: =20
             Text: ="Login as an employee"
             Width: =336
             X: =250
@@ -131,7 +131,7 @@ LoginScreen As screen:
             RadiusBottomRight: =15
             RadiusTopLeft: =15
             RadiusTopRight: =15
-            Size: =18
+            Size: =20
             Text: ="Login as a manager"
             Width: =337
             X: =765

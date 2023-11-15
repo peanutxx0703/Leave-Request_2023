@@ -170,6 +170,7 @@ NewRequestScreen As screen:
         PressedBorderColor: =Label8.BorderColor
         PressedColor: =Label8.Color
         PressedFill: =Label8.Fill
+        Size: =20
         Text: =If(_editingRequest, "Edit", "New") & " request"
         Width: =243
         X: =Parent.Width / 2 - Label8.Width/2
@@ -729,7 +730,7 @@ NewRequestScreen As screen:
             Default: =LookUp(LeaveTypeCollection, type=_aboutSelectedLeaveType)
             DisabledBorderColor: =NewRequestLeaveTypeGallery.BorderColor
             DisabledFill: =NewRequestLeaveTypeGallery.Fill
-            Height: =142
+            Height: =155
             HoverBorderColor: =NewRequestLeaveTypeGallery.BorderColor
             HoverFill: =NewRequestLeaveTypeGallery.Fill
             Items: =LeaveTypeCollection
@@ -741,10 +742,10 @@ NewRequestScreen As screen:
             ShowScrollbar: =false
             TemplatePadding: =20
             TemplateSize: =42
-            Width: =785
+            Width: =796
             WrapCount: =3
             X: =TypeRequestTitle.X-20
-            Y: =132
+            Y: =135
             ZIndex: =44
 
             NRLeaveCellBK As rectangle:
@@ -836,6 +837,7 @@ NewRequestScreen As screen:
             FocusedBorderColor: =TypeRequestTitle.BorderColor
             Font: =Font.Lato
             FontWeight: =FontWeight.Bold
+            Height: =22
             HoverBorderColor: =TypeRequestTitle.BorderColor
             HoverColor: =TypeRequestTitle.Color
             HoverFill: =TypeRequestTitle.Fill
@@ -850,7 +852,7 @@ NewRequestScreen As screen:
             Size: =13.5
             Text: |-
                 ="Select the type of leave you plan to take:"
-            Width: =864
+            Width: =876
             X: =260
             Y: =102
             ZIndex: =45
@@ -864,8 +866,8 @@ NewRequestScreen As screen:
             Height: =1
             HoverFill: =NewRequestSeparator.Fill
             PressedFill: =NewRequestSeparator.Fill
-            Width: =864
+            Width: =876
             X: =260
-            Y: =278
+            Y: =294
             ZIndex: =46
 
