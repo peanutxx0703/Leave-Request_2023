@@ -326,6 +326,7 @@ LeaveBalanceScreen As screen:
             ZIndex: =7
 
     Navigation_6 As Navigation:
+        CurrentScreen: ="My Leave Balance"
         Y: =80
         ZIndex: =32
 

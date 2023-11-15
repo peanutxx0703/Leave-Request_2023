@@ -1,8 +1,9 @@
 Navigation As CanvasComponent:
+    CurrentScreen: ="Text"
     Fill: =RGBA(0, 0, 0, 0)
     Height: =688
     NavItem: |-
-        =Table({Title: "My Leave Requests", TargetScreen: 'HomeScreen'},{Title: "My Leave Balance", TargetScreen: LeaveBalanceScreen},{Title: "Today's On Leave", TargetScreen: TodayOnLeaveScreen},{Title: "Company Holiday", TargetScreen: CompanyHolidaysScreen},{Title: "About", TargetScreen: AboutScreen},{Title: "Log Out", TargetScreen: HomeScreen})
+        =Table({Title: "My Leave Requests", TargetScreen: HomeScreen},{Title: "My Leave Balance", TargetScreen: LeaveBalanceScreen},{Title: "Today's On Leave", TargetScreen: TodayOnLeaveScreen},{Title: "Company Holidays", TargetScreen: CompanyHolidaysScreen},{Title: "About", TargetScreen: AboutScreen},{Title: "Log Out", TargetScreen: LoginScreen})
     Width: =231
     X: =0
     Y: =0
@@ -16,7 +17,7 @@ Navigation As CanvasComponent:
         Layout: =Layout.Vertical
         LoadingSpinner: =LoadingSpinner.Data
         OnSelect: =true; Navigate(ThisItem.TargetScreen,ScreenTransition.Fade)
-        TemplateFill: =If(ThisItem.IsSelected,Color.White,RGBA(240, 240, 240, 1))
+        TemplateFill: =If(ThisItem.Title=Navigation.CurrentScreen,Color.White,RGBA(240, 240, 240, 1))
         TemplateSize: =75
         Width: =231
         ZIndex: =1

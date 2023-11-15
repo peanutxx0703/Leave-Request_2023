@@ -801,6 +801,7 @@ HomeScreen As screen:
             ZIndex: =1
 
     Navigation_1 As Navigation:
+        CurrentScreen: ="My Leave Requests"
         Y: =80
         ZIndex: =43
 
