@@ -213,7 +213,7 @@ CompanyHolidaysScreen As screen:
             PressedBorderColor: =Label12.BorderColor
             PressedColor: =Label12.Color
             PressedFill: =Label12.Fill
-            Size: =12
+            Size: =14
             Text: =ThisItem.HolidayName
             Width: =322
             ZIndex: =1
@@ -230,7 +230,6 @@ CompanyHolidaysScreen As screen:
             PressedBorderColor: =Label13.BorderColor
             PressedColor: =Label13.Color
             PressedFill: =Label13.Fill
-            Size: =12
             Text: =Text(DateAdd(ThisItem.StartDate, TimeZoneOffset(ThisItem.StartDate), TimeUnit.Minutes),"[$-en-US]dddd, mmmm dd")
             Width: =442
             X: =405
