@@ -139,6 +139,7 @@
     "ManagerChangeRequestScreen",
     "ManagerSendEmailScreen",
     "Collections and Variables",
-    "LeaveInformationScreen"
+    "LeaveInformationScreen",
+    "Screen1"
   ]
 }
