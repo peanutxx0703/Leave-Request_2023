@@ -1,0 +1,29 @@
+Navigation As CanvasComponent:
+    Fill: =RGBA(0, 0, 0, 0)
+    Height: =Max(App.Height, App.MinScreenHeight)-Max(App.Height, App.MinScreenHeight)/8
+    NavItem: |-
+        =Table({Title: "My Leave Requests", TargetScreen: App.ActiveScreen},{Title: "My Leave Balance", TargetScreen: App.ActiveScreen},{Title: "My Leave Requests", TargetScreen: App.ActiveScreen},{Title: "Today's On Leave", TargetScreen: App.ActiveScreen},{Title: "Company Holiday", TargetScreen: App.ActiveScreen},{Title: "About", TargetScreen: App.ActiveScreen},{Title: "Log Out", TargetScreen: App.ActiveScreen})
+    Width: =Max(App.Width, App.MinScreenWidth)/5
+    X: =0
+    Y: =0
+    ZIndex: =1
+
+    Gallery2 As gallery.galleryVertical:
+        DelayItemLoading: =true
+        Fill: =RGBA(240, 240, 240, 1)
+        Height: =Navigation.Height
+        Items: =Navigation.NavItem
+        Layout: =Layout.Vertical
+        LoadingSpinner: =LoadingSpinner.Data
+        TemplateSize: =70
+        Width: =Navigation.Width
+        ZIndex: =1
+
+        Label9 As label:
+            OnSelect: =Select(Parent)
+            Text: =ThisItem.Title
+            Width: =200
+            X: =20
+            Y: =16
+            ZIndex: =1
+
