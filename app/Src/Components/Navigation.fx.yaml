@@ -16,7 +16,7 @@ Navigation As CanvasComponent:
         Items: =Navigation.NavItem
         Layout: =Layout.Vertical
         LoadingSpinner: =LoadingSpinner.Data
-        OnSelect: =true; Nav
+        OnSelect: =true; Navigate(ThisItem.TargetScreen,Fade)
         TemplateFill: =If(ThisItem.Title=Navigation.CurrentScreen,Color.White, RGBA(240, 240, 240, 1))
         TemplateSize: =73
         Width: =Navigation.Width
