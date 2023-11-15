@@ -87,7 +87,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "BtnEmployeeLogin",
-      "ParentIndex": 5,
+      "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -364,7 +364,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "BtnManagerLogin",
-      "ParentIndex": 6,
+      "ParentIndex": 7,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -838,7 +838,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "LblEmployeeLogin",
-      "ParentIndex": 3,
+      "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -1123,7 +1123,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "LblManagerLogin",
-      "ParentIndex": 4,
+      "ParentIndex": 6,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -1378,7 +1378,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "LeaveLabel",
-      "ParentIndex": 2,
+      "ParentIndex": 5,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -1579,7 +1579,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "LoginAsEmployeeGroup",
-      "ParentIndex": 8,
+      "ParentIndex": 9,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -1630,7 +1630,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "LoginAsManagerGroup",
-      "ParentIndex": 9,
+      "ParentIndex": 10,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -1799,7 +1799,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "RequestLabel",
-      "ParentIndex": 1,
+      "ParentIndex": 4,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -2000,7 +2000,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "WelcomePageHeaderGroup",
-      "ParentIndex": 7,
+      "ParentIndex": 8,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
