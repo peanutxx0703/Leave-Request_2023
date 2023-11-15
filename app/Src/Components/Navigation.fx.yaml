@@ -1,0 +1,32 @@
+Navigation As CanvasComponent:
+    CurrentScreen: ="Text"
+    Fill: =RGBA(0, 0, 0, 0)
+    Height: =688
+    NavItem: |-
+        =Table({Title: "My Leave Requests", TargetScreen: HomeScreen},{Title: "My Leave Balance", TargetScreen: LeaveBalanceScreen},{Title: "Today's On Leave", TargetScreen: TodayOnLeaveScreen},{Title: "Company Holidays", TargetScreen: CompanyHolidaysScreen},{Title: "About", TargetScreen: AboutScreen},{Title: "Log Out", TargetScreen: LoginScreen})
+    Width: =231
+    X: =0
+    Y: =0
+    ZIndex: =1
+
+    Gallery2 As gallery.galleryVertical:
+        DelayItemLoading: =true
+        Fill: =RGBA(240, 240, 240, 1)
+        Height: =Navigation.Height
+        Items: =Navigation.NavItem
+        Layout: =Layout.Vertical
+        LoadingSpinner: =LoadingSpinner.Data
+        OnSelect: =true; Nav
+        TemplateFill: =If(ThisItem.Title=Navigation.CurrentScreen,Color.White, RGBA(240, 240, 240, 1))
+        TemplateSize: =73
+        Width: =Navigation.Width
+        ZIndex: =1
+
+        Label2 As label:
+            OnSelect: =Select(Parent)
+            Text: =ThisItem.Title
+            Width: =173
+            X: =20
+            Y: =20
+            ZIndex: =1
+

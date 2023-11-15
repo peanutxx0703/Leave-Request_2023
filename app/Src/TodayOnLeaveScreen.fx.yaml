@@ -166,9 +166,11 @@ TodayOnLeaveScreen As screen:
         ZIndex: =30
 
     Label1 As label:
+        Height: =55
         Text: ="Today on leave"
+        Width: =166
         X: =688
-        Y: =316
+        Y: =274
         ZIndex: =31
 
     GalleryNavigation_13 As gallery.galleryVertical:
