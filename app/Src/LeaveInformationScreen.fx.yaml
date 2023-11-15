@@ -2,13 +2,13 @@ LeaveInformationScreen As screen:
 
     "Gallery3 As gallery.'BrowseLayout_Vertical_ThreeTextVariant_ver5.0'":
         DelayItemLoading: =true
-        Height: =528
+        Height: =664
         Items: =CustomGallerySample
         Layout: =Layout.Vertical
         LoadingSpinner: =LoadingSpinner.Data
         TemplatePadding: =0
         TemplateSize: =110
-        Width: =619
+        Width: =890
         X: =232
         Y: =80
         ZIndex: =1
@@ -93,7 +93,6 @@ LeaveInformationScreen As screen:
 
     Navigation_2 As Navigation:
         CurrentScreen: ="Leave Information"
-        X: =1
         Y: =80
         ZIndex: =8
 

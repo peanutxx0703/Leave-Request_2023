@@ -45,7 +45,7 @@ LoginScreen As screen:
             BorderColor: =ColorFade(BtnEmployeeLogin.Fill, -15%)
             BorderThickness: =0
             DisabledBorderColor: =ColorFade(BtnEmployeeLogin.BorderColor, 70%)
-            Fill: =RGBA(0, 100, 235, 1)
+            Fill: =RGBA(0, 134, 208, 1)
             FocusedBorderColor: =BtnEmployeeLogin.BorderColor
             Height: =61
             HoverBorderColor: =ColorFade(BtnEmployeeLogin.BorderColor, 20%)
