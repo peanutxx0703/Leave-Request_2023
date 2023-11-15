@@ -801,6 +801,7 @@ HomeScreen As screen:
             ZIndex: =1
 
     Navigation_1 As Navigation:
+        CurrentScreen: ="My Leave Requests"
         NavItem: |-
             =Table({Title: "My Leave Requests", TargetScreen: NewRequestScreen},{Title: "My Leave Balance", TargetScreen: LeaveBalanceScreen},{Title: "Today's On Leave", TargetScreen: TodayOnLeaveScreen},{Title: "Company Holiday", TargetScreen: CompanyHolidaysScreen},{Title: "About", TargetScreen: AboutScreen},{Title: "Log Out", TargetScreen: HomeScreen})
         Y: =80

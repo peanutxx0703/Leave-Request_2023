@@ -1,4 +1,5 @@
 Navigation As CanvasComponent:
+    CurrentScreen: ="Text"
     Fill: =RGBA(0, 0, 0, 0)
     Height: =688
     NavItem: |-
@@ -16,7 +17,7 @@ Navigation As CanvasComponent:
         Layout: =Layout.Vertical
         LoadingSpinner: =LoadingSpinner.Data
         OnSelect: =true; Navigate(ThisItem.TargetScreen,ScreenTransition.Fade)
-        TemplateFill: =If(ThisItem.IsSelected,Color.White,RGBA(240, 240, 240, 1))
+        TemplateFill: =If(ThisItem.Title=Navigation.CurrentScreen,Color.White,RGBA(240, 240, 240, 1))
         TemplateSize: =75
         Width: =231
         ZIndex: =1

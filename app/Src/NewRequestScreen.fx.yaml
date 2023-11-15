@@ -649,10 +649,6 @@ NewRequestScreen As screen:
             Y: =503
             ZIndex: =24
 
-    Navigation_3 As Navigation:
-        Y: =80
-        ZIndex: =47
-
     GroupLeaveType As group:
         Height: =5
         Width: =5
@@ -807,4 +803,8 @@ NewRequestScreen As screen:
             X: =260
             Y: =294
             ZIndex: =46
+
+    Navigation_3 As Navigation:
+        Y: =80
+        ZIndex: =47
 
