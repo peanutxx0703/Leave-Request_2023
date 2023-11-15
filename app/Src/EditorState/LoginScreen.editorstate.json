@@ -49,14 +49,7 @@
         "Width",
         "Height",
         "ZIndex",
-        {
-          "AFDDataSourceName": "",
-          "AutoRuleBindingEnabled": false,
-          "AutoRuleBindingString": "",
-          "InvariantPropertyName": "Size",
-          "IsLockable": false,
-          "NameMapSourceSchema": "?"
-        },
+        "Size",
         {
           "AFDDataSourceName": "",
           "AutoRuleBindingEnabled": false,
@@ -333,14 +326,7 @@
         "Width",
         "Height",
         "ZIndex",
-        {
-          "AFDDataSourceName": "",
-          "AutoRuleBindingEnabled": false,
-          "AutoRuleBindingString": "",
-          "InvariantPropertyName": "Size",
-          "IsLockable": false,
-          "NameMapSourceSchema": "?"
-        },
+        "Size",
         {
           "AFDDataSourceName": "",
           "AutoRuleBindingEnabled": false,
@@ -378,7 +364,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "BtnManagerLogin",
-      "ParentIndex": 6,
+      "ParentIndex": 7,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -808,14 +794,7 @@
         "Height",
         "DisplayMode",
         "ZIndex",
-        {
-          "AFDDataSourceName": "",
-          "AutoRuleBindingEnabled": false,
-          "AutoRuleBindingString": "",
-          "InvariantPropertyName": "Size",
-          "IsLockable": false,
-          "NameMapSourceSchema": "?"
-        },
+        "Size",
         "PaddingTop",
         "PaddingBottom",
         "PaddingRight",
@@ -1144,7 +1123,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "LblManagerLogin",
-      "ParentIndex": 5,
+      "ParentIndex": 6,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -1399,7 +1378,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "LeaveLabel",
-      "ParentIndex": 4,
+      "ParentIndex": 5,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -1600,7 +1579,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "LoginAsEmployeeGroup",
-      "ParentIndex": 8,
+      "ParentIndex": 9,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -1651,7 +1630,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "LoginAsManagerGroup",
-      "ParentIndex": 9,
+      "ParentIndex": 10,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -1820,7 +1799,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "RequestLabel",
-      "ParentIndex": 3,
+      "ParentIndex": 4,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -2021,7 +2000,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "WelcomePageHeaderGroup",
-      "ParentIndex": 7,
+      "ParentIndex": 8,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {

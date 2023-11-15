@@ -5799,14 +5799,7 @@
         "Height",
         "DisplayMode",
         "ZIndex",
-        {
-          "AFDDataSourceName": "",
-          "AutoRuleBindingEnabled": false,
-          "AutoRuleBindingString": "",
-          "InvariantPropertyName": "Size",
-          "IsLockable": false,
-          "NameMapSourceSchema": "?"
-        },
+        "Size",
         {
           "AFDDataSourceName": "",
           "AutoRuleBindingEnabled": false,
