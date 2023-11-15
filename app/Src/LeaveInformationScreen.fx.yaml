@@ -93,7 +93,6 @@ LeaveInformationScreen As screen:
 
     Navigation_2 As Navigation:
         CurrentScreen: ="Leave Information"
-        X: =1
         Y: =80
         ZIndex: =8
 
