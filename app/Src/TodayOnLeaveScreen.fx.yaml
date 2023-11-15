@@ -106,13 +106,13 @@ TodayOnLeaveScreen As screen:
         ZIndex: =10
 
     Rectangle12 As rectangle:
-        BorderColor: =RGBA(62, 96, 170, 1)
+        BorderColor: =RGBA(217, 216, 217, 1)
         BorderThickness: =3
-        Fill: =RGBA(255, 255, 255, 1)
-        Height: =56
+        Fill: =RGBA(230, 229, 229, 1)
+        Height: =1
         Width: =1134
         X: =232
-        Y: =80
+        Y: =135
         ZIndex: =11
 
     Header_6 As group:
