@@ -249,3 +249,8 @@ CompanyHolidaysScreen As screen:
             Y: =48
             ZIndex: =3
 
+    Navigation_4 As Navigation:
+        CurrentScreen: ="Company Holidays"
+        Y: =80
+        ZIndex: =33
+
