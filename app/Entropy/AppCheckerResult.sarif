@@ -14,46 +14,6 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Navigation.NavItem"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Navigation.NavItem",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 22,
-                  "charOffset": 228,
-                  "snippet": {
-                    "text": "LeaveInformationScreen"
-                  }
-                }
-              },
-              "properties": {
-                "member": "NavItem",
-                "module": "Navigation",
-                "type": "Navigation"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "LeaveInformationScreen"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrInvalidName",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
                   "fullyQualifiedName": "Navigation.Gallery2.galleryTemplate5.OnSelect"
                 }
               ],
@@ -63,10 +23,10 @@
                   "relativeAddress": 0
                 },
                 "region": {
-                  "charLength": 4,
-                  "charOffset": 37,
+                  "charLength": 3,
+                  "charOffset": 6,
                   "snippet": {
-                    "text": "Fade"
+                    "text": "Nav"
                   }
                 }
               },
@@ -79,87 +39,7 @@
           ],
           "message": {
             "arguments": [
-              "Fade"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrInvalidName",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "CompanyHolidaysScreen.Navigation_2.NavItem"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "CompanyHolidaysScreen.Navigation_2.NavItem",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 22,
-                  "charOffset": 228,
-                  "snippet": {
-                    "text": "LeaveInformationScreen"
-                  }
-                }
-              },
-              "properties": {
-                "member": "NavItem",
-                "module": "CompanyHolidaysScreen",
-                "type": "CompanyHolidaysScreen.Navigation_2"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "LeaveInformationScreen"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrInvalidName",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "TodayOnLeaveScreen.Navigation_1.NavItem"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "TodayOnLeaveScreen.Navigation_1.NavItem",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 22,
-                  "charOffset": 228,
-                  "snippet": {
-                    "text": "LeaveInformationScreen"
-                  }
-                }
-              },
-              "properties": {
-                "member": "NavItem",
-                "module": "TodayOnLeaveScreen",
-                "type": "TodayOnLeaveScreen.Navigation_1"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "LeaveInformationScreen"
+              "Nav"
             ],
             "id": "issue"
           },
@@ -937,6 +817,36 @@
                 "member": "TabIndex",
                 "module": "ChangeApproverScreen",
                 "type": "ChangeApproverScreen.GalleryChangeApprover"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "CompanyHolidaysScreen.GalleryNavigation_11.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "CompanyHolidaysScreen.GalleryNavigation_11.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "CompanyHolidaysScreen",
+                "type": "CompanyHolidaysScreen.GalleryNavigation_11"
               }
             }
           ],
