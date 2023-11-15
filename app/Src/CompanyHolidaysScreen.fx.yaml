@@ -174,18 +174,18 @@ CompanyHolidaysScreen As screen:
         PressedBorderColor: =LblHolidaysHeader.BorderColor
         PressedColor: =LblHolidaysHeader.Color
         PressedFill: =LblHolidaysHeader.Fill
-        Size: =12
+        Size: =14
         Text: ="Below is a list of our company's paid holidays during which our offices will be closed for observance."
         Width: =904
         X: =232
-        Y: =120
+        Y: =104
         ZIndex: =31
 
     GalleryHolidays As gallery.galleryVertical:
         AccessibleLabel: ="Company holidays"
         DisabledBorderColor: =GalleryHolidays.BorderColor
         DisabledFill: =GalleryHolidays.Fill
-        Height: =623
+        Height: =597
         HoverBorderColor: =GalleryHolidays.BorderColor
         HoverFill: =GalleryHolidays.Fill
         Items: =HolidaysCollection
@@ -197,7 +197,7 @@ CompanyHolidaysScreen As screen:
         TemplateSize: =49
         Width: =857
         X: =252
-        Y: =145
+        Y: =171
         ZIndex: =32
 
         Label12 As label:
@@ -213,7 +213,7 @@ CompanyHolidaysScreen As screen:
             PressedBorderColor: =Label12.BorderColor
             PressedColor: =Label12.Color
             PressedFill: =Label12.Fill
-            Size: =12
+            Size: =14
             Text: =ThisItem.HolidayName
             Width: =322
             ZIndex: =1
@@ -230,7 +230,6 @@ CompanyHolidaysScreen As screen:
             PressedBorderColor: =Label13.BorderColor
             PressedColor: =Label13.Color
             PressedFill: =Label13.Fill
-            Size: =12
             Text: =Text(DateAdd(ThisItem.StartDate, TimeZoneOffset(ThisItem.StartDate), TimeUnit.Minutes),"[$-en-US]dddd, mmmm dd")
             Width: =442
             X: =405
