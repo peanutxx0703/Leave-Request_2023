@@ -11,9 +11,22 @@
             "AllowAccessToGlobals": true,
             "Children": [],
             "ControlPropertyState": [
-              "ItemAccessibleLabel",
-              "TemplateFill",
-              "OnSelect"
+              {
+                "AFDDataSourceName": "",
+                "AutoRuleBindingEnabled": false,
+                "AutoRuleBindingString": "RGBA(0, 0, 0, 0)",
+                "InvariantPropertyName": "TemplateFill",
+                "IsLockable": false,
+                "NameMapSourceSchema": "?"
+              },
+              {
+                "AFDDataSourceName": "",
+                "AutoRuleBindingEnabled": false,
+                "AutoRuleBindingString": "false",
+                "InvariantPropertyName": "OnSelect",
+                "IsLockable": false,
+                "NameMapSourceSchema": "?"
+              }
             ],
             "ControlUniqueId": "6",
             "HasDynamicProperties": false,
@@ -28,14 +41,8 @@
             "Name": "galleryTemplate5",
             "Parent": "Gallery2",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 274,
+            "PublishOrderIndex": 3,
             "Rules": [
-              {
-                "Category": "Data",
-                "InvariantScript": "\"\"",
-                "Property": "ItemAccessibleLabel",
-                "RuleProviderType": "Unknown"
-              },
               {
                 "Category": "Design",
                 "InvariantScript": "If(ThisItem.Title=Navigation.CurrentScreen,Color.White, RGBA(240, 240, 240, 1))",
@@ -44,12 +51,12 @@
               },
               {
                 "Category": "Behavior",
-                "InvariantScript": "true; Navigate(ThisItem.TargetScreen,ScreenTransition.Fade)",
+                "InvariantScript": "true; Nav",
                 "Property": "OnSelect",
                 "RuleProviderType": "Unknown"
               }
             ],
-            "StyleName": "defaultGalleryTemplateStyle",
+            "StyleName": "",
             "Template": {
               "CustomGroupControlTemplateName": "",
               "FirstParty": true,
@@ -120,7 +127,7 @@
             "Name": "Label2",
             "Parent": "Gallery2",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 275,
+            "PublishOrderIndex": 4,
             "Rules": [
               {
                 "Category": "Data",
@@ -388,7 +395,7 @@
         "Name": "Gallery2",
         "Parent": "Navigation",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 273,
+        "PublishOrderIndex": 2,
         "Rules": [
           {
             "Category": "Data",
@@ -589,7 +596,7 @@
       },
       "CurrentScreen"
     ],
-    "LastModifiedTimestamp": "638356295168196069",
+    "LastModifiedTimestamp": "638356281419386075",
     "Name": "Navigation",
     "Rules": [
       {
@@ -680,7 +687,7 @@
   "IsPcfControl": false,
   "IsPremiumPcfControl": false,
   "IsWidgetTemplate": false,
-  "LastModifiedTimestamp": "638356295168196069",
+  "LastModifiedTimestamp": "638356281419386075",
   "Name": "b6b5e691fc474668b7b6312386d8a5c2",
   "OverridableProperties": {},
   "Version": "1.0"
