@@ -93,7 +93,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "BtnEmailRequester",
-      "ParentIndex": 23,
+      "ParentIndex": 16,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -373,7 +373,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "BtnManagerApprove",
-      "ParentIndex": 21,
+      "ParentIndex": 14,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -698,7 +698,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "BtnManagerDecline",
-      "ParentIndex": 22,
+      "ParentIndex": 15,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -987,7 +987,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Circle1",
-      "ParentIndex": 19,
+      "ParentIndex": 12,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -1079,7 +1079,7 @@
       "StyleName": "defaultCircleStyle",
       "Type": "ControlInfo"
     },
-    "CircleHeaderCreateNew": {
+    "CircleHeaderCreateNew_9": {
       "AllowAccessToGlobals": true,
       "ControlPropertyState": [
         {
@@ -1130,14 +1130,6 @@
           "NameMapSourceSchema": "?"
         },
         "ZIndex",
-        {
-          "AFDDataSourceName": "",
-          "AutoRuleBindingEnabled": false,
-          "AutoRuleBindingString": "true",
-          "InvariantPropertyName": "Visible",
-          "IsLockable": false,
-          "NameMapSourceSchema": "?"
-        },
         "ContentLanguage"
       ],
       "HasDynamicProperties": false,
@@ -1149,8 +1141,8 @@
       "IsLocked": false,
       "LayoutName": "",
       "MetaDataIDKey": "",
-      "Name": "CircleHeaderCreateNew",
-      "ParentIndex": 5,
+      "Name": "CircleHeaderCreateNew_9",
+      "ParentIndex": 22,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -1221,11 +1213,6 @@
         {
           "Category": "Design",
           "PropertyName": "DisabledFill",
-          "RuleProviderType": "Unknown"
-        },
-        {
-          "Category": "Design",
-          "PropertyName": "Visible",
           "RuleProviderType": "Unknown"
         }
       ],
@@ -1632,7 +1619,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "FilterGallery",
-      "ParentIndex": 10,
+      "ParentIndex": 3,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -1879,7 +1866,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "GalleryRequestDetails",
-      "ParentIndex": 12,
+      "ParentIndex": 5,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -2155,7 +2142,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "GalleryRequests",
-      "ParentIndex": 13,
+      "ParentIndex": 6,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -2552,7 +2539,7 @@
       "StyleName": "",
       "Type": "ControlInfo"
     },
-    "Header": {
+    "Header_11": {
       "AllowAccessToGlobals": true,
       "ControlPropertyState": [
         "X",
@@ -2570,7 +2557,7 @@
       "IsLocked": false,
       "LayoutName": "",
       "MetaDataIDKey": "",
-      "Name": "Header",
+      "Name": "Header_11",
       "ParentIndex": 24,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -2725,7 +2712,7 @@
       "StyleName": "defaultScreenStyle",
       "Type": "ControlInfo"
     },
-    "icon2": {
+    "icon2_11": {
       "AllowAccessToGlobals": true,
       "ControlPropertyState": [
         "Icon",
@@ -2796,8 +2783,8 @@
       "IsLocked": false,
       "LayoutName": "",
       "MetaDataIDKey": "",
-      "Name": "icon2",
-      "ParentIndex": 4,
+      "Name": "icon2_11",
+      "ParentIndex": 21,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -3027,7 +3014,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "icon7",
-      "ParentIndex": 20,
+      "ParentIndex": 13,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -3189,7 +3176,7 @@
       "StyleName": "defaultIconStyle",
       "Type": "ControlInfo"
     },
-    "IconHeaderCreateNew": {
+    "IconHeaderCreateNew_9": {
       "AllowAccessToGlobals": true,
       "ControlPropertyState": [
         "Icon",
@@ -3298,14 +3285,6 @@
         {
           "AFDDataSourceName": "",
           "AutoRuleBindingEnabled": false,
-          "AutoRuleBindingString": "true",
-          "InvariantPropertyName": "Visible",
-          "IsLockable": false,
-          "NameMapSourceSchema": "?"
-        },
-        {
-          "AFDDataSourceName": "",
-          "AutoRuleBindingEnabled": false,
           "AutoRuleBindingString": "\"\"",
           "InvariantPropertyName": "AccessibleLabel",
           "IsLockable": false,
@@ -3331,8 +3310,8 @@
       "IsLocked": false,
       "LayoutName": "",
       "MetaDataIDKey": "",
-      "Name": "IconHeaderCreateNew",
-      "ParentIndex": 6,
+      "Name": "IconHeaderCreateNew_9",
+      "ParentIndex": 23,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -3468,11 +3447,6 @@
         {
           "Category": "Design",
           "PropertyName": "PressedColor",
-          "RuleProviderType": "Unknown"
-        },
-        {
-          "Category": "Design",
-          "PropertyName": "Visible",
           "RuleProviderType": "Unknown"
         },
         {
@@ -3598,7 +3572,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "IconRequesterEdit",
-      "ParentIndex": 17,
+      "ParentIndex": 10,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -5419,7 +5393,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "LblEmptyRequests",
-      "ParentIndex": 15,
+      "ParentIndex": 8,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -5689,7 +5663,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "LblFirstRequest",
-      "ParentIndex": 16,
+      "ParentIndex": 9,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -5851,7 +5825,7 @@
       "StyleName": "defaultLabelStyle",
       "Type": "ControlInfo"
     },
-    "LblHeaderCreateNew": {
+    "LblHeaderCreateNew_9": {
       "AllowAccessToGlobals": true,
       "ControlPropertyState": [
         "Overflow",
@@ -5897,14 +5871,6 @@
         {
           "AFDDataSourceName": "",
           "AutoRuleBindingEnabled": false,
-          "AutoRuleBindingString": "true",
-          "InvariantPropertyName": "Visible",
-          "IsLockable": false,
-          "NameMapSourceSchema": "?"
-        },
-        {
-          "AFDDataSourceName": "",
-          "AutoRuleBindingEnabled": false,
           "AutoRuleBindingString": "",
           "InvariantPropertyName": "TabIndex",
           "IsLockable": false,
@@ -5931,8 +5897,8 @@
       "IsLocked": false,
       "LayoutName": "",
       "MetaDataIDKey": "",
-      "Name": "LblHeaderCreateNew",
-      "ParentIndex": 3,
+      "Name": "LblHeaderCreateNew_9",
+      "ParentIndex": 20,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -6112,11 +6078,6 @@
         },
         {
           "Category": "Design",
-          "PropertyName": "Visible",
-          "RuleProviderType": "Unknown"
-        },
-        {
-          "Category": "Design",
           "PropertyName": "TabIndex",
           "RuleProviderType": "Unknown"
         },
@@ -6134,7 +6095,7 @@
       "StyleName": "defaultLabelStyle",
       "Type": "ControlInfo"
     },
-    "LblHeaderTItle1": {
+    "LblHeaderTItle1_11": {
       "AllowAccessToGlobals": true,
       "ControlPropertyState": [
         "Overflow",
@@ -6219,8 +6180,8 @@
       "IsLocked": false,
       "LayoutName": "",
       "MetaDataIDKey": "",
-      "Name": "LblHeaderTItle1",
-      "ParentIndex": 1,
+      "Name": "LblHeaderTItle1_11",
+      "ParentIndex": 18,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -6377,7 +6338,7 @@
       "StyleName": "defaultLabelStyle",
       "Type": "ControlInfo"
     },
-    "LblHeaderTitle2": {
+    "LblHeaderTitle2_11": {
       "AllowAccessToGlobals": true,
       "ControlPropertyState": [
         "Overflow",
@@ -6448,8 +6409,8 @@
       "IsLocked": false,
       "LayoutName": "",
       "MetaDataIDKey": "",
-      "Name": "LblHeaderTitle2",
-      "ParentIndex": 2,
+      "Name": "LblHeaderTitle2_11",
+      "ParentIndex": 19,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -6713,7 +6674,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "LblRequestDetailsHeader",
-      "ParentIndex": 11,
+      "ParentIndex": 4,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -6974,7 +6935,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "LblRequesterEdit",
-      "ParentIndex": 18,
+      "ParentIndex": 11,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -7241,7 +7202,7 @@
       },
       "MetaDataIDKey": "",
       "Name": "Navigation_5",
-      "ParentIndex": 8,
+      "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -7289,7 +7250,7 @@
       "StyleName": "",
       "Type": "ControlInfo"
     },
-    "Rectangle1": {
+    "Rectangle1_11": {
       "AllowAccessToGlobals": true,
       "ControlPropertyState": [
         {
@@ -7337,8 +7298,8 @@
       "IsLocked": false,
       "LayoutName": "",
       "MetaDataIDKey": "",
-      "Name": "Rectangle1",
-      "ParentIndex": 0,
+      "Name": "Rectangle1_11",
+      "ParentIndex": 17,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -7638,7 +7599,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Rectangle2_1",
-      "ParentIndex": 14,
+      "ParentIndex": 7,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -7783,7 +7744,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Rectangle3",
-      "ParentIndex": 7,
+      "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -7902,7 +7863,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "RectNavSep",
-      "ParentIndex": 9,
+      "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
