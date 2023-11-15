@@ -254,7 +254,7 @@ TodayOnLeaveScreen As screen:
         Size: =16
         Text: ="Today on leave"
         Width: =229
-        X: =258
-        Y: =81
+        X: =232
+        Y: =83
         ZIndex: =12
 
