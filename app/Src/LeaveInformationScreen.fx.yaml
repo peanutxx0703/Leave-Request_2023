@@ -133,6 +133,7 @@ LeaveInformationScreen As screen:
 
     Navigation_2 As Navigation:
         CurrentScreen: ="Leave Information"
+        NavItem: =If(_managerView,ManagerNavigation,EmployeeNavigation)
         Y: =80
         ZIndex: =8
 
