@@ -39,7 +39,7 @@ App As appinfo:
             ClearCollect(
                 ManagerNavigation,
                 {
-                    Title: "Leave Requests",
+                    Title: "My Leave Requests",
                     TargetScreen: HomeScreen
                 },
                 {

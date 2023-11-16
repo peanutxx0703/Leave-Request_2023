@@ -164,6 +164,7 @@ AboutScreen As screen:
 
     Navigation_3 As Navigation:
         CurrentScreen: ="About"
+        NavItem: =If(_managerView,ManagerNavigation,EmployeeNavigation)
         Y: =80
         ZIndex: =47
 
