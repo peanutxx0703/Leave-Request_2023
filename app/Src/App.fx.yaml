@@ -144,48 +144,27 @@ App As appinfo:
                 }
             )
         );
-        ClearCollect(
-            LeaveCollection,
-            {
-                Title: "Example here",
-                Detail: "Example here",
-                StartDate: Today(),
-                EndDate: DateAdd(
-                    Today(),
-                    6,
-                    TimeUnit.Days
-                ),
-                LeaveType: "Vacation",
-                Requester: _myProfile.UserPrincipalName,
-                Approver: _myProfile.UserPrincipalName,
-                Status: "Pending",
-                LeaveID: _myProfile.UserPrincipalName & Text(
-                    Now(),
-                    "[$-en-US]mm-dd-yyyy-hh-mm-ss-fff"
-                )
-            }
-        );
-        ClearCollect(
-            BalanceCollection,
-            {
-                EmployeeEmail: _myProfile.UserPrincipalName,
-                EmployeeName: _myProfile.DisplayName,
-                Year: Text(Year(Now())),
-                Vacation: 10,
-                VacationUsed: 0,
-                Sick: 8,
-                SickUsed: 0,
-                Floating: 8,
-                FloatingUsed: 0,
-                JuryDuty: 3,
-                JuryDutyUsed: 0,
-                Bereavement: 5,
-                BereavementUsed: 0,
-                BalanceID: _myProfile.UserPrincipalName & Text(
-                    Now(),
-                    "[$-en-US]mm-dd-yyyy-hh-mm-ss-fff"
-                )
-            }
+        ClearCollect(LeaveCollection, 
+             {Title: "Vacation", Detail: "Example vacation request", StartDate: Today(), EndDate: DateAdd(Today(), 6, TimeUnit.Days), LeaveType: "Vacation", Requester: _myProfile.UserPrincipalName, Approver: _myProfile.UserPrincipalName, 
+             Status: "Pending", LeaveID: _myProfile.UserPrincipalName&Text(Now(), "[$-en-US]mm-dd-yyyy-hh-mm-ss-fff")});
+        
+        ClearCollect(BalanceCollection,
+                {
+                    EmployeeEmail: _myProfile.UserPrincipalName, 
+                    EmployeeName: _myProfile.DisplayName , 
+                    Year: Text(Year(Now())), 
+                    Vacation:10, 
+                    VacationUsed:0, 
+                    Sick:8, 
+                    SickUsed:0, 
+                    Floating:8, 
+                    FloatingUsed:0, 
+                    JuryDuty:3, 
+                    JuryDutyUsed:0, 
+                    Bereavement:5, 
+                    BereavementUsed:0, 
+                    BalanceID:_myProfile.UserPrincipalName&Text(Now(), "[$-en-US]mm-dd-yyyy-hh-mm-ss-fff")
+                }
         )
     Theme: =PowerAppsTheme
 
