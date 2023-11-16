@@ -763,6 +763,43 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "NewRequestScreen.OnVisible"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "NewRequestScreen.OnVisible",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 23,
+                  "charOffset": 50,
+                  "snippet": {
+                    "text": "Set(_navMenuSelect, \"\")"
+                  }
+                }
+              },
+              "properties": {
+                "member": "OnVisible",
+                "module": "NewRequestScreen",
+                "type": "NewRequestScreen"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrIncompatibleCtxtVariableTypes",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "NewRequestScreen.GalleryNavigation_12.galleryTemplate2_14.TemplateFill"
                 }
               ],
@@ -1364,6 +1401,43 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "TodayOnLeaveScreen.OnVisible"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "TodayOnLeaveScreen.OnVisible",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 40,
+                  "charOffset": 16,
+                  "snippet": {
+                    "text": "Set(_navMenuSelect, \"My Leave Requests\")"
+                  }
+                }
+              },
+              "properties": {
+                "member": "OnVisible",
+                "module": "TodayOnLeaveScreen",
+                "type": "TodayOnLeaveScreen"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrIncompatibleCtxtVariableTypes",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "AboutScreen.OnVisible"
                 }
               ],
@@ -1421,6 +1495,80 @@
                 "member": "OnVisible",
                 "module": "CompanyHolidaysScreen",
                 "type": "CompanyHolidaysScreen"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrIncompatibleCtxtVariableTypes",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "ConfirmationScreen.OnVisible"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "ConfirmationScreen.OnVisible",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 57,
+                  "charOffset": 52,
+                  "snippet": {
+                    "text": "Set(\n            _navMenuSelect,\n            \"\"\n        )"
+                  }
+                }
+              },
+              "properties": {
+                "member": "OnVisible",
+                "module": "ConfirmationScreen",
+                "type": "ConfirmationScreen"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrIncompatibleCtxtVariableTypes",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "HomeScreen.OnVisible"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "HomeScreen.OnVisible",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 40,
+                  "charOffset": 16,
+                  "snippet": {
+                    "text": "Set(_navMenuSelect, \"My Leave Requests\")"
+                  }
+                }
+              },
+              "properties": {
+                "member": "OnVisible",
+                "module": "HomeScreen",
+                "type": "HomeScreen"
               }
             }
           ],
