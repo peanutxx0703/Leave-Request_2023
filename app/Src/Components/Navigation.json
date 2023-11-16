@@ -41,7 +41,7 @@
             "Name": "galleryTemplate5",
             "Parent": "Gallery2",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 3,
+            "PublishOrderIndex": 285,
             "Rules": [
               {
                 "Category": "Design",
@@ -127,7 +127,7 @@
             "Name": "Label2",
             "Parent": "Gallery2",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 4,
+            "PublishOrderIndex": 286,
             "Rules": [
               {
                 "Category": "Data",
@@ -395,7 +395,7 @@
         "Name": "Gallery2",
         "Parent": "Navigation",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 2,
+        "PublishOrderIndex": 284,
         "Rules": [
           {
             "Category": "Data",
@@ -596,7 +596,7 @@
       },
       "CurrentScreen"
     ],
-    "LastModifiedTimestamp": "638356342023083875",
+    "LastModifiedTimestamp": "638357012022634309",
     "Name": "Navigation",
     "Rules": [
       {
@@ -687,7 +687,7 @@
   "IsPcfControl": false,
   "IsPremiumPcfControl": false,
   "IsWidgetTemplate": false,
-  "LastModifiedTimestamp": "638356342023083875",
+  "LastModifiedTimestamp": "638357012022634309",
   "Name": "b6b5e691fc474668b7b6312386d8a5c2",
   "OverridableProperties": {},
   "Version": "1.0"
