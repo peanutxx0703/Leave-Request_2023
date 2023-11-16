@@ -360,7 +360,7 @@ ManagerChangeRequestScreen As screen:
             FocusedBorderThickness: =2
             Font: =Font.Lato
             FontWeight: =FontWeight.Bold
-            Height: =72
+            Height: =71
             HoverBorderColor: =Label2_6.BorderColor
             HoverColor: =Label2_6.Color
             HoverFill: =Label2_6.Fill
