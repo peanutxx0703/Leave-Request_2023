@@ -44,6 +44,20 @@
     "dependents": [],
     "id": "6f72918a-7921-fa64-14bf-78187ad1b172"
   },
+  "81d384ae-de03-4521-b437-163eeda7a732": {
+    "connectionRef": {
+      "displayName": "Microsoft Teams",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1656/1.0.1656.3429/teams/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_teams"
+    },
+    "datasets": {},
+    "dataSources": [
+      "MicrosoftTeams"
+    ],
+    "dependencies": {},
+    "dependents": [],
+    "id": "81d384ae-de03-4521-b437-163eeda7a732"
+  },
   "fcd20ec9-7b79-45f7-a3de-aee9bdd8bc4f": {
     "connectionRef": {
       "displayName": "Office 365 Users",
