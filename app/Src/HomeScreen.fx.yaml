@@ -301,7 +301,7 @@ HomeScreen As screen:
             PressedFill: =icon7.Fill
             TabIndex: =0
             Visible: =!_managerView && !GalleryRequests.Visible && _requestTypeFilter = "All"
-            X: =589
+            X: =1256
             Y: =433
             ZIndex: =33
 

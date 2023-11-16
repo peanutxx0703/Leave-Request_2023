@@ -61,39 +61,65 @@ App As appinfo:
             ),
             //add custom leave types to this collection to make them show up in the app
             ClearCollect(
-                LeaveTypeCollection,
+            LeaveTypeCollection, 
                 Table(
-                    {
-                        type: "Vacation",
-                        icon: vacation,
-                        iconselected: 'vacation-selected',
-                        description: "Vacation leave is provided to all employees for the purpose of rest, relaxation, and to attend to personal affairs. Vacation balance is acquired over time and can be used at any time."
-                    },
-                    {
-                        type: "Sick Leave",
-                        icon: 'sick-leave',
-                        iconselected: 'sick-leave-selected',
-                        description: "Sick leave may be used for your own illness or medical/dental appointments or for the illness or medical/dental appointments of family members. Sick leave can also be used to address the psychological, physical, or legal aspects of domestic violence, sexual assault, stalking, or other crime. You may not use sick leave for vacation purposes. Some cities and states have specific laws governing sick leave that allow use of sick leave to care for other family members."
-                    },
-                    {
-                        type: "Floating Holiday",
-                        icon: 'floating-holiday',
-                        iconselected: 'floating-holiday-selected',
-                        description: "As a regular employee working full time, you receive eight floating holidays at the beginning of each calendar year. Please obtain your manager's approval prior to scheduling your floating holidays (one floating holiday equals eight hours for full-time employees). As a regular employee working part-time, you will receive the equivalent of eight floating holidays at the beginning of each calendar year in accordance with your reduced work schedule. If you were hired on or after October 16, you will not receive floating holidays for that calendar year. You will receive eight floating holidays in January of the following calendar year. If your floating holidays are not used within the current calendar year, they are forfeited. Unless required by state law, unused floating holidays are not cashed out at termination."
-                    },
-                    {
-                        type: "Jury Duty",
-                        icon: 'jury-duty',
-                        iconselected: 'jury-duty-selected',
-                        description: "If you are summoned for jury duty or subpoenaed as a trial witness in a federal or state court in the United States or its territories, or in a suit to which the company is a party, you will be granted paid time away from work for the time that you are required to devote to jury service or being a trial witness, (for hourly employees, up to eight hours in a day). Regular employees working part-time will be eligible for paid time away in accordance with their part-time work schedules. You may keep all jury-duty–related compensation paid to you (for example, parking reimbursements or payments for jury duty)."
-                    },
-                    {
-                        type: "Bereavement",
-                        icon: bereavement,
-                        iconselected: 'bereavement-selected',
-                        description: "Regular employees may take paid time away from work in the event of the death to attend the funeral (or alternative to a funeral), make arrangements necessitated by the death of a family member or grieve the death of a family member. Bereavement leave for a family member may be taken as follows: Employees may take up to 5 work/business days in the event of a death of an immediate family member broadly including a spouse, domestic partner, custodial parent, non-custodial parent, adoptive parent, foster parent, biological parent, parent-in-law, parent of domestic partner, sibling, grandparent or grandchild of the employee, or a person with whom the employee is or was in a relationship of in loco parentis. The term also includes the biological, adopted, legal ward, foster or step child of an employee or the child of an employee's domestic partner."
-                    }
-                )
+                        {
+                            type:"Annual Leave", 
+                            icon:vacation,
+                            iconselected:'vacation-selected',
+                            description:
+                            "Vacation leave is provided to all employees for the purpose of rest, relaxation, and to attend to personal affairs. Vacation balance is acquired over time and can be used at any time."
+                        }
+                        ,
+                        {
+                            type:"Sick Leave", 
+                            icon:'sick-leave', 
+                            iconselected:'sick-leave-selected',
+                            description:"Sick leave may be used for your own illness or medical/dental appointments or for the illness or medical/dental appointments of family members. Sick leave can also be used to address the psychological, physical, or legal aspects of domestic violence, sexual assault, stalking, or other crime. You may not use sick leave for vacation purposes. Some cities and states have specific laws governing sick leave that allow use of sick leave to care for other family members."
+                        }
+                            ,
+                        {
+                            type:"Compassionate Leave", 
+                            icon: 'floating-holiday', 
+                            iconselected:'floating-holiday-selected',
+                            description:"As a regular employee working full time, you receive eight floating holidays at the beginning of each calendar year. Please obtain your manager's approval prior to scheduling your floating holidays (one floating holiday equals eight hours for full-time employees). As a regular employee working part-time, you will receive the equivalent of eight floating holidays at the beginning of each calendar year in accordance with your reduced work schedule. If you were hired on or after October 16, you will not receive floating holidays for that calendar year. You will receive eight floating holidays in January of the following calendar year. If your floating holidays are not used within the current calendar year, they are forfeited. Unless required by state law, unused floating holidays are not cashed out at termination."
+                        }
+                            ,
+                        {
+                            type:"Hospitalization leave", 
+                            icon: 'jury-duty', 
+                            iconselected:'jury-duty-selected',
+                            description:"If you are summoned for jury duty or subpoenaed as a trial witness in a federal or state court in the United States or its territories, or in a suit to which the company is a party, you will be granted paid time away from work for the time that you are required to devote to jury service or being a trial witness, (for hourly employees, up to eight hours in a day). Regular employees working part-time will be eligible for paid time away in accordance with their part-time work schedules. You may keep all jury-duty–related compensation paid to you (for example, parking reimbursements or payments for jury duty)."
+                        }
+                            ,
+                        {
+                            type:"Paternity Leave", 
+                            icon: bereavement, 
+                            iconselected:'bereavement-selected',
+                            description:"Regular employees may take paid time away from work in the event of the death to attend the funeral (or alternative to a funeral), make arrangements necessitated by the death of a family member or grieve the death of a family member. Bereavement leave for a family member may be taken as follows: Employees may take up to 5 work/business days in the event of a death of an immediate family member broadly including a spouse, domestic partner, custodial parent, non-custodial parent, adoptive parent, foster parent, biological parent, parent-in-law, parent of domestic partner, sibling, grandparent or grandchild of the employee, or a person with whom the employee is or was in a relationship of in loco parentis. The term also includes the biological, adopted, legal ward, foster or step child of an employee or the child of an employee's domestic partner."
+                        }
+                            ,
+                        {
+                            type:"Marriage Leave", 
+                            icon: bereavement, 
+                            iconselected:'bereavement-selected',
+                            description:"Regular employees may take paid time away from work in the event of the death to attend the funeral (or alternative to a funeral), make arrangements necessitated by the death of a family member or grieve the death of a family member. Bereavement leave for a family member may be taken as follows: Employees may take up to 5 work/business days in the event of a death of an immediate family member broadly including a spouse, domestic partner, custodial parent, non-custodial parent, adoptive parent, foster parent, biological parent, parent-in-law, parent of domestic partner, sibling, grandparent or grandchild of the employee, or a person with whom the employee is or was in a relationship of in loco parentis. The term also includes the biological, adopted, legal ward, foster or step child of an employee or the child of an employee's domestic partner."
+                        }
+                            ,
+                        {
+                            type:"Unpaid Leave", 
+                            icon: bereavement, 
+                            iconselected:'bereavement-selected',
+                            description:"Regular employees may take paid time away from work in the event of the death to attend the funeral (or alternative to a funeral), make arrangements necessitated by the death of a family member or grieve the death of a family member. Bereavement leave for a family member may be taken as follows: Employees may take up to 5 work/business days in the event of a death of an immediate family member broadly including a spouse, domestic partner, custodial parent, non-custodial parent, adoptive parent, foster parent, biological parent, parent-in-law, parent of domestic partner, sibling, grandparent or grandchild of the employee, or a person with whom the employee is or was in a relationship of in loco parentis. The term also includes the biological, adopted, legal ward, foster or step child of an employee or the child of an employee's domestic partner."
+                        }
+                            ,
+                        {
+                            type:"Maternity Leave", 
+                            icon: bereavement, 
+                            iconselected:'bereavement-selected',
+                            description:"Regular employees may take paid time away from work in the event of the death to attend the funeral (or alternative to a funeral), make arrangements necessitated by the death of a family member or grieve the death of a family member. Bereavement leave for a family member may be taken as follows: Employees may take up to 5 work/business days in the event of a death of an immediate family member broadly including a spouse, domestic partner, custodial parent, non-custodial parent, adoptive parent, foster parent, biological parent, parent-in-law, parent of domestic partner, sibling, grandparent or grandchild of the employee, or a person with whom the employee is or was in a relationship of in loco parentis. The term also includes the biological, adopted, legal ward, foster or step child of an employee or the child of an employee's domestic partner."
+                        }
+                    )
             ),
             //defines leave start and end for requests. Default set to Now since most users will be creating new requests. Changes to reflect leave times for requests which are being edited
             Set(
