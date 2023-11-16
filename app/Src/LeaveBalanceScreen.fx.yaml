@@ -327,6 +327,7 @@ LeaveBalanceScreen As screen:
 
     Navigation_6 As Navigation:
         CurrentScreen: ="My Leave Balance"
+        NavItem: =If(_managerView,ManagerNavigation,EmployeeNavigation)
         Y: =80
         ZIndex: =32
 

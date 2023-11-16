@@ -870,3 +870,8 @@ NewRequestScreen As screen:
             Y: =294
             ZIndex: =46
 
+    Navigation_7 As Navigation:
+        NavItem: =If(_managerView,ManagerNavigation,EmployeeNavigation)
+        Y: =80
+        ZIndex: =48
+
