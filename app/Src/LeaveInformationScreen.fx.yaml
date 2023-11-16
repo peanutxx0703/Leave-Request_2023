@@ -115,6 +115,7 @@ LeaveInformationScreen As screen:
                 (ThisItem.Status)="Approved",RGBA(0,128,0,1))
             DisabledBorderColor: =RGBA(101, 128, 187, 1)
             Fill: =RGBA(255, 255, 255, 1)
+            Font: =Font.'Lato Black'
             FontWeight: =FontWeight.Bold
             OnSelect: =Select(Parent)
             Text: =ThisItem.Status

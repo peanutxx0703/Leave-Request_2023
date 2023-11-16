@@ -380,7 +380,7 @@ NewRequestScreen As screen:
                 ="New balance:"
             Visible: =!IsBlank(_selectedLeaveType)
             Width: =93
-            X: =967
+            X: =956
             Y: =377
             ZIndex: =18
 
@@ -402,7 +402,7 @@ NewRequestScreen As screen:
                     " days"
             Visible: =!IsBlank(_selectedLeaveType)
             Width: =70
-            X: =1060
+            X: =1046
             Y: =377
             ZIndex: =19
 
