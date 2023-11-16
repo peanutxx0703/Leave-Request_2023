@@ -439,7 +439,7 @@ HomeScreen As screen:
             Image1_1 As image:
                 AccessibleLabel: =ThisItem.Header & " icon"
                 FocusedBorderColor: =Image1_1.BorderColor
-                Height: =35
+                Height: =58
                 HoverBorderColor: =ColorFade(Image1_1.BorderColor, 20%)
                 HoverFill: =ColorFade(Image1_1.Fill, 20%)
                 Image: =ThisItem.Image
@@ -450,7 +450,7 @@ HomeScreen As screen:
                 RadiusTopLeft: =If(ThisItem.Header = "Request sent to", 25)
                 RadiusTopRight: =If(ThisItem.Header = "Request sent to", 25)
                 Visible: =ThisItem.Image <> "null"
-                Width: =35
+                Width: =45
                 X: =26
                 Y: =10
                 ZIndex: =3
