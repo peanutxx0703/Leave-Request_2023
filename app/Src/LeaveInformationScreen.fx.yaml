@@ -2,15 +2,15 @@ LeaveInformationScreen As screen:
 
     "Gallery6 As gallery.'BrowseLayout_Vertical_ThreeTextVariant_ver5.0'":
         DelayItemLoading: =true
-        Height: =563
+        Height: =617
         Items: =Table1_4
         Layout: =Layout.Vertical
         LoadingSpinner: =LoadingSpinner.Data
         TemplatePadding: =0
-        TemplateSize: =244
+        TemplateSize: =297
         Width: =1142
         X: =224
-        Y: =183
+        Y: =129
         ZIndex: =1
 
         Separator7 As rectangle:
@@ -127,8 +127,8 @@ LeaveInformationScreen As screen:
             Height: =2
             OnSelect: =Select(Parent)
             Width: =1134
-            X: =8
-            Y: =232
+            X: =4
+            Y: =259
             ZIndex: =18
 
     Navigation_2 As Navigation:
@@ -269,63 +269,12 @@ LeaveInformationScreen As screen:
             X: =1211
             ZIndex: =7
 
-    "FilterGallery_1 As gallery.'BrowseLayout_Horizontal_TwoTextOneImageVariant_ver4.0'":
-        DisabledBorderColor: =FilterGallery_1.BorderColor
-        DisabledFill: =FilterGallery_1.Fill
-        Height: =61
-        HoverBorderColor: =FilterGallery_1.BorderColor
-        HoverFill: =FilterGallery_1.Fill
-        Items: |-
-            =Table({Filter: "All"}, {Filter: "Pending"}, {Filter: "Approved"}, {Filter: "Declined"})
-        LoadingSpinnerColor: =FilterGallery_1.BorderColor
-        OnSelect: =
-        PressedBorderColor: =FilterGallery_1.BorderColor
-        PressedFill: =FilterGallery_1.Fill
-        ShowScrollbar: =false
-        TemplatePadding: =0
-        TemplateSize: =140
-        Width: =768
-        X: =465
-        Y: =101
-        ZIndex: =9
-
-        FilterButton_1 As button:
-            BorderColor: =RGBA(10, 106, 204, 1)
-            Color: =If(_requestTypeFilter=ThisItem.Filter,RGBA(255, 255, 255, 1),RGBA(10, 106, 204, 1))
-            DisabledBorderColor: =ColorFade(FilterButton_1.BorderColor, 70%)
-            Fill: =If(_requestTypeFilter=ThisItem.Filter,RGBA(0, 71, 144, 1),RGBA(255, 255, 255, 1))
-            FocusedBorderColor: =FilterButton_1.BorderColor
-            FocusedBorderThickness: =2
-            Font: =Font.Lato
-            FontWeight: =FontWeight.Bold
-            Height: =36
-            HoverBorderColor: =ColorFade(FilterButton_1.BorderColor, 20%)
-            HoverColor: =FilterButton_1.Color
-            HoverFill: =ColorFade(FilterButton_1.Fill, 20%)
-            OnSelect: |-
-                =If(ThisItem.Filter <> _requestTypeFilter,
-                Set(_showDetails, false); 
-                Set(_requestTypeFilter, ThisItem.Filter))
-            PressedBorderColor: =FilterButton_1.Fill
-            PressedColor: =If(_requestTypeFilter=ThisItem.Filter,RGBA(255, 255, 255, 1),RGBA(10, 106, 204, 1))
-            PressedFill: =FilterButton_1.Color
-            RadiusBottomLeft: =25
-            RadiusBottomRight: =25
-            RadiusTopLeft: =25
-            RadiusTopRight: =25
-            Size: =14
-            Text: =ThisItem.Filter
-            Width: =116
-            X: =12
-            Y: =6
-            ZIndex: =1
-
     Rectangle20_1 As rectangle:
         Fill: =RGBA(173, 171, 172, 1)
         Height: =2
         OnSelect: =Select(Parent)
         Width: =1134
         X: =232
-        Y: =160
+        Y: =122
         ZIndex: =10
 

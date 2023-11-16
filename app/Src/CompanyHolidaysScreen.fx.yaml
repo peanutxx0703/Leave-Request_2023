@@ -185,7 +185,7 @@ CompanyHolidaysScreen As screen:
         AccessibleLabel: ="Company holidays"
         DisabledBorderColor: =GalleryHolidays.BorderColor
         DisabledFill: =GalleryHolidays.Fill
-        Height: =597
+        Height: =442
         HoverBorderColor: =GalleryHolidays.BorderColor
         HoverFill: =GalleryHolidays.Fill
         Items: =HolidaysCollection
@@ -193,10 +193,9 @@ CompanyHolidaysScreen As screen:
         LoadingSpinnerColor: =GalleryHolidays.BorderColor
         PressedBorderColor: =GalleryHolidays.BorderColor
         PressedFill: =GalleryHolidays.Fill
-        ShowScrollbar: =false
         TemplateSize: =49
         Width: =857
-        X: =252
+        X: =265
         Y: =171
         ZIndex: =32
 
@@ -230,7 +229,7 @@ CompanyHolidaysScreen As screen:
             PressedBorderColor: =Label13.BorderColor
             PressedColor: =Label13.Color
             PressedFill: =Label13.Fill
-            Text: =Text(DateAdd(ThisItem.StartDate, TimeZoneOffset(ThisItem.StartDate), TimeUnit.Minutes),"[$-en-US]dddd, mmmm dd")
+            Text: =Text(DateAdd(ThisItem.StartDate, -TimeZoneOffset(ThisItem.StartDate), TimeUnit.Minutes),"[$-en-US]dddd, mmmm dd")
             Width: =442
             X: =405
             ZIndex: =2
@@ -248,9 +247,52 @@ CompanyHolidaysScreen As screen:
             Y: =48
             ZIndex: =3
 
+        Icon3 As icon.Trash:
+            Height: =24
+            Icon: =Icon.Trash
+            OnSelect: =Remove(HolidaysCollection,ThisItem)
+            Width: =29
+            X: =791
+            Y: =12
+            ZIndex: =4
+
     Navigation_4 As Navigation:
         CurrentScreen: ="Company Holidays"
         NavItem: =If(_managerView,ManagerNavigation,EmployeeNavigation)
         Y: =80
         ZIndex: =33
+
+    txtHoliday As text:
+        Default: ="Text input"
+        X: =354
+        Y: =627
+        ZIndex: =34
+
+    txtHolidayDate As text:
+        Default: ="Text input"
+        X: =354
+        Y: =695
+        ZIndex: =35
+
+    Label7 As label:
+        Height: =149
+        Size: =14
+        Text: |-
+            ="Holiday:
+            
+            
+            Date:"
+        Width: =191
+        X: =265
+        Y: =599
+        ZIndex: =36
+
+    Button1 As button:
+        OnSelect: |-
+            =Collect(HolidaysCollection,{HolidayName:txtHoliday.Text, StartDate:DateValue(txtHolidayDate.Text)})
+        Text: ="Add"
+        Width: =123
+        X: =736
+        Y: =695
+        ZIndex: =37
 
