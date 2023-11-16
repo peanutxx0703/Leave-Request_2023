@@ -147,8 +147,8 @@ App As appinfo:
         ClearCollect(
             LeaveCollection,
             {
-                Title: "Vacation",
-                Detail: "Example vacation request",
+                Title: "Example here",
+                Detail: "Example here",
                 StartDate: Today(),
                 EndDate: DateAdd(
                     Today(),

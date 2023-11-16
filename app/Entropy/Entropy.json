@@ -1,6 +1,6 @@
 {
   "ComponentIndexes": {
-    "Navigation": 14
+    "Navigation": 15
   },
   "ControlUniqueGuids": {},
   "ControlUniqueIds": {
@@ -23,6 +23,7 @@
     "BtnManagerDecline": 284,
     "BtnManagerLogin": 63,
     "BtnSendEmail": 82,
+    "Button1": 302,
     "Button1_1": 149,
     "Button3": 145,
     "Button4_1": 103,
@@ -289,6 +290,7 @@
     "RectSeparator_1": 139,
     "RequestLabel": 58,
     "RequestStatus": 267,
+    "Screen1": 301,
     "Separator4": 171,
     "Separator7": 33,
     "Subtitle4": 170,
@@ -306,7 +308,7 @@
   },
   "FunctionParamsInvariantScripts": {},
   "FunctionParamsInvariantScriptsOnInstances": {},
-  "HeaderLastSavedDateTimeUTC": "11/16/2023 07:12:00",
+  "HeaderLastSavedDateTimeUTC": "11/16/2023 07:35:51",
   "IsLegacyComponentAllowGlobalScopeCase": false,
   "LocalConnectionIDReferences": {
     "12f73af9-777f-4fd4-a512-da2f66fd7501": "\"/providers/microsoft.powerapps/apis/shared_office365/connections/eefb4da557ef4127b9b1aea660ab9aea\"",
@@ -362,6 +364,7 @@
     "EmployeeNavigation": 14,
     "HolidaysCollection": 15,
     "LeaveCollection": 16,
+    "LeaveType": 22,
     "LeaveTypeCollection": 17,
     "ListboxSample": 6,
     "ManagerNavigation": 18,
@@ -574,6 +577,7 @@
     "BtnManagerDecline": {},
     "BtnManagerLogin": {},
     "BtnSendEmail": {},
+    "Button1": {},
     "Button1_1": {},
     "Button3": {},
     "Button4_1": {},
@@ -840,6 +844,7 @@
     "RectSeparator_1": {},
     "RequestLabel": {},
     "RequestStatus": {},
+    "Screen1": {},
     "Separator4": {},
     "Separator7": {},
     "Subtitle4": {},
@@ -877,6 +882,7 @@
     "BtnManagerDecline": 106,
     "BtnManagerLogin": 190,
     "BtnSendEmail": 209,
+    "Button1": 0,
     "Button1_1": 268,
     "Button3": 264,
     "Button4_1": 227,
@@ -1143,6 +1149,7 @@
     "RectSeparator_1": 258,
     "RequestLabel": 185,
     "RequestStatus": 121,
+    "Screen1": 0,
     "Separator4": 299,
     "Separator7": 171,
     "Subtitle4": 298,

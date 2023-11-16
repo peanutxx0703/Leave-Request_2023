@@ -1,0 +1,10 @@
+Screen1 As screen:
+
+    Button1 As button:
+        OnSelect: |-
+            =ClearCollect(LeaveType,{Type:"Annual Leave"},{Type:"Sick Leave"},{Type:"Compassionate Leave"},{Type:"Hospitalization Leave"},{Type:"Paternity Leave"},{Type:"Marriage Leave"},{Type:"Unpaid Leave"},{Type:"Maternity Leave"})
+        Text: ="Button"
+        X: =195
+        Y: =225
+        ZIndex: =1
+
