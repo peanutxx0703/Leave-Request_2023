@@ -681,7 +681,7 @@ NewRequestScreen As screen:
         ZIndex: =47
 
         LeftMenuSeparator_12 As rectangle:
-            AccessibleLabel: =ThisItem.MenuItem
+            AccessibleLabel: =ThisItem.Title
             DisabledFill: =LeftMenuSeparator_12.Fill
             Fill: =RGBA(205, 205, 205, 1)
             FocusedBorderColor: =LeftMenuSeparator_12.BorderColor
