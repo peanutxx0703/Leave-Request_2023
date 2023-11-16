@@ -133,6 +133,7 @@ LeaveInformationScreen As screen:
 
     Navigation_2 As Navigation:
         CurrentScreen: ="Leave Information"
+        NavItem: =If(_managerView,ManagerNavigation,EmployeeNavigation)
         Y: =80
         ZIndex: =8
 
@@ -277,6 +278,7 @@ LeaveInformationScreen As screen:
         Items: |-
             =Table({Filter: "All"}, {Filter: "Pending"}, {Filter: "Approved"}, {Filter: "Declined"})
         LoadingSpinnerColor: =FilterGallery_1.BorderColor
+        OnSelect: =
         PressedBorderColor: =FilterGallery_1.BorderColor
         PressedFill: =FilterGallery_1.Fill
         ShowScrollbar: =false
