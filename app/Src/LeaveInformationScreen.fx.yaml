@@ -279,3 +279,15 @@ LeaveInformationScreen As screen:
         Y: =122
         ZIndex: =10
 
+    Label20 As label:
+        Color: =RGBA(62, 96, 170, 1)
+        Font: =Font.Georgia
+        FontWeight: =FontWeight.Semibold
+        Height: =26
+        Size: =19
+        Text: ="Leave request history"
+        Width: =375
+        X: =231
+        Y: =84
+        ZIndex: =11
+
