@@ -9,8 +9,8 @@ Screen2 As screen:
         Layout: =Layout.Vertical
         LoadingSpinner: =LoadingSpinner.Data
         Width: =961
-        X: =200
-        Y: =87
+        X: =201
+        Y: =156
         ZIndex: =1
 
         Label17_1 As label:
@@ -511,4 +511,12 @@ Screen2 As screen:
                 X: =798
                 Y: =407
                 ZIndex: =55
+
+    Label16 As label:
+        Height: =46
+        Text: ="Leave Balance   -   " & User().FullName
+        Width: =368
+        X: =96
+        Y: =110
+        ZIndex: =2
 

@@ -239,13 +239,13 @@
               },
               {
                 "Category": "Design",
-                "InvariantScript": "Font.'Open Sans'",
+                "InvariantScript": "Font.Georgia",
                 "Property": "Font",
                 "RuleProviderType": "Unknown"
               },
               {
                 "Category": "Design",
-                "InvariantScript": "FontWeight.Normal",
+                "InvariantScript": "FontWeight.Semibold",
                 "Property": "FontWeight",
                 "RuleProviderType": "Unknown"
               },
@@ -275,7 +275,7 @@
               },
               {
                 "Category": "Design",
-                "InvariantScript": "173",
+                "InvariantScript": "196",
                 "Property": "Width",
                 "RuleProviderType": "Unknown"
               },
@@ -596,7 +596,7 @@
       },
       "CurrentScreen"
     ],
-    "LastModifiedTimestamp": "638357945000399823",
+    "LastModifiedTimestamp": "638358050068507954",
     "Name": "Navigation",
     "Rules": [
       {
@@ -687,7 +687,7 @@
   "IsPcfControl": false,
   "IsPremiumPcfControl": false,
   "IsWidgetTemplate": false,
-  "LastModifiedTimestamp": "638357945000399823",
+  "LastModifiedTimestamp": "638358050068507954",
   "Name": "b6b5e691fc474668b7b6312386d8a5c2",
   "OverridableProperties": {},
   "Version": "1.0"
