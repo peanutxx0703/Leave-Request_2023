@@ -223,6 +223,24 @@ AboutScreen As screen:
             Y: =AboutTitle.Y+AboutTitle.Height+5
             ZIndex: =43
 
+            AboutLeaveTypeIcon As image:
+                ApplyEXIFOrientation: =false
+                FocusedBorderColor: =AboutLeaveTypeIcon.BorderColor
+                FocusedBorderThickness: =0
+                Height: =17
+                HoverBorderColor: =ColorFade(AboutLeaveTypeIcon.BorderColor, 20%)
+                HoverFill: =ColorFade(AboutLeaveTypeIcon.Fill, 20%)
+                Image: =If(_aboutSelectedLeaveType = ThisItem.type, ThisItem.iconselected, ThisItem.icon)
+                OnSelect: =Select(Parent)
+                PaddingRight: =0.00
+                PaddingTop: =0.00
+                PressedBorderColor: =ColorFade(AboutLeaveTypeIcon.BorderColor, -20%)
+                PressedFill: =ColorFade(AboutLeaveTypeIcon.Fill, -20%)
+                Width: =20
+                X: =21
+                Y: =12
+                ZIndex: =1
+
             AboutLeveTypeCell As rectangle:
                 DisabledFill: =AboutLeveTypeCell.Fill
                 Fill: =RGBA(0, 0, 0, 0)
@@ -233,7 +251,7 @@ AboutScreen As screen:
                 OnSelect: =Select(Parent)
                 PressedFill: =AboutLeveTypeCell.Fill
                 Width: =232
-                ZIndex: =1
+                ZIndex: =2
 
             AboutLeaveTypeButton As button:
                 BorderColor: =RGBA(10, 106, 204, 1)
@@ -259,9 +277,10 @@ AboutScreen As screen:
                 RadiusTopRight: =15
                 Text: =""
                 Width: =232
-                ZIndex: =2
+                ZIndex: =3
 
             AboutLeaveTypeLabel As label:
+                Align: =Align.Center
                 Color: =If(_aboutSelectedLeaveType = ThisItem.type, Color.White, RGBA(10, 106, 204, 1))
                 FocusedBorderColor: =AboutLeaveTypeLabel.BorderColor
                 Font: =Font.Lato
@@ -280,25 +299,7 @@ AboutScreen As screen:
                 PressedFill: =AboutLeaveTypeLabel.Fill
                 Size: =14
                 Text: =ThisItem.type
-                X: =63
-                ZIndex: =3
-
-            AboutLeaveTypeIcon As image:
-                ApplyEXIFOrientation: =false
-                FocusedBorderColor: =AboutLeaveTypeIcon.BorderColor
-                FocusedBorderThickness: =0
-                Height: =17
-                HoverBorderColor: =ColorFade(AboutLeaveTypeIcon.BorderColor, 20%)
-                HoverFill: =ColorFade(AboutLeaveTypeIcon.Fill, 20%)
-                Image: =If(_aboutSelectedLeaveType = ThisItem.type, ThisItem.iconselected, ThisItem.icon)
-                OnSelect: =Select(Parent)
-                PaddingRight: =0.00
-                PaddingTop: =0.00
-                PressedBorderColor: =ColorFade(AboutLeaveTypeIcon.BorderColor, -20%)
-                PressedFill: =ColorFade(AboutLeaveTypeIcon.Fill, -20%)
-                Width: =20
-                X: =21
-                Y: =12
+                Width: =232
                 ZIndex: =4
 
         AboutDescription As label:
