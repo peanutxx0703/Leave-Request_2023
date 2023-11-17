@@ -23,7 +23,7 @@ HomeScreen As screen:
 
     "Gallery7 As gallery.'BrowseLayout_Vertical_ThreeTextVariant_ver5.0'":
         DelayItemLoading: =true
-        Items: =Filter(Table1_13,'Created By' = User().FullName)
+        Items: =Filter(Table1_14,'Created By' = User().FullName)
         Layout: =Layout.Vertical
         LoadingSpinner: =LoadingSpinner.Data
         TemplatePadding: =0
