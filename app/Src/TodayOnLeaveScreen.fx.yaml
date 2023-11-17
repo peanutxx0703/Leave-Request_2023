@@ -3,20 +3,7 @@ TodayOnLeaveScreen As screen:
         =RGBA(255,255,255,1)
     Height: =Max(App.Height, App.DesignHeight)
     OnHidden: =Set(_showDetails, false)
-    OnVisible: |-
-        =Concurrent(
-            Set(_navMenuSelect, "My Leave Requests"),
-            //if not manager view, refresh my balance collection when on this screen
-            If(!_managerView, Set(_requesterBalanceRecord, LookUp(BalanceCollection, Year = Text(Year(Now())) && EmployeeEmail = _myProfile.UserPrincipalName));
-                ClearCollect(RequesterBalanceCollection, 
-                { type: "Vacation", balance: Value(_requesterBalanceRecord.Vacation) - Value(_requesterBalanceRecord.VacationUsed)},
-                {type:"Sick Leave", balance:Value(_requesterBalanceRecord.Sick)-Value(_requesterBalanceRecord.SickUsed)},
-                {type:"Floating Holiday", balance:Value(_requesterBalanceRecord.Floating)-Value(_requesterBalanceRecord.FloatingUsed)},
-                {type:"Jury Duty", balance:Value(_requesterBalanceRecord.JuryDuty)-Value(_requesterBalanceRecord.JuryDutyUsed)},
-                {type:"Bereavement", balance:Value(_requesterBalanceRecord.Bereavement)-Value(_requesterBalanceRecord.BereavementUsed)})
-            ),
-            Set(_showDetails, false)
-        );
+    OnVisible: =
     Orientation: =If(TodayOnLeaveScreen.Width < TodayOnLeaveScreen.Height, Layout.Vertical, Layout.Horizontal)
     Size: =1 + CountRows(App.SizeBreakpoints) - CountIf(App.SizeBreakpoints, Value >= TodayOnLeaveScreen.Width)
     Width: =Max(App.Width, App.DesignWidth)
@@ -24,11 +11,15 @@ TodayOnLeaveScreen As screen:
     "Gallery1 As gallery.'BrowseLayout_Vertical_TwoTextVariant_ver5.0'":
         DelayItemLoading: =true
         Height: =552
-        Items: =Filter(Table1_6, 'Start Date'>= Today() && 'Status' = "Approved")
+        Items: |-
+            =Filter(
+                Table1_7,
+                DateValue('Start Date') <= Today() && DateValue('End Date') >= Today() && 'Status' = "Approved"
+            )
         Layout: =Layout.Vertical
         LoadingSpinner: =LoadingSpinner.Data
         TemplatePadding: =0
-        TemplateSize: =133
+        TemplateSize: =111
         Width: =1034
         X: =267
         Y: =148
@@ -46,23 +37,8 @@ TodayOnLeaveScreen As screen:
             VerticalAlign: =VerticalAlign.Top
             Width: =Parent.TemplateWidth - 86
             X: =16
-            Y: =27
+            Y: =30
             ZIndex: =1
-
-        Subtitle4 As label:
-            FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
-            Height: =Self.Size * 1.8
-            OnSelect: =Select(Parent)
-            PaddingBottom: =0
-            PaddingLeft: =0
-            PaddingRight: =0
-            PaddingTop: =0
-            Text: =Text(ThisItem.'Start Date',"[$-en-US]dd/mm/yyyy")
-            VerticalAlign: =VerticalAlign.Top
-            Width: =Title4.Width
-            X: =Title4.X
-            Y: =Title4.Y + Title4.Height
-            ZIndex: =2
 
         NextArrow4 As icon.ChevronRight:
             AccessibleLabel: =Self.Tooltip
@@ -96,7 +72,7 @@ TodayOnLeaveScreen As screen:
             Text: =ThisItem.'Leave Type'
             Width: =250
             X: =16
-            Y: =77
+            Y: =54
             ZIndex: =5
 
     RectNavSep_5 As rectangle:
