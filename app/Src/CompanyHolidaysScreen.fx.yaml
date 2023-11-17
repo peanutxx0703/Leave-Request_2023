@@ -251,8 +251,9 @@ CompanyHolidaysScreen As screen:
             Height: =24
             Icon: =Icon.Trash
             OnSelect: =Remove(HolidaysCollection,ThisItem)
-            Width: =29
-            X: =791
+            Visible: =_managerView=true
+            Width: =43
+            X: =776
             Y: =12
             ZIndex: =4
 
@@ -262,37 +263,48 @@ CompanyHolidaysScreen As screen:
         Y: =80
         ZIndex: =33
 
-    txtHoliday As text:
-        Default: =""
-        X: =354
-        Y: =627
-        ZIndex: =34
+    Group1 As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =38
 
-    txtHolidayDate As text:
-        Default: =""
-        X: =354
-        Y: =695
-        ZIndex: =35
+        txtHoliday As text:
+            Default: =""
+            Visible: =_managerView=true
+            X: =354
+            Y: =627
+            ZIndex: =34
 
-    Label7 As label:
-        Height: =149
-        Size: =14
-        Text: |-
-            ="Holiday:
-            
-            
-            Date:"
-        Width: =191
-        X: =265
-        Y: =599
-        ZIndex: =36
+        txtHolidayDate As text:
+            Default: =""
+            Visible: =_managerView=true
+            X: =354
+            Y: =695
+            ZIndex: =35
 
-    Button1 As button:
-        OnSelect: |-
-            =Collect(HolidaysCollection,{HolidayName:txtHoliday.Text, StartDate:DateValue(txtHolidayDate.Text)})
-        Text: ="Add"
-        Width: =123
-        X: =736
-        Y: =695
-        ZIndex: =37
+        Label7 As label:
+            Height: =149
+            Size: =14
+            Text: |-
+                ="Holiday:
+                
+                
+                Date:"
+            Visible: =_managerView=true
+            Width: =191
+            X: =265
+            Y: =599
+            ZIndex: =36
+
+        Button1 As button:
+            OnSelect: |-
+                =Collect(HolidaysCollection,{HolidayName:txtHoliday.Text, StartDate:DateValue(txtHolidayDate.Text)})
+            Text: ="Add"
+            Visible: =_managerView=true
+            Width: =123
+            X: =736
+            Y: =695
+            ZIndex: =37
 
