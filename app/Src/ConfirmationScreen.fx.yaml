@@ -185,6 +185,27 @@ ConfirmationScreen As screen:
         Y: =80
         ZIndex: =10
 
+    LblRequestSubmitted As label:
+        Align: =LayoutAlignItems.Center
+        FocusedBorderColor: =LblRequestSubmitted.BorderColor
+        FocusedBorderThickness: =2
+        Font: =Font.Lato
+        FontWeight: =FontWeight.Semibold
+        HoverBorderColor: =LblRequestSubmitted.BorderColor
+        HoverColor: =LblRequestSubmitted.Color
+        HoverFill: =LblRequestSubmitted.Fill
+        Live: =Live.Polite
+        OnSelect: =Navigate(HomeScreen, BorderStyle.None)
+        PressedBorderColor: =LblRequestSubmitted.BorderColor
+        PressedColor: =LblRequestSubmitted.Color
+        PressedFill: =LblRequestSubmitted.Fill
+        Size: =13.5
+        Text: ="Your request " & If(_submittingRequest, "is being processed...", "has been submitted")
+        Width: =350
+        X: =Parent.Width/2 - LblRequestSubmitted.Width / 2
+        Y: =484
+        ZIndex: =11
+
     Header_5 As group:
         Height: =5
         Width: =5
@@ -313,27 +334,6 @@ ConfirmationScreen As screen:
             Width: =155
             X: =1211
             ZIndex: =9
-
-    LblRequestSubmitted As label:
-        Align: =LayoutAlignItems.Center
-        FocusedBorderColor: =LblRequestSubmitted.BorderColor
-        FocusedBorderThickness: =2
-        Font: =Font.Lato
-        FontWeight: =FontWeight.Semibold
-        HoverBorderColor: =LblRequestSubmitted.BorderColor
-        HoverColor: =LblRequestSubmitted.Color
-        HoverFill: =LblRequestSubmitted.Fill
-        Live: =Live.Polite
-        OnSelect: =Navigate(HomeScreen, BorderStyle.None)
-        PressedBorderColor: =LblRequestSubmitted.BorderColor
-        PressedColor: =LblRequestSubmitted.Color
-        PressedFill: =LblRequestSubmitted.Fill
-        Size: =13.5
-        Text: ="Your request " & If(_submittingRequest, "is being processed...", "has been submitted")
-        Width: =350
-        X: =Parent.Width/2 - LblRequestSubmitted.Width / 2
-        Y: =484
-        ZIndex: =11
 
     Navigation_8 As Navigation:
         NavItem: =If(_managerView,ManagerNavigation,EmployeeNavigation)

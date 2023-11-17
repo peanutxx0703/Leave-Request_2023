@@ -26,6 +26,13 @@
       "id": "/providers/microsoft.powerapps/apis/shared_excel"
     },
     "datasets": {
+      "F3B14CA320F2591B!4176": {
+        "dataSources": {
+          "leaveBucket": {
+            "tableName": "leaveBucket"
+          }
+        }
+      },
       "F3B14CA320F2591B!4178": {
         "dataSources": {
           "leaveRecord": {
@@ -35,7 +42,8 @@
       }
     },
     "dataSources": [
-      "leaveRecord"
+      "leaveRecord",
+      "leaveBucket"
     ],
     "dependencies": {
       "fileSource": "a78fc13e-fc8c-4ac7-9145-ab499280749a"
