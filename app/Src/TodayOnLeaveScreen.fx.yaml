@@ -10,32 +10,35 @@ TodayOnLeaveScreen As screen:
 
     Gallery1 As gallery.galleryVertical:
         DelayItemLoading: =true
-        Height: =608
+        Height: =620
         Items: =Filter(Table1_6, 'Start Date'>= Today() && Status = "Approved")
         Layout: =Layout.Vertical
         LoadingSpinner: =LoadingSpinner.Data
         TemplateSize: =121
-        Width: =1014
-        X: =267
-        Y: =159
+        Width: =1135
+        X: =231
+        Y: =147
         ZIndex: =1
 
         Label25 As label:
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
             Height: =36
             OnSelect: =Select(Parent)
+            Size: =14
             Text: =ThisItem.'Created By'
-            Width: =440
+            Width: =656
             X: =28
-            Y: =24
+            Y: =12
             ZIndex: =1
 
         Label27 As label:
-            Height: =34
+            Height: =60
             OnSelect: =Select(Parent)
             Text: =ThisItem.'Leave Type'
-            Width: =340
+            Width: =541
             X: =28
-            Y: =60
+            Y: =34
             ZIndex: =2
 
         Rectangle12 As rectangle:
@@ -198,7 +201,7 @@ TodayOnLeaveScreen As screen:
             ZIndex: =8
 
     Label1 As label:
-        Font: =Font.Lato
+        Font: =Font.Georgia
         FontWeight: =FontWeight.Bold
         Height: =78
         Size: =16
@@ -207,4 +210,13 @@ TodayOnLeaveScreen As screen:
         X: =250
         Y: =81
         ZIndex: =12
+
+    Rectangle1 As rectangle:
+        BorderStyle: =BorderStyle.Dotted
+        Fill: =RGBA(192, 190, 191, 1)
+        Height: =2
+        Width: =1134
+        X: =232
+        Y: =147
+        ZIndex: =13
 
