@@ -155,8 +155,8 @@ ConfirmationScreen As screen:
         OnSelect: =Navigate(HomeScreen, BorderStyle.None)
         PressedFill: =Rectangle7.Fill
         Width: =905
-        X: =203
-        Y: =80
+        X: =230
+        Y: =76
         ZIndex: =1
 
     Rectangle3_5 As rectangle:
@@ -184,6 +184,27 @@ ConfirmationScreen As screen:
         X: =231
         Y: =80
         ZIndex: =10
+
+    LblRequestSubmitted As label:
+        Align: =LayoutAlignItems.Center
+        FocusedBorderColor: =LblRequestSubmitted.BorderColor
+        FocusedBorderThickness: =2
+        Font: =Font.Lato
+        FontWeight: =FontWeight.Semibold
+        HoverBorderColor: =LblRequestSubmitted.BorderColor
+        HoverColor: =LblRequestSubmitted.Color
+        HoverFill: =LblRequestSubmitted.Fill
+        Live: =Live.Polite
+        OnSelect: =Navigate(HomeScreen, BorderStyle.None)
+        PressedBorderColor: =LblRequestSubmitted.BorderColor
+        PressedColor: =LblRequestSubmitted.Color
+        PressedFill: =LblRequestSubmitted.Fill
+        Size: =13.5
+        Text: ="Your request " & If(_submittingRequest, "is being processed...", "has been submitted")
+        Width: =350
+        X: =Parent.Width/2 - LblRequestSubmitted.Width / 2
+        Y: =484
+        ZIndex: =11
 
     Header_5 As group:
         Height: =5
@@ -314,35 +335,10 @@ ConfirmationScreen As screen:
             X: =1211
             ZIndex: =9
 
-    LblRequestSubmitted As label:
-        Align: =LayoutAlignItems.Center
-        FocusedBorderColor: =LblRequestSubmitted.BorderColor
-        FocusedBorderThickness: =2
-        Font: =Font.Lato
-        FontWeight: =FontWeight.Semibold
-        HoverBorderColor: =LblRequestSubmitted.BorderColor
-        HoverColor: =LblRequestSubmitted.Color
-        HoverFill: =LblRequestSubmitted.Fill
-        Live: =Live.Polite
-        OnSelect: =Navigate(HomeScreen, BorderStyle.None)
-        PressedBorderColor: =LblRequestSubmitted.BorderColor
-        PressedColor: =LblRequestSubmitted.Color
-        PressedFill: =LblRequestSubmitted.Fill
-        Size: =13.5
-        Text: ="Your request " & If(_submittingRequest, "is being processed...", "has been submitted")
-        Width: =350
-        X: =Parent.Width/2 - LblRequestSubmitted.Width / 2
-        Y: =484
-        ZIndex: =11
-
-    Navigation_8 As Navigation:
-        NavItem: =If(_managerView,ManagerNavigation,EmployeeNavigation)
-        Y: =80
-        ZIndex: =12
-
     icon4 As icon.Check:
         AccessibleLabel: ="Success"
         Color: =RGBA(0, 128, 0, 1)
+        DisabledColor: =RGBA(230, 230, 230, 1)
         DisabledFill: =icon4.Fill
         FocusedBorderColor: =icon4.BorderColor
         Height: =130
@@ -358,5 +354,10 @@ ConfirmationScreen As screen:
         Width: =130
         X: =Parent.Width/2 - icon4.Width/2
         Y: =Parent.Height/2 - icon4.Height/2
+        ZIndex: =12
+
+    Navigation_8 As Navigation:
+        NavItem: =If(_managerView,ManagerNavigation,EmployeeNavigation)
+        Y: =80
         ZIndex: =13
 
