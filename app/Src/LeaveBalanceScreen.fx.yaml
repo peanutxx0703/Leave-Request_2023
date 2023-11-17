@@ -178,7 +178,7 @@ LeaveBalanceScreen As screen:
     "Gallery3_1 As gallery.'BrowseLayout_Vertical_TwoTextVariant_ver5.0'":
         DelayItemLoading: =true
         Height: =588
-        Items: =Filter(Table1_11,'Name of Employee' = User().FullName)
+        Items: =Filter(Table1,'Name of Employee' = User().FullName)
         Layout: =Layout.Vertical
         LoadingSpinner: =LoadingSpinner.Data
         TemplateSize: =549
