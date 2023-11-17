@@ -512,3 +512,10 @@ Screen2 As screen:
                 Y: =407
                 ZIndex: =55
 
+    Label16 As label:
+        Text: ="Leave Balance   -   " & User().FullName
+        Width: =264
+        X: =100
+        Y: =116
+        ZIndex: =2
+
