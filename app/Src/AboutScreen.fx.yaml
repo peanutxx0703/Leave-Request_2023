@@ -198,7 +198,7 @@ AboutScreen As screen:
                 ="Learn about the types of leave:"
             Width: =855
             X: =265
-            Y: =230
+            Y: =172
             ZIndex: =42
 
         AboutLeaveTypeGallery As gallery.galleryVertical:
@@ -219,8 +219,8 @@ AboutScreen As screen:
             TemplateSize: =40
             Width: =803
             WrapCount: =3
-            X: =AboutTitle.X-20
-            Y: =264
+            X: =249
+            Y: =200
             ZIndex: =43
 
             AboutLeaveTypeIcon As image:
@@ -345,8 +345,8 @@ AboutScreen As screen:
             Size: =12
             Text: =If(IsBlank(AboutLeaveTypeGallery.Selected), "", AboutLeaveTypeGallery.Selected.description)
             Width: =855
-            X: =265
-            Y: =517
+            X: =256
+            Y: =420
             ZIndex: =45
 
         AboutLeaveGallerySeparator As rectangle:
@@ -358,7 +358,7 @@ AboutScreen As screen:
             HoverFill: =AboutLeaveGallerySeparator.Fill
             PressedFill: =AboutLeaveGallerySeparator.Fill
             Width: =890
-            X: =265
-            Y: =470
+            X: =234
+            Y: =397
             ZIndex: =46
 
