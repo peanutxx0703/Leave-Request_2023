@@ -16,18 +16,6 @@ LeaveBalanceScreen As screen:
     Size: =1 + CountRows(App.SizeBreakpoints) - CountIf(App.SizeBreakpoints, Value >= LeaveBalanceScreen.Width)
     Width: =Max(App.Width, App.DesignWidth)
 
-    Rectangle3_4 As rectangle:
-        DisabledFill: =Rectangle3_4.Fill
-        Fill: =RGBA(249, 249, 249, 1)
-        FocusedBorderColor: =Rectangle3_4.BorderColor
-        Height: =695
-        HoverFill: =Rectangle3_4.Fill
-        PressedFill: =Rectangle3_4.Fill
-        Width: =230
-        X: =1136
-        Y: =73
-        ZIndex: =3
-
     Header_4 As group:
         Height: =5
         Width: =5
@@ -175,168 +163,6 @@ LeaveBalanceScreen As screen:
         Y: =80
         ZIndex: =32
 
-    "Gallery3_1 As gallery.'BrowseLayout_Vertical_TwoTextVariant_ver5.0'":
-        DelayItemLoading: =true
-        Height: =588
-        Items: =Filter(Table1_11,'Name of Employee' = User().FullName)
-        Layout: =Layout.Vertical
-        LoadingSpinner: =LoadingSpinner.Data
-        TemplateSize: =549
-        Width: =824
-        X: =265
-        Y: =168
-        ZIndex: =33
-
-        Label28_1 As label:
-            BorderThickness: =1
-            Height: =50
-            OnSelect: =Select(Parent)
-            PaddingBottom: =10
-            PaddingLeft: =15
-            PaddingTop: =10
-            Size: =18
-            Text: |-
-                ="Annual Leave Entitlement: " & ThisItem.'Annual Leave Entitlement'
-            Width: =710
-            X: =72
-            Y: =27
-            ZIndex: =1
-
-        Label29_17 As label:
-            BorderThickness: =1
-            Height: =50
-            OnSelect: =Select(Parent)
-            PaddingBottom: =10
-            PaddingLeft: =15
-            PaddingTop: =10
-            Size: =18
-            Text: |-
-                ="Annual Carried Forward Leave: " & ThisItem.'Annual Carried Forward Leave'
-            Width: =710
-            X: =72
-            Y: =77
-            ZIndex: =2
-
-        Label29_16 As label:
-            BorderThickness: =1
-            Height: =50
-            OnSelect: =Select(Parent)
-            PaddingBottom: =10
-            PaddingLeft: =15
-            PaddingTop: =10
-            Size: =18
-            Text: |-
-                ="Annual Total Entitlement: " & ThisItem.'Annual Total Entitlement'
-            Width: =710
-            X: =72
-            Y: =127
-            ZIndex: =3
-
-        Label29_15 As label:
-            BorderThickness: =1
-            Height: =50
-            OnSelect: =Select(Parent)
-            PaddingBottom: =10
-            PaddingLeft: =15
-            PaddingTop: =10
-            Size: =18
-            Text: |-
-                ="Annual Leave Balance: " & ThisItem.'Annual Leave Balance'
-            Width: =710
-            X: =72
-            Y: =177
-            ZIndex: =4
-
-        Label29_14 As label:
-            BorderThickness: =1
-            Height: =50
-            OnSelect: =Select(Parent)
-            PaddingBottom: =10
-            PaddingLeft: =15
-            PaddingTop: =10
-            Size: =18
-            Text: |-
-                ="Medical Leave Balance: " & ThisItem.'Medical Leave Balance'
-            Width: =710
-            X: =72
-            Y: =228
-            ZIndex: =5
-
-        Label29_13 As label:
-            BorderThickness: =1
-            Height: =50
-            OnSelect: =Select(Parent)
-            PaddingBottom: =10
-            PaddingLeft: =15
-            PaddingTop: =10
-            Size: =18
-            Text: |-
-                ="Compassionate Leave Balance: " & ThisItem.'Compassionate Leave Balance'
-            Width: =710
-            X: =72
-            Y: =278
-            ZIndex: =6
-
-        Label29_12 As label:
-            BorderThickness: =1
-            Height: =50
-            OnSelect: =Select(Parent)
-            PaddingBottom: =10
-            PaddingLeft: =15
-            PaddingTop: =10
-            Size: =18
-            Text: |-
-                ="Marriage Leave Balance: " & ThisItem.'Marriage Leave Balance'
-            Width: =710
-            X: =72
-            Y: =328
-            ZIndex: =7
-
-        Label29_11 As label:
-            BorderThickness: =1
-            Height: =50
-            OnSelect: =Select(Parent)
-            PaddingBottom: =10
-            PaddingLeft: =15
-            PaddingTop: =10
-            Size: =18
-            Text: |-
-                ="Paternity Leave Balance: " & ThisItem.'Paternity Leave Balance' 
-            Width: =710
-            X: =72
-            Y: =378
-            ZIndex: =8
-
-        Label29_10 As label:
-            BorderThickness: =1
-            Height: =50
-            OnSelect: =Select(Parent)
-            PaddingBottom: =10
-            PaddingLeft: =15
-            PaddingTop: =10
-            Size: =18
-            Text: |-
-                ="Maternity Leave Balance: " & ThisItem.'Maternity Leave Balance'
-            Width: =710
-            X: =72
-            Y: =428
-            ZIndex: =9
-
-        Label29_9 As label:
-            BorderThickness: =1
-            Height: =50
-            OnSelect: =Select(Parent)
-            PaddingBottom: =10
-            PaddingLeft: =15
-            PaddingTop: =10
-            Size: =18
-            Text: |-
-                ="Hospitalization Leave Balance: " & ThisItem.'Hospitalization Leave Balance'
-            Width: =710
-            X: =72
-            Y: =478
-            ZIndex: =10
-
     Label15 As label:
         Font: =Font.Lato
         Height: =51
@@ -346,4 +172,594 @@ LeaveBalanceScreen As screen:
         X: =253
         Y: =101
         ZIndex: =34
+
+    Gallery4_1 As gallery.galleryVertical:
+        BorderColor: =RGBA(230, 230, 230, 1)
+        DelayItemLoading: =true
+        Fill: =RGBA(255, 255, 255, 1)
+        Height: =552
+        Items: =Filter(Table1,'Name of Employee' = User().FullName)
+        Layout: =Layout.Vertical
+        LoadingSpinner: =LoadingSpinner.Data
+        TemplateSize: =534
+        Width: =961
+        X: =316
+        Y: =166
+        ZIndex: =35
+
+        Label17_54 As label:
+            Height: =46
+            OnSelect: =Select(Parent)
+            Text: ="Entitlement"
+            X: =150
+            Y: =3
+            ZIndex: =2
+
+        Label17_55 As label:
+            Height: =46
+            OnSelect: =Select(Parent)
+            Text: ="Carried Forward"
+            Width: =200
+            X: =300
+            Y: =3
+            ZIndex: =3
+
+        Label17_56 As label:
+            Height: =46
+            OnSelect: =Select(Parent)
+            Text: ="Total"
+            X: =500
+            Y: =3
+            ZIndex: =4
+
+        Label17_57 As label:
+            Height: =46
+            OnSelect: =Select(Parent)
+            Text: ="Taken"
+            X: =650
+            Y: =3
+            ZIndex: =5
+
+        Label17_58 As label:
+            Height: =46
+            OnSelect: =Select(Parent)
+            Text: ="Balance"
+            X: =800
+            Y: =3
+            ZIndex: =6
+
+        Rectangle15_1 As rectangle:
+            BorderColor: =RGBA(230, 230, 230, 1)
+            BorderThickness: =1
+            Fill: =RGBA(230, 230, 230, 1)
+            Height: =1
+            OnSelect: =Select(Parent)
+            Width: =950
+            Y: =49
+            ZIndex: =7
+
+        Rectangle6_7 As rectangle:
+            BorderColor: =RGBA(230, 230, 230, 1)
+            BorderThickness: =1
+            Fill: =RGBA(230, 230, 230, 1)
+            Height: =1
+            OnSelect: =Select(Parent)
+            Width: =951
+            Y: =110
+            ZIndex: =56
+
+        Group9_1 As group:
+            Height: =5
+            Width: =5
+            X: =40
+            Y: =40
+            ZIndex: =56
+
+            Label17_101 As label:
+                Height: =60
+                OnSelect: =Select(Parent)
+                PaddingLeft: =10
+                Text: ="Hospitalization"
+                Y: =471
+                ZIndex: =50
+
+            Label17_102 As label:
+                Height: =60
+                OnSelect: =Select(Parent)
+                Text: =ThisItem.'Hospitalization Leave Entitlement'
+                X: =150
+                Y: =471
+                ZIndex: =51
+
+            Label17_103 As label:
+                Height: =60
+                OnSelect: =Select(Parent)
+                Text: =ThisItem.'Hospitalization Carried Forward'
+                Width: =200
+                X: =300
+                Y: =471
+                ZIndex: =52
+
+            Label17_104 As label:
+                Height: =60
+                OnSelect: =Select(Parent)
+                Text: =ThisItem.'Hospitalization Leave Total Entitlement'
+                X: =500
+                Y: =471
+                ZIndex: =53
+
+            Label17_105 As label:
+                Height: =60
+                OnSelect: =Select(Parent)
+                Text: =ThisItem.'Hospitalization Leave Taken'
+                X: =650
+                Y: =471
+                ZIndex: =54
+
+            Label17_106 As label:
+                Height: =60
+                OnSelect: =Select(Parent)
+                Text: =ThisItem.'Hospitalization Leave Balance'
+                X: =798
+                Y: =471
+                ZIndex: =55
+
+        Group8_1 As group:
+            Height: =5
+            Width: =5
+            X: =40
+            Y: =40
+            ZIndex: =56
+
+            Label17_95 As label:
+                Height: =60
+                OnSelect: =Select(Parent)
+                PaddingLeft: =10
+                Text: ="Maternity"
+                Y: =410
+                ZIndex: =44
+
+            Label17_96 As label:
+                Height: =60
+                OnSelect: =Select(Parent)
+                Text: =ThisItem.'Maternity Leave Entitlement'
+                X: =150
+                Y: =410
+                ZIndex: =45
+
+            Label17_97 As label:
+                Height: =60
+                OnSelect: =Select(Parent)
+                Text: =ThisItem.'Maternity Leave Carried Forward'
+                Width: =200
+                X: =300
+                Y: =410
+                ZIndex: =46
+
+            Label17_98 As label:
+                Height: =60
+                OnSelect: =Select(Parent)
+                Text: =ThisItem.'Maternity Leave Total Entitlement'
+                X: =500
+                Y: =410
+                ZIndex: =47
+
+            Label17_99 As label:
+                Height: =60
+                OnSelect: =Select(Parent)
+                Text: =ThisItem.'Maternity Leave Taken'
+                X: =650
+                Y: =410
+                ZIndex: =48
+
+            Label17_100 As label:
+                Height: =60
+                OnSelect: =Select(Parent)
+                Text: =ThisItem.'Maternity Leave Balance'
+                X: =798
+                Y: =410
+                ZIndex: =49
+
+        Group7_1 As group:
+            Height: =5
+            Width: =5
+            X: =40
+            Y: =40
+            ZIndex: =56
+
+            Label17_89 As label:
+                Height: =60
+                OnSelect: =Select(Parent)
+                PaddingLeft: =10
+                Text: ="Paternity"
+                Y: =349
+                ZIndex: =38
+
+            Label17_90 As label:
+                Height: =60
+                OnSelect: =Select(Parent)
+                Text: =ThisItem.'Paternity Leave Entitlement'
+                X: =150
+                Y: =349
+                ZIndex: =39
+
+            Label17_91 As label:
+                Height: =60
+                OnSelect: =Select(Parent)
+                Text: =ThisItem.'Paternity Leave Carried Forward'
+                Width: =200
+                X: =300
+                Y: =349
+                ZIndex: =40
+
+            Label17_92 As label:
+                Height: =60
+                OnSelect: =Select(Parent)
+                Text: =ThisItem.'Paternity Leave Total Entitlement'
+                X: =500
+                Y: =349
+                ZIndex: =41
+
+            Label17_93 As label:
+                Height: =60
+                OnSelect: =Select(Parent)
+                Text: =ThisItem.'Paternity Leave Taken'
+                X: =650
+                Y: =349
+                ZIndex: =42
+
+            Label17_94 As label:
+                Height: =60
+                OnSelect: =Select(Parent)
+                Text: =ThisItem.'Paternity Leave Balance'
+                X: =798
+                Y: =349
+                ZIndex: =43
+
+        Group6_1 As group:
+            Height: =5
+            Width: =5
+            X: =40
+            Y: =40
+            ZIndex: =56
+
+            Label17_83 As label:
+                Height: =60
+                OnSelect: =Select(Parent)
+                PaddingLeft: =10
+                Text: ="Marriage"
+                Y: =290
+                ZIndex: =32
+
+            Label17_84 As label:
+                Height: =60
+                OnSelect: =Select(Parent)
+                Text: =ThisItem.'Marriage Leave Entitlement'
+                X: =150
+                Y: =290
+                ZIndex: =33
+
+            Label17_85 As label:
+                Height: =60
+                OnSelect: =Select(Parent)
+                Text: =ThisItem.'Marriage Leave Carried Forward'
+                Width: =200
+                X: =300
+                Y: =290
+                ZIndex: =34
+
+            Label17_86 As label:
+                Height: =60
+                OnSelect: =Select(Parent)
+                Text: =ThisItem.'Marriage Leave Total Entitlement'
+                X: =500
+                Y: =290
+                ZIndex: =35
+
+            Label17_87 As label:
+                Height: =60
+                OnSelect: =Select(Parent)
+                Text: =ThisItem.'Marriage Leave Taken'
+                X: =650
+                Y: =290
+                ZIndex: =36
+
+            Label17_88 As label:
+                Height: =60
+                OnSelect: =Select(Parent)
+                Text: =ThisItem.'Marriage Leave Balance'
+                X: =798
+                Y: =290
+                ZIndex: =37
+
+        Group5_1 As group:
+            Height: =5
+            Width: =5
+            X: =40
+            Y: =40
+            ZIndex: =56
+
+            Label17_77 As label:
+                Height: =60
+                OnSelect: =Select(Parent)
+                PaddingLeft: =10
+                Text: ="Compassionate"
+                Y: =230
+                ZIndex: =26
+
+            Label17_78 As label:
+                Height: =60
+                OnSelect: =Select(Parent)
+                Text: =ThisItem.'Compassionate Leave Entitlement'
+                X: =150
+                Y: =230
+                ZIndex: =27
+
+            Label17_79 As label:
+                Height: =60
+                OnSelect: =Select(Parent)
+                Text: =ThisItem.'Compassionate Leave Carried Forward'
+                Width: =200
+                X: =300
+                Y: =230
+                ZIndex: =28
+
+            Label17_80 As label:
+                Height: =60
+                OnSelect: =Select(Parent)
+                Text: =ThisItem.'Compassionate Leave Total Entitlement'
+                X: =500
+                Y: =230
+                ZIndex: =29
+
+            Label17_81 As label:
+                Height: =60
+                OnSelect: =Select(Parent)
+                Text: =ThisItem.'Compassionate Leave Taken'
+                X: =650
+                Y: =230
+                ZIndex: =30
+
+            Label17_82 As label:
+                Height: =60
+                OnSelect: =Select(Parent)
+                Text: =ThisItem.'Compassionate Leave Balance'
+                X: =798
+                Y: =230
+                ZIndex: =31
+
+        Group4_1 As group:
+            Height: =5
+            Width: =5
+            X: =40
+            Y: =40
+            ZIndex: =56
+
+            Label17_71 As label:
+                Height: =60
+                OnSelect: =Select(Parent)
+                PaddingLeft: =10
+                Text: ="Medical"
+                Y: =170
+                ZIndex: =20
+
+            Label17_72 As label:
+                Height: =60
+                OnSelect: =Select(Parent)
+                Text: =ThisItem.'Medical Leave Entitlement'
+                X: =150
+                Y: =170
+                ZIndex: =21
+
+            Label17_73 As label:
+                Height: =60
+                OnSelect: =Select(Parent)
+                Text: =ThisItem.'Medical Carried Forward Leave'
+                Width: =200
+                X: =300
+                Y: =170
+                ZIndex: =22
+
+            Label17_74 As label:
+                Height: =60
+                OnSelect: =Select(Parent)
+                Text: =ThisItem.'Medical Total Entitlement Leave'
+                X: =500
+                Y: =170
+                ZIndex: =23
+
+            Label17_75 As label:
+                Height: =60
+                OnSelect: =Select(Parent)
+                Text: =ThisItem.'Medical Leave Taken'
+                X: =650
+                Y: =170
+                ZIndex: =24
+
+            Label17_76 As label:
+                Height: =60
+                OnSelect: =Select(Parent)
+                Text: =ThisItem.'Medical Leave Balance'
+                X: =798
+                Y: =170
+                ZIndex: =25
+
+        Group3_1 As group:
+            Height: =5
+            Width: =5
+            X: =40
+            Y: =40
+            ZIndex: =56
+
+            Label17_65 As label:
+                Height: =60
+                OnSelect: =Select(Parent)
+                PaddingLeft: =10
+                Text: ="Unpaid"
+                Y: =110
+                ZIndex: =14
+
+            Label17_66 As label:
+                Height: =60
+                OnSelect: =Select(Parent)
+                Text: ="-"
+                X: =150
+                Y: =110
+                ZIndex: =15
+
+            Label17_67 As label:
+                Height: =60
+                OnSelect: =Select(Parent)
+                Text: ="-"
+                Width: =200
+                X: =300
+                Y: =110
+                ZIndex: =16
+
+            Label17_68 As label:
+                Height: =60
+                OnSelect: =Select(Parent)
+                Text: ="-"
+                X: =500
+                Y: =110
+                ZIndex: =17
+
+            Label17_69 As label:
+                Height: =60
+                OnSelect: =Select(Parent)
+                Text: =ThisItem.'Unpaid Leave Taken'
+                X: =650
+                Y: =110
+                ZIndex: =18
+
+            Label17_70 As label:
+                Height: =60
+                OnSelect: =Select(Parent)
+                Text: ="-"
+                X: =798
+                Y: =110
+                ZIndex: =19
+
+        Group2_1 As group:
+            Height: =5
+            Width: =5
+            X: =40
+            Y: =40
+            ZIndex: =56
+
+            Label17_59 As label:
+                Height: =60
+                OnSelect: =Select(Parent)
+                PaddingLeft: =10
+                Text: ="Annual Leave"
+                Y: =50
+                ZIndex: =8
+
+            Label17_60 As label:
+                Height: =60
+                OnSelect: =Select(Parent)
+                Text: =ThisItem.'Annual Leave Entitlement'
+                X: =150
+                Y: =50
+                ZIndex: =9
+
+            Label17_61 As label:
+                Height: =60
+                OnSelect: =Select(Parent)
+                Text: =ThisItem.'Annual Carried Forward Leave'
+                Width: =200
+                X: =300
+                Y: =50
+                ZIndex: =10
+
+            Label17_62 As label:
+                Height: =60
+                OnSelect: =Select(Parent)
+                Text: =ThisItem.'Annual Total Entitlement'
+                X: =500
+                Y: =50
+                ZIndex: =11
+
+            Label17_63 As label:
+                Height: =60
+                OnSelect: =Select(Parent)
+                Text: =ThisItem.'Annual Leave Taken'
+                X: =650
+                Y: =50
+                ZIndex: =12
+
+            Label17_64 As label:
+                Height: =60
+                OnSelect: =Select(Parent)
+                Text: =ThisItem.'Annual Leave Balance'
+                X: =800
+                Y: =50
+                ZIndex: =13
+
+        Rectangle6_8 As rectangle:
+            BorderColor: =RGBA(230, 230, 230, 1)
+            BorderThickness: =1
+            Fill: =RGBA(230, 230, 230, 1)
+            Height: =1
+            OnSelect: =Select(Parent)
+            Width: =951
+            Y: =169
+            ZIndex: =57
+
+        Rectangle6_9 As rectangle:
+            BorderColor: =RGBA(230, 230, 230, 1)
+            BorderThickness: =1
+            Fill: =RGBA(230, 230, 230, 1)
+            Height: =1
+            OnSelect: =Select(Parent)
+            Width: =951
+            Y: =229
+            ZIndex: =58
+
+        Rectangle6_10 As rectangle:
+            BorderColor: =RGBA(230, 230, 230, 1)
+            BorderThickness: =1
+            Fill: =RGBA(230, 230, 230, 1)
+            Height: =1
+            OnSelect: =Select(Parent)
+            Width: =951
+            Y: =290
+            ZIndex: =59
+
+        Rectangle6_11 As rectangle:
+            BorderColor: =RGBA(230, 230, 230, 1)
+            BorderThickness: =1
+            Fill: =RGBA(230, 230, 230, 1)
+            Height: =1
+            OnSelect: =Select(Parent)
+            Width: =951
+            Y: =348
+            ZIndex: =60
+
+        Rectangle6_12 As rectangle:
+            BorderColor: =RGBA(230, 230, 230, 1)
+            BorderThickness: =1
+            Fill: =RGBA(230, 230, 230, 1)
+            Height: =1
+            OnSelect: =Select(Parent)
+            Width: =951
+            Y: =409
+            ZIndex: =61
+
+        Rectangle6_13 As rectangle:
+            BorderColor: =RGBA(230, 230, 230, 1)
+            BorderThickness: =1
+            Fill: =RGBA(230, 230, 230, 1)
+            Height: =1
+            OnSelect: =Select(Parent)
+            Width: =951
+            Y: =470
+            ZIndex: =62
+
+        Label17_107 As label:
+            Height: =46
+            OnSelect: =Select(Parent)
+            PaddingLeft: =10
+            Text: ="Leave Types"
+            ZIndex: =63
 
