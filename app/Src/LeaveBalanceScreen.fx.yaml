@@ -190,6 +190,7 @@ LeaveBalanceScreen As screen:
         ZIndex: =35
 
         Label17_54 As label:
+            FontWeight: =FontWeight.Bold
             Height: =46
             OnSelect: =Select(Parent)
             Text: ="Entitlement"
@@ -198,6 +199,7 @@ LeaveBalanceScreen As screen:
             ZIndex: =2
 
         Label17_55 As label:
+            FontWeight: =FontWeight.Bold
             Height: =46
             OnSelect: =Select(Parent)
             Text: ="Carried Forward"
@@ -207,6 +209,7 @@ LeaveBalanceScreen As screen:
             ZIndex: =3
 
         Label17_56 As label:
+            FontWeight: =FontWeight.Bold
             Height: =46
             OnSelect: =Select(Parent)
             Text: ="Total"
@@ -215,6 +218,7 @@ LeaveBalanceScreen As screen:
             ZIndex: =4
 
         Label17_57 As label:
+            FontWeight: =FontWeight.Bold
             Height: =46
             OnSelect: =Select(Parent)
             Text: ="Taken"
@@ -223,6 +227,7 @@ LeaveBalanceScreen As screen:
             ZIndex: =5
 
         Label17_58 As label:
+            FontWeight: =FontWeight.Bold
             Height: =46
             OnSelect: =Select(Parent)
             Text: ="Balance"
@@ -258,6 +263,7 @@ LeaveBalanceScreen As screen:
             ZIndex: =56
 
             Label17_101 As label:
+                FontWeight: =FontWeight.Semibold
                 Height: =60
                 OnSelect: =Select(Parent)
                 PaddingLeft: =10
@@ -314,6 +320,7 @@ LeaveBalanceScreen As screen:
             ZIndex: =56
 
             Label17_95 As label:
+                FontWeight: =FontWeight.Semibold
                 Height: =60
                 OnSelect: =Select(Parent)
                 PaddingLeft: =10
@@ -370,6 +377,7 @@ LeaveBalanceScreen As screen:
             ZIndex: =56
 
             Label17_89 As label:
+                FontWeight: =FontWeight.Semibold
                 Height: =60
                 OnSelect: =Select(Parent)
                 PaddingLeft: =10
@@ -426,6 +434,7 @@ LeaveBalanceScreen As screen:
             ZIndex: =56
 
             Label17_83 As label:
+                FontWeight: =FontWeight.Semibold
                 Height: =60
                 OnSelect: =Select(Parent)
                 PaddingLeft: =10
@@ -482,6 +491,7 @@ LeaveBalanceScreen As screen:
             ZIndex: =56
 
             Label17_77 As label:
+                FontWeight: =FontWeight.Semibold
                 Height: =60
                 OnSelect: =Select(Parent)
                 PaddingLeft: =10
@@ -538,6 +548,7 @@ LeaveBalanceScreen As screen:
             ZIndex: =56
 
             Label17_71 As label:
+                FontWeight: =FontWeight.Semibold
                 Height: =60
                 OnSelect: =Select(Parent)
                 PaddingLeft: =10
@@ -594,6 +605,7 @@ LeaveBalanceScreen As screen:
             ZIndex: =56
 
             Label17_65 As label:
+                FontWeight: =FontWeight.Semibold
                 Height: =60
                 OnSelect: =Select(Parent)
                 PaddingLeft: =10
@@ -602,6 +614,7 @@ LeaveBalanceScreen As screen:
                 ZIndex: =14
 
             Label17_66 As label:
+                FontWeight: =FontWeight.Semibold
                 Height: =60
                 OnSelect: =Select(Parent)
                 Text: ="-"
@@ -610,6 +623,7 @@ LeaveBalanceScreen As screen:
                 ZIndex: =15
 
             Label17_67 As label:
+                FontWeight: =FontWeight.Semibold
                 Height: =60
                 OnSelect: =Select(Parent)
                 Text: ="-"
@@ -619,6 +633,7 @@ LeaveBalanceScreen As screen:
                 ZIndex: =16
 
             Label17_68 As label:
+                FontWeight: =FontWeight.Semibold
                 Height: =60
                 OnSelect: =Select(Parent)
                 Text: ="-"
@@ -627,6 +642,7 @@ LeaveBalanceScreen As screen:
                 ZIndex: =17
 
             Label17_69 As label:
+                FontWeight: =FontWeight.Semibold
                 Height: =60
                 OnSelect: =Select(Parent)
                 Text: =ThisItem.'Unpaid Leave Taken'
@@ -635,6 +651,7 @@ LeaveBalanceScreen As screen:
                 ZIndex: =18
 
             Label17_70 As label:
+                FontWeight: =FontWeight.Semibold
                 Height: =60
                 OnSelect: =Select(Parent)
                 Text: ="-"
@@ -650,6 +667,7 @@ LeaveBalanceScreen As screen:
             ZIndex: =56
 
             Label17_59 As label:
+                FontWeight: =FontWeight.Semibold
                 Height: =60
                 OnSelect: =Select(Parent)
                 PaddingLeft: =10
@@ -759,6 +777,7 @@ LeaveBalanceScreen As screen:
             ZIndex: =62
 
         Label17_107 As label:
+            FontWeight: =FontWeight.Bold
             Height: =46
             OnSelect: =Select(Parent)
             PaddingLeft: =10
