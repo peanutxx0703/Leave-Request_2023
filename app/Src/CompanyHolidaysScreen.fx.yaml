@@ -13,8 +13,8 @@ CompanyHolidaysScreen As screen:
         Height: =695
         HoverFill: =Rectangle3_2.Fill
         PressedFill: =Rectangle3_2.Fill
-        Width: =230
-        X: =1136
+        Width: =244
+        X: =1122
         Y: =73
         ZIndex: =3
 
@@ -185,7 +185,7 @@ CompanyHolidaysScreen As screen:
         AccessibleLabel: ="Company holidays"
         DisabledBorderColor: =GalleryHolidays.BorderColor
         DisabledFill: =GalleryHolidays.Fill
-        Height: =442
+        Height: =597
         HoverBorderColor: =GalleryHolidays.BorderColor
         HoverFill: =GalleryHolidays.Fill
         Items: =HolidaysCollection
@@ -195,8 +195,8 @@ CompanyHolidaysScreen As screen:
         PressedFill: =GalleryHolidays.Fill
         TemplateSize: =49
         Width: =857
-        X: =265
-        Y: =171
+        X: =248
+        Y: =165
         ZIndex: =32
 
         Label12 As label:
@@ -263,6 +263,20 @@ CompanyHolidaysScreen As screen:
         Y: =80
         ZIndex: =33
 
+    Label4 As label:
+        Align: =Align.Center
+        Font: =Font.Georgia
+        FontWeight: =FontWeight.Semibold
+        Height: =36
+        Size: =14
+        Text: |-
+            ="New company holiday:"
+        Underline: =true
+        Width: =232
+        X: =1122
+        Y: =129
+        ZIndex: =38
+
     Group1 As group:
         Height: =5
         Width: =5
@@ -272,20 +286,25 @@ CompanyHolidaysScreen As screen:
 
         txtHoliday As text:
             Default: =""
+            Height: =37
             Visible: =_managerView=true
-            X: =354
-            Y: =627
+            Width: =155
+            X: =1211
+            Y: =186
             ZIndex: =34
 
         txtHolidayDate As text:
             Default: =""
+            Height: =34
             Visible: =_managerView=true
-            X: =354
-            Y: =695
+            Width: =155
+            X: =1211
+            Y: =257
             ZIndex: =35
 
         Label7 As label:
-            Height: =149
+            Font: =Font.Georgia
+            Height: =96
             Size: =14
             Text: |-
                 ="Holiday:
@@ -293,18 +312,19 @@ CompanyHolidaysScreen As screen:
                 
                 Date:"
             Visible: =_managerView=true
-            Width: =191
-            X: =265
-            Y: =599
+            Width: =124
+            X: =1122
+            Y: =190
             ZIndex: =36
 
         Button1 As button:
+            Height: =26
             OnSelect: |-
                 =Collect(HolidaysCollection,{HolidayName:txtHoliday.Text, StartDate:DateValue(txtHolidayDate.Text)})
             Text: ="Add"
             Visible: =_managerView=true
-            Width: =123
-            X: =736
-            Y: =695
+            Width: =80
+            X: =1201
+            Y: =333
             ZIndex: =37
 
