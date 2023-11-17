@@ -1,6 +1,6 @@
 Screen2 As screen:
 
-    Gallery3 As gallery.galleryVertical:
+    "Gallery3 As gallery.'BrowseLayout_Vertical_TwoTextVariant_ver5.0'":
         DelayItemLoading: =true
         Height: =608
         Items: =Filter(Table1_11,'Name of Employee' = User().FullName)
