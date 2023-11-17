@@ -21,11 +21,12 @@ TodayOnLeaveScreen As screen:
         ZIndex: =1
 
         Label25 As label:
+            Color: =RGBA(62, 96, 170, 1)
             Font: =Font.'Segoe UI'
             FontWeight: =FontWeight.Semibold
             Height: =36
             OnSelect: =Select(Parent)
-            Size: =14
+            Size: =15
             Text: =ThisItem.'Created By'
             Width: =656
             X: =28
@@ -33,8 +34,10 @@ TodayOnLeaveScreen As screen:
             ZIndex: =1
 
         Label27 As label:
+            FontWeight: =FontWeight.Semibold
             Height: =60
             OnSelect: =Select(Parent)
+            Size: =14
             Text: =ThisItem.'Leave Type'
             Width: =541
             X: =28
@@ -213,7 +216,7 @@ TodayOnLeaveScreen As screen:
 
     Rectangle1 As rectangle:
         BorderStyle: =BorderStyle.Dotted
-        Fill: =RGBA(192, 190, 191, 1)
+        Fill: =RGBA(230, 229, 229, 1)
         Height: =2
         Width: =1134
         X: =232

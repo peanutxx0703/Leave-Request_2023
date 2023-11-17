@@ -23,35 +23,38 @@ HomeScreen As screen:
 
     "Gallery7 As gallery.'BrowseLayout_Vertical_ThreeTextVariant_ver5.0'":
         DelayItemLoading: =true
+        Height: =601
         Items: =Filter(Table1_14,'Created By' = User().FullName)
         Layout: =Layout.Vertical
         LoadingSpinner: =LoadingSpinner.Data
         TemplatePadding: =0
-        TemplateSize: =116
-        Width: =874
+        TemplateSize: =197
+        Visible: =!_managerView=true
+        Width: =943
         X: =237
-        Y: =193
+        Y: =167
         ZIndex: =1
 
-        Title3 As label:
+        Title2 As label:
+            Color: =RGBA(62, 96, 170, 1)
             Font: =Font.Lato
-            FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+            FontWeight: =FontWeight.Bold
             Height: =Self.Size * 1.8
             OnSelect: =Select(Parent)
             PaddingBottom: =0
             PaddingLeft: =0
             PaddingRight: =0
             PaddingTop: =0
+            Size: =15
             Text: =ThisItem.'Created By'
             VerticalAlign: =VerticalAlign.Top
             Width: =Parent.TemplateWidth - 86
-            X: =16
-            Y: =(Parent.TemplateHeight - (Self.Size*1.8 + Subtitle2.Size*1.8 + 2 + Body2.Size*1.8)) / 2
+            X: =14
+            Y: =13
             ZIndex: =1
 
         Subtitle2 As label:
-            FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
-            Height: =Self.Size * 1.8
+            Height: =25
             OnSelect: =Select(Parent)
             PaddingBottom: =0
             PaddingLeft: =0
@@ -59,14 +62,13 @@ HomeScreen As screen:
             PaddingTop: =0
             Text: =ThisItem.'Start Date'
             VerticalAlign: =VerticalAlign.Top
-            Width: =Title3.Width
-            X: =Title3.X
-            Y: =Title3.Y + Title3.Height
+            Width: =412
+            X: =135
+            Y: =50
             ZIndex: =2
 
-        Body2 As label:
-            FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
-            Height: =Self.Size * 1.8
+        Body1 As label:
+            Height: =22
             OnSelect: =Select(Parent)
             PaddingBottom: =0
             PaddingLeft: =0
@@ -74,12 +76,12 @@ HomeScreen As screen:
             PaddingTop: =0
             Text: =ThisItem.'Leave Type'
             VerticalAlign: =VerticalAlign.Top
-            Width: =Title3.Width
-            X: =14
-            Y: =69
+            Width: =737
+            X: =144
+            Y: =132
             ZIndex: =3
 
-        NextArrow1 As icon.ChevronRight:
+        NextArrow2 As icon.ChevronRight:
             AccessibleLabel: =Self.Tooltip
             Color: =RGBA(166, 166, 166, 1)
             Height: =50
@@ -95,7 +97,7 @@ HomeScreen As screen:
             Y: =(Parent.TemplateHeight / 2) - (Self.Height / 2)
             ZIndex: =4
 
-        Separator1 As rectangle:
+        Separator2 As rectangle:
             Fill: =RGBA(255, 255, 255, 1)
             Height: =8
             OnSelect: =Select(Parent)
@@ -103,13 +105,57 @@ HomeScreen As screen:
             Y: =Parent.TemplateHeight - Self.Height
             ZIndex: =5
 
-        Rectangle13 As rectangle:
+        Label16 As label:
+            FontWeight: =FontWeight.Semibold
+            Height: =153
+            OnSelect: =Select(Parent)
+            Text: |-
+                ="Start date:
+                
+                End date:
+                
+                Leave Type:"
+            X: =28
+            Y: =25
+            ZIndex: =7
+
+        Label17 As label:
+            Height: =26
+            OnSelect: =Select(Parent)
+            Text: =ThisItem.'End Date'
+            Width: =236
+            X: =135
+            Y: =92
+            ZIndex: =8
+
+        Rectangle14 As rectangle:
             Fill: =RGBA(217, 216, 217, 1)
             Height: =2
             OnSelect: =Select(Parent)
-            Width: =812
-            Y: =99
-            ZIndex: =7
+            Width: =826
+            Y: =187
+            ZIndex: =9
+
+        Label26_1 As label:
+            Align: =Align.Center
+            BorderColor: |
+                =If((ThisItem.Status)="Pending",RGBA(0,71,144,1),
+                (ThisItem.Status)="Rejected",RGBA(213,0,0,1),
+                (ThisItem.Status)="Approved",RGBA(0,128,0,1))
+            BorderThickness: =3
+            Color: |
+                =If((ThisItem.Status)="Pending",RGBA(0,71,144,1),
+                (ThisItem.Status)="Rejected",RGBA(213,0,0,1),
+                (ThisItem.Status)="Approved",RGBA(0,128,0,1))
+            DisabledBorderColor: =RGBA(101, 128, 187, 1)
+            Fill: =RGBA(255, 255, 255, 1)
+            Font: =Font.'Lato Black'
+            FontWeight: =FontWeight.Bold
+            OnSelect: =Select(Parent)
+            Text: =ThisItem.Status
+            X: =639
+            Y: =112
+            ZIndex: =10
 
     Rectangle3 As rectangle:
         DisabledFill: =Rectangle3.Fill
@@ -118,8 +164,8 @@ HomeScreen As screen:
         Height: =695
         HoverFill: =Rectangle3.Fill
         PressedFill: =Rectangle3.Fill
-        Width: =360
-        X: =1006
+        Width: =303
+        X: =1063
         Y: =73
         ZIndex: =3
 
@@ -342,7 +388,7 @@ HomeScreen As screen:
             Align: =LayoutAlignItems.Center
             FocusedBorderColor: =LblFirstRequest.BorderColor
             Font: =Font.Lato
-            Height: =100
+            Height: =93
             HoverBorderColor: =LblFirstRequest.BorderColor
             HoverColor: =LblFirstRequest.Color
             HoverFill: =LblFirstRequest.Fill
@@ -351,10 +397,10 @@ HomeScreen As screen:
             PressedFill: =LblFirstRequest.Fill
             Size: =20
             Text: ="Make your first leave request!"
-            Visible: =!_managerView && !GalleryRequests.Visible && _requestTypeFilter = "All"
+            Visible: =If(IsEmpty(Table1_14),true,false)
             Width: =400
             X: =425
-            Y: =333
+            Y: =322
             ZIndex: =31
 
         Circle1 As circle:
@@ -362,14 +408,14 @@ HomeScreen As screen:
             DisabledFill: =Circle1.Fill
             Fill: =RGBA(12, 132, 255, 1)
             FocusedBorderColor: =Circle1.BorderColor
-            Height: =icon7.Height
+            Height: =60
             HoverFill: =Circle1.Fill
             OnSelect: =Select(IconHeaderCreateNew)
             PressedFill: =Circle1.Fill
-            Visible: =!_managerView && !GalleryRequests.Visible && _requestTypeFilter = "All"
-            Width: =icon7.Width
+            Visible: =If(IsEmpty(Table1_14),true,false)
+            Width: =64
             X: =icon7.X
-            Y: =icon7.Y
+            Y: =392
             ZIndex: =32
 
         icon7 As icon.Add:
@@ -377,6 +423,7 @@ HomeScreen As screen:
             Color: =Color.White
             DisabledFill: =icon7.Fill
             FocusedBorderColor: =icon7.BorderColor
+            Height: =60
             HoverBorderColor: =ColorFade(icon7.BorderColor, 20%)
             HoverColor: =ColorFade(icon7.Color, 20%)
             HoverFill: =icon7.Fill
@@ -390,15 +437,16 @@ HomeScreen As screen:
             PressedColor: =ColorFade(icon7.Color, -20%)
             PressedFill: =icon7.Fill
             TabIndex: =0
-            Visible: =!_managerView && !GalleryRequests.Visible && _requestTypeFilter = "All"
+            Visible: =If(IsEmpty(Table1_14),true,false)
             X: =579
-            Y: =408
+            Y: =392
             ZIndex: =33
 
         LblEmptyRequests As label:
             FocusedBorderColor: =LblEmptyRequests.BorderColor
             Font: =Font.Lato
             FontWeight: =FontWeight.Semibold
+            Height: =37
             HoverBorderColor: =LblEmptyRequests.BorderColor
             HoverColor: =LblEmptyRequests.Color
             HoverFill: =LblEmptyRequests.Fill
@@ -406,10 +454,10 @@ HomeScreen As screen:
             PressedColor: =LblEmptyRequests.Color
             PressedFill: =LblEmptyRequests.Fill
             Text: ="No " & If(_requestTypeFilter <> "All", Lower(_requestTypeFilter)) & " requests"
-            Visible: =!GalleryRequests.Visible
+            Visible: =If(IsEmpty(Table1_14),true,false)
             Width: =190
-            X: =248
-            Y: =166
+            X: =268
+            Y: =167
             ZIndex: =34
 
     GroupRequestDetails As group:
@@ -424,7 +472,7 @@ HomeScreen As screen:
             FocusedBorderColor: =LblRequestDetailsHeader.BorderColor
             Font: =Font.Lato
             FontWeight: =FontWeight.Bold
-            Height: =24
+            Height: =29
             HoverBorderColor: =LblRequestDetailsHeader.BorderColor
             HoverColor: =LblRequestDetailsHeader.Color
             HoverFill: =LblRequestDetailsHeader.Fill
@@ -433,9 +481,9 @@ HomeScreen As screen:
             PressedFill: =LblRequestDetailsHeader.Fill
             Size: =13.5
             Text: ="Request Details"
-            Width: =316
-            X: =1037
-            Y: =119
+            Width: =291
+            X: =1075
+            Y: =103
             ZIndex: =13
 
         GalleryRequestDetails As gallery.galleryVertical:
