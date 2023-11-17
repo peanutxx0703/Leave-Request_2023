@@ -164,6 +164,7 @@ LeaveBalanceScreen As screen:
         ZIndex: =32
 
     Label15 As label:
+        Color: =RGBA(101, 128, 187, 1)
         Font: =Font.Georgia
         FontWeight: =FontWeight.Semibold
         Height: =51
@@ -183,8 +184,8 @@ LeaveBalanceScreen As screen:
         Layout: =Layout.Vertical
         LoadingSpinner: =LoadingSpinner.Data
         TemplateSize: =537
-        Width: =1058
-        X: =253
+        Width: =1080
+        X: =231
         Y: =147
         ZIndex: =35
 
@@ -763,4 +764,12 @@ LeaveBalanceScreen As screen:
             PaddingLeft: =10
             Text: ="Leave Types"
             ZIndex: =63
+
+    Rectangle6 As rectangle:
+        Fill: =RGBA(230, 229, 229, 1)
+        Height: =2
+        Width: =970
+        X: =231
+        Y: =141
+        ZIndex: =36
 
