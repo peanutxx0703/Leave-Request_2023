@@ -29,6 +29,7 @@ HomeScreen As screen:
         LoadingSpinner: =LoadingSpinner.Data
         TemplatePadding: =0
         TemplateSize: =197
+        Visible: =!_managerView=true
         Width: =943
         X: =237
         Y: =167
