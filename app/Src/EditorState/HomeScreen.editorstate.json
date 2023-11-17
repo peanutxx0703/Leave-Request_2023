@@ -93,7 +93,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "BtnEmailRequester",
-      "ParentIndex": 23,
+      "ParentIndex": 15,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -373,7 +373,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "BtnManagerApprove",
-      "ParentIndex": 21,
+      "ParentIndex": 13,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -698,7 +698,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "BtnManagerDecline",
-      "ParentIndex": 22,
+      "ParentIndex": 14,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -987,7 +987,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Circle1",
-      "ParentIndex": 19,
+      "ParentIndex": 22,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -2142,7 +2142,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "GalleryRequests",
-      "ParentIndex": 13,
+      "ParentIndex": 16,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -3014,7 +3014,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "icon7",
-      "ParentIndex": 20,
+      "ParentIndex": 23,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -3572,7 +3572,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "IconRequesterEdit",
-      "ParentIndex": 17,
+      "ParentIndex": 20,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -5393,7 +5393,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "LblEmptyRequests",
-      "ParentIndex": 15,
+      "ParentIndex": 18,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -5663,7 +5663,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "LblFirstRequest",
-      "ParentIndex": 16,
+      "ParentIndex": 19,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -6935,7 +6935,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "LblRequesterEdit",
-      "ParentIndex": 18,
+      "ParentIndex": 21,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -7599,7 +7599,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Rectangle2_1",
-      "ParentIndex": 14,
+      "ParentIndex": 17,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {

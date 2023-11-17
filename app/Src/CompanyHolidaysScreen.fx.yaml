@@ -263,6 +263,20 @@ CompanyHolidaysScreen As screen:
         Y: =80
         ZIndex: =33
 
+    Label4 As label:
+        Align: =Align.Center
+        Font: =Font.Georgia
+        FontWeight: =FontWeight.Semibold
+        Height: =36
+        Size: =14
+        Text: |-
+            ="New company holiday:"
+        Underline: =true
+        Width: =232
+        X: =1122
+        Y: =129
+        ZIndex: =38
+
     Group1 As group:
         Height: =5
         Width: =5
@@ -313,18 +327,4 @@ CompanyHolidaysScreen As screen:
             X: =1201
             Y: =333
             ZIndex: =37
-
-    Label4 As label:
-        Align: =Align.Center
-        Font: =Font.Georgia
-        FontWeight: =FontWeight.Semibold
-        Height: =36
-        Size: =14
-        Text: |-
-            ="New company holiday:"
-        Underline: =true
-        Width: =232
-        X: =1122
-        Y: =129
-        ZIndex: =38
 
