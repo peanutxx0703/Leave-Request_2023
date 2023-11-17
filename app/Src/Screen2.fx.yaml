@@ -13,14 +13,6 @@ Screen2 As screen:
         Y: =87
         ZIndex: =1
 
-        Label17 As label:
-            Height: =46
-            OnSelect: =Select(Parent)
-            PaddingLeft: =10
-            Text: ="Leave Type"
-            Y: =3
-            ZIndex: =1
-
         Label17_1 As label:
             Height: =46
             OnSelect: =Select(Parent)

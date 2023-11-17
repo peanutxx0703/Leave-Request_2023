@@ -86,7 +86,7 @@ LoginScreen As screen:
             FocusedBorderColor: =LblManagerLogin.BorderColor
             FocusedBorderThickness: =2
             Font: =Font.Georgia
-            Height: =23
+            Height: =37
             HoverBorderColor: =LblManagerLogin.BorderColor
             HoverColor: =LblManagerLogin.Color
             HoverFill: =LblManagerLogin.Fill
@@ -101,7 +101,7 @@ LoginScreen As screen:
             PressedFill: =LblManagerLogin.Fill
             Size: =12
             Text: ="TO APPROVE OR DECLINE LEAVE REQUESTS"
-            Width: =355
+            Width: =395
             X: =790
             Y: =372
             ZIndex: =2
@@ -134,7 +134,7 @@ LoginScreen As screen:
             Size: =20
             Text: ="Login as a manager"
             Width: =337
-            X: =793
+            X: =819
             Y: =420
             ZIndex: =8
 
