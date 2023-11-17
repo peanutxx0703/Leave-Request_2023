@@ -595,7 +595,7 @@ NewRequestScreen As screen:
             PressedColor: =Label1_10.Color
             PressedFill: =Label1_10.Fill
             Size: =12
-            Text: =If(!IsBlank(_selectedApprover.DisplayName),_selectedApprover.DisplayName,"Select an approver by clicking ""Change""")
+            Text: =If(!IsBlank(_selectedApprover.DisplayName),_selectedApprover.DisplayName,"Select an approver by clicking Change")
             X: =299
             Y: =489
             ZIndex: =21
