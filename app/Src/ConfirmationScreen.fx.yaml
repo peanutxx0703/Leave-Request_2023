@@ -171,7 +171,7 @@ ConfirmationScreen As screen:
         Width: =230
         X: =1136
         Y: =73
-        ZIndex: =3
+        ZIndex: =2
 
     RectNavSep_4 As rectangle:
         DisabledFill: =RectNavSep_4.Fill
@@ -183,6 +183,27 @@ ConfirmationScreen As screen:
         Width: =1
         X: =231
         Y: =80
+        ZIndex: =10
+
+    LblRequestSubmitted As label:
+        Align: =LayoutAlignItems.Center
+        FocusedBorderColor: =LblRequestSubmitted.BorderColor
+        FocusedBorderThickness: =2
+        Font: =Font.Lato
+        FontWeight: =FontWeight.Semibold
+        HoverBorderColor: =LblRequestSubmitted.BorderColor
+        HoverColor: =LblRequestSubmitted.Color
+        HoverFill: =LblRequestSubmitted.Fill
+        Live: =Live.Polite
+        OnSelect: =Navigate(HomeScreen, BorderStyle.None)
+        PressedBorderColor: =LblRequestSubmitted.BorderColor
+        PressedColor: =LblRequestSubmitted.Color
+        PressedFill: =LblRequestSubmitted.Fill
+        Size: =13.5
+        Text: ="Your request " & If(_submittingRequest, "is being processed...", "has been submitted")
+        Width: =350
+        X: =Parent.Width/2 - LblRequestSubmitted.Width / 2
+        Y: =484
         ZIndex: =11
 
     Header_5 As group:
@@ -200,7 +221,7 @@ ConfirmationScreen As screen:
             HoverFill: =Rectangle1_5.Fill
             PressedFill: =Rectangle1_5.Fill
             Width: =1366
-            ZIndex: =4
+            ZIndex: =3
 
         LblHeaderTItle1_5 As label:
             Color: =RGBA(255, 255, 255, 1)
@@ -217,7 +238,7 @@ ConfirmationScreen As screen:
             Text: =Upper("Request")
             Width: =117
             X: =30
-            ZIndex: =5
+            ZIndex: =4
 
         LblHeaderTitle2_5 As label:
             Color: =RGBA(255, 255, 255, 1)
@@ -233,7 +254,7 @@ ConfirmationScreen As screen:
             Text: =Upper("Leave")
             Width: =138
             X: =178
-            ZIndex: =6
+            ZIndex: =5
 
         icon2_5 As icon.ArrowRight:
             Color: =Color.White
@@ -249,7 +270,7 @@ ConfirmationScreen As screen:
             Width: =32
             X: =143
             Y: =9
-            ZIndex: =7
+            ZIndex: =6
 
         CircleHeaderCreateNew_4 As circle:
             DisabledFill: =CircleHeaderCreateNew_4.Fill
@@ -261,7 +282,7 @@ ConfirmationScreen As screen:
             Width: =46
             X: =1155
             Y: =17
-            ZIndex: =8
+            ZIndex: =7
 
         IconHeaderCreateNew_4 As icon.Add:
             AccessibleLabel: ="Create new leave request"
@@ -288,7 +309,7 @@ ConfirmationScreen As screen:
             Width: =46
             X: =CircleHeaderCreateNew_4.X
             Y: =CircleHeaderCreateNew_4.Y
-            ZIndex: =9
+            ZIndex: =8
 
         LblHeaderCreateNew_4 As label:
             Color: =RGBA(255, 255, 255, 1)
@@ -312,7 +333,12 @@ ConfirmationScreen As screen:
             Text: ="Create Request"
             Width: =155
             X: =1211
-            ZIndex: =10
+            ZIndex: =9
+
+    Navigation_8 As Navigation:
+        NavItem: =If(_managerView,ManagerNavigation,EmployeeNavigation)
+        Y: =80
+        ZIndex: =12
 
     icon4 As icon.Check:
         AccessibleLabel: ="Success"
@@ -332,31 +358,5 @@ ConfirmationScreen As screen:
         Width: =130
         X: =Parent.Width/2 - icon4.Width/2
         Y: =Parent.Height/2 - icon4.Height/2
-        ZIndex: =12
-
-    LblRequestSubmitted As label:
-        Align: =LayoutAlignItems.Center
-        FocusedBorderColor: =LblRequestSubmitted.BorderColor
-        FocusedBorderThickness: =2
-        Font: =Font.Lato
-        FontWeight: =FontWeight.Semibold
-        HoverBorderColor: =LblRequestSubmitted.BorderColor
-        HoverColor: =LblRequestSubmitted.Color
-        HoverFill: =LblRequestSubmitted.Fill
-        Live: =Live.Polite
-        OnSelect: =Navigate(HomeScreen, BorderStyle.None)
-        PressedBorderColor: =LblRequestSubmitted.BorderColor
-        PressedColor: =LblRequestSubmitted.Color
-        PressedFill: =LblRequestSubmitted.Fill
-        Size: =13.5
-        Text: ="Your request " & If(_submittingRequest, "is being processed...", "has been submitted")
-        Width: =350
-        X: =Parent.Width/2 - LblRequestSubmitted.Width / 2
-        Y: =484
         ZIndex: =13
-
-    Navigation_8 As Navigation:
-        NavItem: =If(_managerView,ManagerNavigation,EmployeeNavigation)
-        Y: =80
-        ZIndex: =14
 
