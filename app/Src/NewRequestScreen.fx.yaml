@@ -35,18 +35,6 @@ NewRequestScreen As screen:
     Size: =1 + CountRows(App.SizeBreakpoints) - CountIf(App.SizeBreakpoints, Value >= NewRequestScreen.Width)
     Width: =Max(App.Width, App.DesignWidth)
 
-    Rectangle3_1 As rectangle:
-        DisabledFill: =Rectangle3_1.Fill
-        Fill: =RGBA(249, 249, 249, 1)
-        FocusedBorderColor: =Rectangle3_1.BorderColor
-        Height: =695
-        HoverFill: =Rectangle3_1.Fill
-        PressedFill: =Rectangle3_1.Fill
-        Width: =230
-        X: =1136
-        Y: =73
-        ZIndex: =2
-
     Rectangle4 As rectangle:
         DisabledFill: =Rectangle4.Fill
         Fill: =RGBA(204, 204, 204, 1)
@@ -740,11 +728,30 @@ NewRequestScreen As screen:
             ShowScrollbar: =false
             TemplatePadding: =20
             TemplateSize: =42
-            Width: =796
-            WrapCount: =3
+            Width: =1023
+            WrapCount: =4
             X: =TypeRequestTitle.X-20
             Y: =135
             ZIndex: =44
+
+            NRLeaveTypeIcon As image:
+                ApplyEXIFOrientation: =false
+                Fill: =RGBA(255, 255, 255, 0)
+                FocusedBorderColor: =NRLeaveTypeIcon.BorderColor
+                FocusedBorderThickness: =0
+                Height: =17
+                HoverBorderColor: =ColorFade(NRLeaveTypeIcon.BorderColor, 20%)
+                HoverFill: =ColorFade(NRLeaveTypeIcon.Fill, 20%)
+                Image: =If(And(Not(IsBlank(_selectedLeaveType)),ThisItem.type = _selectedLeaveType), ThisItem.iconselected, ThisItem.icon)
+                OnSelect: =Select(Parent)
+                PaddingRight: =0.00
+                PaddingTop: =0.00
+                PressedBorderColor: =ColorFade(NRLeaveTypeIcon.BorderColor, -20%)
+                PressedFill: =ColorFade(NRLeaveTypeIcon.Fill, -20%)
+                Width: =20
+                X: =21
+                Y: =12
+                ZIndex: =1
 
             NRLeaveCellBK As rectangle:
                 DisabledFill: =NRLeaveCellBK.Fill
@@ -756,7 +763,7 @@ NewRequestScreen As screen:
                 OnSelect: =Select(Parent)
                 PressedFill: =NRLeaveCellBK.Fill
                 Width: =232
-                ZIndex: =1
+                ZIndex: =2
 
             NRLeaveTypeButton As button:
                 BorderColor: =RGBA(10, 106, 204, 1)
@@ -785,9 +792,10 @@ NewRequestScreen As screen:
                 Size: =14
                 Text: =""
                 Width: =238.66666666666669
-                ZIndex: =2
+                ZIndex: =3
 
             NRLeaveTypeLabel As label:
+                Align: =Align.Center
                 Color: =If(And(Not(IsBlank(_selectedLeaveType)),ThisItem.type = _selectedLeaveType), Color.White, RGBA(10, 106, 204, 1))
                 FocusedBorderColor: =NRLeaveTypeLabel.BorderColor
                 Font: =Font.Lato
@@ -806,27 +814,7 @@ NewRequestScreen As screen:
                 PressedFill: =NRLeaveTypeLabel.Fill
                 Size: =14
                 Text: =ThisItem.type
-                Width: =133
-                X: =63
-                ZIndex: =3
-
-            NRLeaveTypeIcon As image:
-                ApplyEXIFOrientation: =false
-                Fill: =RGBA(255, 255, 255, 0)
-                FocusedBorderColor: =NRLeaveTypeIcon.BorderColor
-                FocusedBorderThickness: =0
-                Height: =17
-                HoverBorderColor: =ColorFade(NRLeaveTypeIcon.BorderColor, 20%)
-                HoverFill: =ColorFade(NRLeaveTypeIcon.Fill, 20%)
-                Image: =If(And(Not(IsBlank(_selectedLeaveType)),ThisItem.type = _selectedLeaveType), ThisItem.iconselected, ThisItem.icon)
-                OnSelect: =Select(Parent)
-                PaddingRight: =0.00
-                PaddingTop: =0.00
-                PressedBorderColor: =ColorFade(NRLeaveTypeIcon.BorderColor, -20%)
-                PressedFill: =ColorFade(NRLeaveTypeIcon.Fill, -20%)
-                Width: =20
-                X: =21
-                Y: =12
+                Width: =230.75
                 ZIndex: =4
 
         TypeRequestTitle As label:
@@ -836,7 +824,7 @@ NewRequestScreen As screen:
             FocusedBorderColor: =TypeRequestTitle.BorderColor
             Font: =Font.Lato
             FontWeight: =FontWeight.Bold
-            Height: =22
+            Height: =19
             HoverBorderColor: =TypeRequestTitle.BorderColor
             HoverColor: =TypeRequestTitle.Color
             HoverFill: =TypeRequestTitle.Fill
@@ -851,8 +839,8 @@ NewRequestScreen As screen:
             Size: =13.5
             Text: |-
                 ="Select the type of leave you plan to take:"
-            Width: =876
-            X: =260
+            Width: =949
+            X: =267
             Y: =102
             ZIndex: =45
 
@@ -865,8 +853,8 @@ NewRequestScreen As screen:
             Height: =1
             HoverFill: =NewRequestSeparator.Fill
             PressedFill: =NewRequestSeparator.Fill
-            Width: =876
-            X: =260
+            Width: =949
+            X: =267
             Y: =294
             ZIndex: =46
 
