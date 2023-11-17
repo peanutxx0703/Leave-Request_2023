@@ -1,75 +1,144 @@
 Screen2 As screen:
 
-    "Gallery3 As gallery.'BrowseLayout_Vertical_TwoTextVariant_ver5.0'":
+    Gallery3 As gallery.galleryVertical:
         DelayItemLoading: =true
-        Items: =EmployeeCollection
+        Height: =608
+        Items: =Filter(Table1_11,'Name of Employee' = User().FullName)
         Layout: =Layout.Vertical
         LoadingSpinner: =LoadingSpinner.Data
-        TemplatePadding: =0
-        TemplateSize: =90
+        TemplateSize: =595
+        Width: =1310
         X: =40
-        Y: =40
+        Y: =30
         ZIndex: =1
 
-        Title3 As label:
-            FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
-            Height: =Self.Size * 1.8
+        Label28 As label:
+            Height: =50
             OnSelect: =Select(Parent)
-            PaddingBottom: =0
-            PaddingLeft: =0
-            PaddingRight: =0
-            PaddingTop: =0
+            PaddingBottom: =50
+            PaddingTop: =10
+            Size: =18
             Text: |-
                 ="Annual Leave Entitlement: " & ThisItem.'Annual Leave Entitlement'
-            VerticalAlign: =VerticalAlign.Top
-            Width: =Parent.TemplateWidth - 86
-            X: =16
-            Y: =(Parent.TemplateHeight - (Self.Size * 1.8 + Subtitle2.Size * 1.8)) / 2
+            Width: =797
+            X: =27
+            Y: =66
             ZIndex: =1
 
-        Subtitle2 As label:
-            FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
-            Height: =Self.Size * 1.8
+        Label29 As label:
+            Height: =50
             OnSelect: =Select(Parent)
-            PaddingBottom: =0
-            PaddingLeft: =0
-            PaddingRight: =0
-            PaddingTop: =0
-            Text: =ThisItem.'Name of Manager'
-            VerticalAlign: =VerticalAlign.Top
-            Width: =Title3.Width
-            X: =Title3.X
-            Y: =Title3.Y + Title3.Height
+            PaddingBottom: =50
+            PaddingTop: =10
+            Size: =18
+            Text: |-
+                ="Annual Carried Forward Leave: " & ThisItem.'Annual Carried Forward Leave'
+            Width: =760
+            X: =27
+            Y: =116
             ZIndex: =2
 
-        NextArrow3 As icon.ChevronRight:
-            AccessibleLabel: =Self.Tooltip
-            Color: =RGBA(166, 166, 166, 1)
+        Label29_1 As label:
             Height: =50
-            Icon: =Icon.ChevronRight
             OnSelect: =Select(Parent)
-            PaddingBottom: =16
-            PaddingLeft: =16
-            PaddingRight: =16
-            PaddingTop: =16
-            Tooltip: ="View item details"
-            Width: =50
-            X: =Parent.TemplateWidth - Self.Width - 12
-            Y: =(Parent.TemplateHeight / 2) - (Self.Height / 2)
+            PaddingBottom: =50
+            PaddingTop: =10
+            Size: =18
+            Text: |-
+                ="Annual Total Entitlement: " & ThisItem.'Annual Total Entitlement'
+            Width: =760
+            X: =27
+            Y: =166
             ZIndex: =3
 
-        Separator3 As rectangle:
-            Fill: =RGBA(255, 255, 255, 1)
-            Height: =8
+        Label29_2 As label:
+            Height: =50
             OnSelect: =Select(Parent)
-            Width: =Parent.TemplateWidth
-            Y: =Parent.TemplateHeight - Self.Height
+            PaddingBottom: =50
+            PaddingTop: =10
+            Size: =18
+            Text: |-
+                ="Annual Leave Balance: " & ThisItem.'Annual Leave Balance'
+            Width: =760
+            X: =27
+            Y: =216
             ZIndex: =4
 
-        Rectangle14 As rectangle:
-            Height: =Parent.TemplateHeight - Separator3.Height
+        Label29_3 As label:
+            Height: =50
             OnSelect: =Select(Parent)
-            Visible: =ThisItem.IsSelected
-            Width: =4
+            PaddingBottom: =50
+            PaddingTop: =10
+            Size: =18
+            Text: |-
+                ="Medical Leave Balance: " & ThisItem.'Medical Leave Balance'
+            Width: =760
+            X: =27
+            Y: =266
             ZIndex: =5
+
+        Label29_4 As label:
+            Height: =50
+            OnSelect: =Select(Parent)
+            PaddingBottom: =50
+            PaddingTop: =10
+            Size: =18
+            Text: |-
+                ="Compassionate Leave Balance: " & ThisItem.'Compassionate Leave Balance'
+            Width: =760
+            X: =27
+            Y: =316
+            ZIndex: =6
+
+        Label29_5 As label:
+            Height: =50
+            OnSelect: =Select(Parent)
+            PaddingBottom: =50
+            PaddingTop: =10
+            Size: =18
+            Text: |-
+                ="Marriage Leave Balance: " & ThisItem.'Marriage Leave Balance'
+            Width: =760
+            X: =27
+            Y: =366
+            ZIndex: =7
+
+        Label29_6 As label:
+            Height: =50
+            OnSelect: =Select(Parent)
+            PaddingBottom: =50
+            PaddingTop: =10
+            Size: =18
+            Text: |-
+                ="Paternity Leave Balance: " & ThisItem.'Paternity Leave Balance' 
+            Width: =760
+            X: =27
+            Y: =416
+            ZIndex: =8
+
+        Label29_7 As label:
+            Height: =50
+            OnSelect: =Select(Parent)
+            PaddingBottom: =50
+            PaddingTop: =10
+            Size: =18
+            Text: |-
+                ="Maternity Leave Balance: " & ThisItem.'Maternity Leave Balance'
+            Width: =760
+            X: =27
+            Y: =466
+            ZIndex: =9
+
+        Label29_8 As label:
+            Height: =50
+            OnSelect: =Select(Parent)
+            PaddingBottom: =50
+            PaddingTop: =10
+            Size: =18
+            Text: |-
+                ="Hospitalization Leave Balance: " & ThisItem.'Hospitalization Leave Balance'
+            Width: =760
+            X: =27
+            Y: =516
+            ZIndex: =10
 
