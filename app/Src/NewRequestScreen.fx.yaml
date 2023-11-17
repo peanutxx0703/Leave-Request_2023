@@ -72,7 +72,7 @@ NewRequestScreen As screen:
         RadiusTopLeft: =0
         RadiusTopRight: =0
         Text: ="Submit request"
-        Width: =904
+        Width: =1134
         X: =232
         Y: =684
         ZIndex: =23
@@ -595,7 +595,7 @@ NewRequestScreen As screen:
             PressedColor: =Label1_10.Color
             PressedFill: =Label1_10.Fill
             Size: =12
-            Text: =If(!IsBlank(_selectedApprover.DisplayName),_selectedApprover.DisplayName,"Select an approver by clicking ""Change""")
+            Text: =If(!IsBlank(_selectedApprover.DisplayName),_selectedApprover.DisplayName,"Select an approver by clicking Change")
             X: =299
             Y: =489
             ZIndex: =21
