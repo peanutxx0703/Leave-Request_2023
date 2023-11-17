@@ -59,6 +59,7 @@ App As appinfo:
                     TargetScreen: LoginScreen
                 }
             ),
+        
             //add custom leave types to this collection to make them show up in the app
          ClearCollect(
             LeaveTypeCollection, 
