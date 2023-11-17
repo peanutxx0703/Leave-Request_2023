@@ -169,165 +169,181 @@ LeaveBalanceScreen As screen:
         Y: =80
         ZIndex: =30
 
-    GalleryLeaveBalance As gallery.galleryVertical:
-        AccessibleLabel: ="Leave balance gallery"
-        DisabledBorderColor: =GalleryLeaveBalance.BorderColor
-        DisabledFill: =GalleryLeaveBalance.Fill
-        Height: =688
-        HoverBorderColor: =GalleryLeaveBalance.BorderColor
-        HoverFill: =GalleryLeaveBalance.Fill
-        Items: =RequesterBalanceCollection
-        Layout: =Layout.Vertical
-        LoadingSpinnerColor: =GalleryLeaveBalance.BorderColor
-        PressedBorderColor: =GalleryLeaveBalance.BorderColor
-        PressedFill: =GalleryLeaveBalance.Fill
-        ShowScrollbar: =false
-        TemplatePadding: =20
-        TemplateSize: =290
-        Width: =926
-        WrapCount: =4
-        X: =258
-        Y: =80
-        ZIndex: =31
-
-        Rectangle6 As rectangle:
-            AccessibleLabel: =ThisItem.type
-            BorderColor: =RGBA(10, 106, 204, 1)
-            BorderThickness: =1
-            DisabledFill: =Rectangle6.Fill
-            Fill: =RGBA(62,96,170,0)
-            FocusedBorderColor: =Rectangle6.BorderColor
-            Height: =290
-            HoverFill: =Rectangle6.Fill
-            OnSelect: =
-            PressedFill: =Rectangle6.Fill
-            Width: =206
-            ZIndex: =1
-
-        Image3 As image:
-            AccessibleLabel: =ThisItem.type
-            FocusedBorderColor: =Image3.BorderColor
-            Height: =40
-            HoverBorderColor: =ColorFade(Image3.BorderColor, 20%)
-            HoverFill: =ColorFade(Image3.Fill, 20%)
-            Image: =LookUp(LeaveTypeCollection, type = ThisItem.type).icon
-            OnSelect: =Select(Parent)
-            PressedBorderColor: =ColorFade(Image3.BorderColor, -20%)
-            PressedFill: =ColorFade(Image3.Fill, -20%)
-            Width: =40
-            X: =Parent.TemplateWidth/2 - Image3.Width/2
-            Y: =30
-            ZIndex: =2
-
-        Label16 As label:
-            Align: =LayoutAlignItems.Center
-            FocusedBorderColor: =Label16.BorderColor
-            FocusedBorderThickness: =2
-            Font: =Font.Lato
-            FontWeight: =FontWeight.Semibold
-            HoverBorderColor: =Label16.BorderColor
-            HoverColor: =Label16.Color
-            HoverFill: =Label16.Fill
-            Live: =Live.Polite
-            OnSelect: =Select(Parent)
-            PressedBorderColor: =Label16.BorderColor
-            PressedColor: =Label16.Color
-            PressedFill: =Label16.Fill
-            Size: =18
-            Text: =ThisItem.type
-            Width: =Parent.TemplateWidth
-            Y: =83
-            ZIndex: =3
-
-        Label17 As label:
-            Align: =LayoutAlignItems.Center
-            FocusedBorderColor: =Label17.BorderColor
-            FocusedBorderThickness: =2
-            Font: =Font.'Lato Light'
-            Height: =48
-            HoverBorderColor: =Label17.BorderColor
-            HoverColor: =Label17.Color
-            HoverFill: =Label17.Fill
-            Live: =Live.Polite
-            OnSelect: =Select(Parent)
-            PressedBorderColor: =Label17.BorderColor
-            PressedColor: =Label17.Color
-            PressedFill: =Label17.Fill
-            Size: =27
-            Text: =Text(ThisItem.balance) & If(Abs(ThisItem.balance)=1, " day", " days")
-            Width: =Parent.TemplateWidth
-            Y: =137
-            ZIndex: =4
-
-        Label18 As label:
-            Align: =LayoutAlignItems.Center
-            FocusedBorderColor: =Label18.BorderColor
-            FocusedBorderThickness: =2
-            Font: =Font.Lato
-            FontWeight: =FontWeight.Bold
-            Height: =32
-            HoverBorderColor: =Label18.BorderColor
-            HoverColor: =Label18.Color
-            HoverFill: =Label18.Fill
-            Live: =Live.Polite
-            OnSelect: =Select(Parent)
-            PressedBorderColor: =Label18.BorderColor
-            PressedColor: =Label18.Color
-            PressedFill: =Label18.Fill
-            Size: =12
-            Text: ="available"
-            Width: =Parent.TemplateWidth
-            Y: =185
-            ZIndex: =5
-
-        icon3 As icon.Information:
-            AccessibleLabel: =ThisItem.type & " more info, " & ThisItem.balance & If(Abs(ThisItem.balance) = 1, " day", " days") & " available"
-            Color: =RGBA(10, 106, 204, 1)
-            DisabledFill: =icon3.Fill
-            FocusedBorderColor: =icon3.BorderColor
-            Height: =20
-            HoverBorderColor: =ColorFade(icon3.BorderColor, 20%)
-            HoverColor: =ColorFade(icon3.Color, 20%)
-            HoverFill: =icon3.Fill
-            Icon: =Icon.Information
-            OnSelect: |
-                =Set(_aboutSelectedLeaveType, ThisItem.type); Navigate(AboutScreen, BorderStyle.None)
-            PressedBorderColor: =ColorFade(icon3.BorderColor, -20%)
-            PressedColor: =ColorFade(icon3.Color, -20%)
-            PressedFill: =icon3.Fill
-            TabIndex: =1
-            Width: =20
-            X: =171
-            Y: =10
-            ZIndex: =6
-
-        Label19 As label:
-            Align: =LayoutAlignItems.Center
-            Color: =RGBA(10, 106, 204, 1)
-            FocusedBorderColor: =Label19.BorderColor
-            FocusedBorderThickness: =2
-            Font: =Font.Lato
-            FontWeight: =FontWeight.Semibold
-            HoverBorderColor: =Label19.BorderColor
-            HoverColor: =Label19.Color
-            HoverFill: =Label19.Fill
-            OnSelect: |
-                =Set(_selectedLeaveType, ThisItem.type);
-                Set(_editingRequest, false);
-                Navigate(NewRequestScreen, BorderStyle.None);
-            PressedBorderColor: =Label19.BorderColor
-            PressedColor: =Label19.Color
-            PressedFill: =Label19.Fill
-            Size: =12
-            TabIndex: =0
-            Text: ="+ Request leave"
-            X: =23
-            Y: =235
-            ZIndex: =7
-
     Navigation_6 As Navigation:
         CurrentScreen: ="My Leave Balance"
         NavItem: =If(_managerView,ManagerNavigation,EmployeeNavigation)
         Y: =80
         ZIndex: =32
+
+    "Gallery3_1 As gallery.'BrowseLayout_Vertical_TwoTextVariant_ver5.0'":
+        DelayItemLoading: =true
+        Height: =588
+        Items: =Filter(Table1_11,'Name of Employee' = User().FullName)
+        Layout: =Layout.Vertical
+        LoadingSpinner: =LoadingSpinner.Data
+        TemplateSize: =549
+        Width: =824
+        X: =265
+        Y: =168
+        ZIndex: =33
+
+        Label28_1 As label:
+            BorderThickness: =1
+            Height: =50
+            OnSelect: =Select(Parent)
+            PaddingBottom: =10
+            PaddingLeft: =15
+            PaddingTop: =10
+            Size: =18
+            Text: |-
+                ="Annual Leave Entitlement: " & ThisItem.'Annual Leave Entitlement'
+            Width: =710
+            X: =72
+            Y: =27
+            ZIndex: =1
+
+        Label29_17 As label:
+            BorderThickness: =1
+            Height: =50
+            OnSelect: =Select(Parent)
+            PaddingBottom: =10
+            PaddingLeft: =15
+            PaddingTop: =10
+            Size: =18
+            Text: |-
+                ="Annual Carried Forward Leave: " & ThisItem.'Annual Carried Forward Leave'
+            Width: =710
+            X: =72
+            Y: =77
+            ZIndex: =2
+
+        Label29_16 As label:
+            BorderThickness: =1
+            Height: =50
+            OnSelect: =Select(Parent)
+            PaddingBottom: =10
+            PaddingLeft: =15
+            PaddingTop: =10
+            Size: =18
+            Text: |-
+                ="Annual Total Entitlement: " & ThisItem.'Annual Total Entitlement'
+            Width: =710
+            X: =72
+            Y: =127
+            ZIndex: =3
+
+        Label29_15 As label:
+            BorderThickness: =1
+            Height: =50
+            OnSelect: =Select(Parent)
+            PaddingBottom: =10
+            PaddingLeft: =15
+            PaddingTop: =10
+            Size: =18
+            Text: |-
+                ="Annual Leave Balance: " & ThisItem.'Annual Leave Balance'
+            Width: =710
+            X: =72
+            Y: =177
+            ZIndex: =4
+
+        Label29_14 As label:
+            BorderThickness: =1
+            Height: =50
+            OnSelect: =Select(Parent)
+            PaddingBottom: =10
+            PaddingLeft: =15
+            PaddingTop: =10
+            Size: =18
+            Text: |-
+                ="Medical Leave Balance: " & ThisItem.'Medical Leave Balance'
+            Width: =710
+            X: =72
+            Y: =228
+            ZIndex: =5
+
+        Label29_13 As label:
+            BorderThickness: =1
+            Height: =50
+            OnSelect: =Select(Parent)
+            PaddingBottom: =10
+            PaddingLeft: =15
+            PaddingTop: =10
+            Size: =18
+            Text: |-
+                ="Compassionate Leave Balance: " & ThisItem.'Compassionate Leave Balance'
+            Width: =710
+            X: =72
+            Y: =278
+            ZIndex: =6
+
+        Label29_12 As label:
+            BorderThickness: =1
+            Height: =50
+            OnSelect: =Select(Parent)
+            PaddingBottom: =10
+            PaddingLeft: =15
+            PaddingTop: =10
+            Size: =18
+            Text: |-
+                ="Marriage Leave Balance: " & ThisItem.'Marriage Leave Balance'
+            Width: =710
+            X: =72
+            Y: =328
+            ZIndex: =7
+
+        Label29_11 As label:
+            BorderThickness: =1
+            Height: =50
+            OnSelect: =Select(Parent)
+            PaddingBottom: =10
+            PaddingLeft: =15
+            PaddingTop: =10
+            Size: =18
+            Text: |-
+                ="Paternity Leave Balance: " & ThisItem.'Paternity Leave Balance' 
+            Width: =710
+            X: =72
+            Y: =378
+            ZIndex: =8
+
+        Label29_10 As label:
+            BorderThickness: =1
+            Height: =50
+            OnSelect: =Select(Parent)
+            PaddingBottom: =10
+            PaddingLeft: =15
+            PaddingTop: =10
+            Size: =18
+            Text: |-
+                ="Maternity Leave Balance: " & ThisItem.'Maternity Leave Balance'
+            Width: =710
+            X: =72
+            Y: =428
+            ZIndex: =9
+
+        Label29_9 As label:
+            BorderThickness: =1
+            Height: =50
+            OnSelect: =Select(Parent)
+            PaddingBottom: =10
+            PaddingLeft: =15
+            PaddingTop: =10
+            Size: =18
+            Text: |-
+                ="Hospitalization Leave Balance: " & ThisItem.'Hospitalization Leave Balance'
+            Width: =710
+            X: =72
+            Y: =478
+            ZIndex: =10
+
+    Label15 As label:
+        Font: =Font.Lato
+        Height: =51
+        Size: =18
+        Text: ="Leave Balance   -   " & User().FullName
+        Width: =361
+        X: =253
+        Y: =101
+        ZIndex: =34
 
