@@ -289,8 +289,8 @@ CompanyHolidaysScreen As screen:
             Height: =37
             Visible: =_managerView=true
             Width: =155
-            X: =1211
-            Y: =186
+            X: =1122
+            Y: =228
             ZIndex: =34
 
         txtHolidayDate As text:
@@ -298,23 +298,24 @@ CompanyHolidaysScreen As screen:
             Height: =34
             Visible: =_managerView=true
             Width: =155
-            X: =1211
-            Y: =257
+            X: =1126
+            Y: =310
             ZIndex: =35
 
         Label7 As label:
             Font: =Font.Georgia
-            Height: =96
+            Height: =108
             Size: =14
             Text: |-
                 ="Holiday:
                 
                 
+                
                 Date:"
             Visible: =_managerView=true
             Width: =124
-            X: =1122
-            Y: =190
+            X: =1126
+            Y: =193
             ZIndex: =36
 
         Button1 As button:
@@ -324,7 +325,7 @@ CompanyHolidaysScreen As screen:
             Text: ="Add"
             Visible: =_managerView=true
             Width: =80
-            X: =1201
-            Y: =333
+            X: =1170
+            Y: =375
             ZIndex: =37
 
