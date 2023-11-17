@@ -26,7 +26,7 @@ Navigation As CanvasComponent:
             OnSelect: =Select(Parent)
             Text: =ThisItem.Title
             Width: =173
-            X: =20
-            Y: =20
+            X: =16
+            Y: =17
             ZIndex: =1
 

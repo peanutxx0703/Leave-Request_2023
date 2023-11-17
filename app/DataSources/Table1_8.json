@@ -1,0 +1,24 @@
+[
+  {
+    "Data": "[{\"Attachments\":0,\"Comments\":null,\"Created\":1700179200000,\"Created By\":\"Leave Admin\",\"Days\":1,\"End Date\":1700179200000,\"Leave Type\":\"Annual\",\"Start Date\":1700179200000,\"Status\":\"Approved\"},{\"Attachments\":0,\"Comments\":null,\"Created\":1699574400000,\"Created By\":\"Leave Admin 2\",\"Days\":1,\"End Date\":1700179200000,\"Leave Type\":\"Sick\",\"Start Date\":1700179200000,\"Status\":\"Approved\"},{\"Attachments\":0,\"Comments\":null,\"Created\":1699574400000,\"Created By\":\"Leave Admin 3\",\"Days\":3,\"End Date\":1700265600000,\"Leave Type\":\"Annual\",\"Start Date\":1700092800000,\"Status\":\"Approved\"},{\"Attachments\":0,\"Comments\":null,\"Created\":1700006400000,\"Created By\":\"Leave Admin 4\",\"Days\":5,\"End Date\":1700352000000,\"Leave Type\":\"Sick\",\"Start Date\":1700006400000,\"Status\":\"Rejected\"},{\"Attachments\":0,\"Comments\":null,\"Created\":1699488000000,\"Created By\":\"Leave Admin 5\",\"Days\":5,\"End Date\":1700179200000,\"Leave Type\":\"Annual\",\"Start Date\":1699833600000,\"Status\":\"Approved\"},{\"Attachments\":0,\"Comments\":null,\"Created\":1699574400000,\"Created By\":\"Leave Admin 6\",\"Days\":2,\"End Date\":1700438400000,\"Leave Type\":\"Annual\",\"Start Date\":1700352000000,\"Status\":\"Approved\"},{\"Attachments\":0,\"Comments\":null,\"Created\":1699574400000,\"Created By\":\"Leave Admin 7\",\"Days\":6,\"End Date\":1700611200000,\"Leave Type\":\"Annual\",\"Start Date\":1700179200000,\"Status\":\"Rejected\"},{\"Attachments\":0,\"Comments\":null,\"Created\":1697760000000,\"Created By\":\"Leave Admin 8\",\"Days\":6,\"End Date\":1699228800000,\"Leave Type\":\"Annual\",\"Start Date\":1698796800000,\"Status\":\"Approved\"},{\"Attachments\":0,\"Comments\":null,\"Created\":1699574400000,\"Created By\":\"Leave Admin 9\",\"Days\":3,\"End Date\":1700697600000,\"Leave Type\":\"Annual\",\"Start Date\":1700524800000,\"Status\":\"Approved\"}]",
+    "IsSampleData": false,
+    "IsWritable": false,
+    "Name": "Table1_8",
+    "OrderedColumnNames": [
+      "Created By",
+      "Leave Type",
+      "Created",
+      "Start Date",
+      "End Date",
+      "Days",
+      "Status",
+      "Comments",
+      "Attachments"
+    ],
+    "OriginalName": "Table1",
+    "OriginalSchema": "*[Attachments:n, Comments:s, Created:d, 'Created By':s, Days:n, 'End Date':d, 'Leave Type':s, 'Start Date':d, Status:s]",
+    "Schema": "*[Attachments:n, Comments:s, Created:d, 'Created By':s, Days:n, 'End Date':d, 'Leave Type':s, 'Start Date':d, Status:s]",
+    "Token": "dummyToken",
+    "Type": "StaticDataSourceInfo"
+  }
+]
