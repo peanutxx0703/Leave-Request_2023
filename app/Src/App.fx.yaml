@@ -59,7 +59,6 @@ App As appinfo:
                     TargetScreen: LoginScreen
                 }
             ),
-            ClearCollect(EmployeeCollection, Filter(Table1_9, 'Name of Employee' = "Chan Jia Xin")),
         
             //add custom leave types to this collection to make them show up in the app
          ClearCollect(
