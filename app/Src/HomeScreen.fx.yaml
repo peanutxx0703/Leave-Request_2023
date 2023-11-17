@@ -351,7 +351,7 @@ HomeScreen As screen:
             PressedFill: =LblFirstRequest.Fill
             Size: =20
             Text: ="Make your first leave request!"
-            Visible: =!_managerView && !GalleryRequests.Visible && _requestTypeFilter = "All"
+            Visible: =If(IsEmpty(Table1_14),true,false)
             Width: =400
             X: =425
             Y: =333
@@ -366,7 +366,7 @@ HomeScreen As screen:
             HoverFill: =Circle1.Fill
             OnSelect: =Select(IconHeaderCreateNew)
             PressedFill: =Circle1.Fill
-            Visible: =!_managerView && !GalleryRequests.Visible && _requestTypeFilter = "All"
+            Visible: =If(IsEmpty(Table1_14),true,false)
             Width: =icon7.Width
             X: =icon7.X
             Y: =icon7.Y
@@ -390,7 +390,7 @@ HomeScreen As screen:
             PressedColor: =ColorFade(icon7.Color, -20%)
             PressedFill: =icon7.Fill
             TabIndex: =0
-            Visible: =!_managerView && !GalleryRequests.Visible && _requestTypeFilter = "All"
+            Visible: =If(IsEmpty(Table1_14),true,false)
             X: =579
             Y: =408
             ZIndex: =33
@@ -406,7 +406,7 @@ HomeScreen As screen:
             PressedColor: =LblEmptyRequests.Color
             PressedFill: =LblEmptyRequests.Fill
             Text: ="No " & If(_requestTypeFilter <> "All", Lower(_requestTypeFilter)) & " requests"
-            Visible: =!GalleryRequests.Visible
+            Visible: =If(IsEmpty(Table1_14),true,false)
             Width: =190
             X: =248
             Y: =166

@@ -178,7 +178,7 @@ LeaveBalanceScreen As screen:
         DelayItemLoading: =true
         Fill: =RGBA(255, 255, 255, 1)
         Height: =552
-        Items: =Filter(Table1,'Name of Employee' = User().FullName)
+        Items: =Filter(Table1_15,'Name of Employee' = User().FullName)
         Layout: =Layout.Vertical
         LoadingSpinner: =LoadingSpinner.Data
         TemplateSize: =534
