@@ -20,8 +20,8 @@ LoginScreen As screen:
             Color: =RGBA(0, 0, 0, 1)
             FocusedBorderColor: =LblEmployeeLogin.BorderColor
             FocusedBorderThickness: =2
-            Font: =Font.Lato
-            Height: =24
+            Font: =Font.Georgia
+            Height: =23
             HoverBorderColor: =LblEmployeeLogin.BorderColor
             HoverColor: =LblEmployeeLogin.Color
             HoverFill: =LblEmployeeLogin.Fill
@@ -36,9 +36,9 @@ LoginScreen As screen:
             PressedFill: =LblEmployeeLogin.Fill
             Size: =12
             Text: ="TO SUBMIT A LEAVE REQUEST"
-            Width: =236
+            Width: =286
             X: =300
-            Y: =386
+            Y: =372
             ZIndex: =3
 
         BtnEmployeeLogin As button:
@@ -69,8 +69,8 @@ LoginScreen As screen:
             Size: =20
             Text: ="Login as an employee"
             Width: =336
-            X: =250
-            Y: =434
+            X: =275
+            Y: =420
             ZIndex: =6
 
     LoginAsManagerGroup As group:
@@ -85,7 +85,7 @@ LoginScreen As screen:
             Color: =RGBA(0, 0, 0, 1)
             FocusedBorderColor: =LblManagerLogin.BorderColor
             FocusedBorderThickness: =2
-            Font: =Font.Lato
+            Font: =Font.Georgia
             Height: =23
             HoverBorderColor: =LblManagerLogin.BorderColor
             HoverColor: =LblManagerLogin.Color
@@ -101,9 +101,9 @@ LoginScreen As screen:
             PressedFill: =LblManagerLogin.Fill
             Size: =12
             Text: ="TO APPROVE OR DECLINE LEAVE REQUESTS"
-            Width: =344
-            X: =762
-            Y: =386
+            Width: =355
+            X: =790
+            Y: =372
             ZIndex: =2
 
         BtnManagerLogin As button:
@@ -134,8 +134,8 @@ LoginScreen As screen:
             Size: =20
             Text: ="Login as a manager"
             Width: =337
-            X: =765
-            Y: =434
+            X: =793
+            Y: =420
             ZIndex: =8
 
     WelcomePageHeaderGroup As group:
@@ -158,38 +158,15 @@ LoginScreen As screen:
             PressedBorderColor: =ColorFade(HeaderBackgroundImage.BorderColor, -20%)
             PressedFill: =ColorFade(HeaderBackgroundImage.Fill, -20%)
             Width: =1365
-            X: =1
             ZIndex: =1
 
-        LeaveLabel As label:
-            Color: =Color.Black
-            FocusedBorderColor: =LeaveLabel.BorderColor
-            Font: =Font.Georgia
-            FontWeight: =FontWeight.Semibold
-            Height: =57
-            HoverBorderColor: =LeaveLabel.BorderColor
-            HoverColor: =LeaveLabel.Color
-            HoverFill: =LeaveLabel.Fill
-            PaddingBottom: =0
-            PaddingLeft: =0
-            PaddingRight: =0.00
-            PaddingTop: =0.00
-            PressedBorderColor: =LeaveLabel.BorderColor
-            PressedColor: =LeaveLabel.Color
-            PressedFill: =LeaveLabel.Fill
-            Size: =38
-            Text: ="LEAVE"
-            Width: =264
-            X: =762
-            Y: =161
-            ZIndex: =4
-
         RequestLabel As label:
-            Color: =Color.Black
+            Align: =Align.Center
+            Color: =RGBA(43, 67, 119, 1)
             FocusedBorderColor: =RequestLabel.BorderColor
             Font: =Font.Georgia
             FontWeight: =FontWeight.Semibold
-            Height: =57
+            Height: =107
             HoverBorderColor: =RequestLabel.BorderColor
             HoverColor: =RequestLabel.Color
             HoverFill: =RequestLabel.Fill
@@ -201,9 +178,9 @@ LoginScreen As screen:
             PressedColor: =RequestLabel.Color
             PressedFill: =RequestLabel.Fill
             Size: =38
-            Text: ="REQUEST"
-            Width: =356
+            Text: ="REQUEST LEAVE"
+            Width: =611
             X: =377
-            Y: =161
+            Y: =149
             ZIndex: =5
 

@@ -11,11 +11,7 @@ TodayOnLeaveScreen As screen:
     Gallery1 As gallery.galleryVertical:
         DelayItemLoading: =true
         Height: =608
-        Items: |-
-            =Filter(
-                Table1_8,
-                DateValue('Start Date') <= Today() && DateValue('End Date') >= Today() && Status = "Approved"
-            )
+        Items: =Filter(Table1_6, 'Start Date'>= Today() && Status = "Approved")
         Layout: =Layout.Vertical
         LoadingSpinner: =LoadingSpinner.Data
         TemplateSize: =121
