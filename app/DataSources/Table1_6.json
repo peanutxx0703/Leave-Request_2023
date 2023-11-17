@@ -1,0 +1,24 @@
+[
+  {
+    "Data": "[{\"Attachments\":0,\"Comments\":null,\"Created\":1700179200000,\"Created By\":\"Leave Admin\",\"Days\":1,\"End Date\":1700179200000,\"Leave Type\":\"Annual\",\"Start Date\":1700179200000,\"Status\":\"Approved\"},{\"Attachments\":0,\"Comments\":null,\"Created\":1700179200000,\"Created By\":\"Leave Admin 2\",\"Days\":1,\"End Date\":1700179200000,\"Leave Type\":\"Annual\",\"Start Date\":1700179200000,\"Status\":\"Approved\"},{\"Attachments\":0,\"Comments\":null,\"Created\":1700179200000,\"Created By\":\"Leave Admin 3\",\"Days\":1,\"End Date\":1700179200000,\"Leave Type\":\"Annual\",\"Start Date\":1700179200000,\"Status\":\"Approved\"}]",
+    "IsSampleData": false,
+    "IsWritable": false,
+    "Name": "Table1_6",
+    "OrderedColumnNames": [
+      "Created By",
+      "Leave Type",
+      "Created",
+      "Start Date",
+      "End Date",
+      "Days",
+      "Status",
+      "Comments",
+      "Attachments"
+    ],
+    "OriginalName": "Table1",
+    "OriginalSchema": "*[Attachments:n, Comments:s, Created:d, 'Created By':s, Days:n, 'End Date':d, 'Leave Type':s, 'Start Date':d, Status:s]",
+    "Schema": "*[Attachments:n, Comments:s, Created:d, 'Created By':s, Days:n, 'End Date':d, 'Leave Type':s, 'Start Date':d, Status:s]",
+    "Token": "dummyToken",
+    "Type": "StaticDataSourceInfo"
+  }
+]
