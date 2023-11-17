@@ -263,13 +263,13 @@ CompanyHolidaysScreen As screen:
         ZIndex: =33
 
     txtHoliday As text:
-        Default: ="Text input"
+        Default: =""
         X: =354
         Y: =627
         ZIndex: =34
 
     txtHolidayDate As text:
-        Default: ="Text input"
+        Default: =""
         X: =354
         Y: =695
         ZIndex: =35
