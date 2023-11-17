@@ -272,6 +272,7 @@ CompanyHolidaysScreen As screen:
         Text: |-
             ="New company holiday:"
         Underline: =true
+        Visible: =_managerView=true
         Width: =232
         X: =1122
         Y: =129
