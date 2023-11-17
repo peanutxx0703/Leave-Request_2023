@@ -212,10 +212,10 @@ TodayOnLeaveScreen As screen:
     Label1 As label:
         Font: =Font.Lato
         FontWeight: =FontWeight.Bold
-        Height: =65
+        Height: =78
         Size: =16
-        Text: ="Today On Leave  -"
-        Width: =197
+        Text: ="Today On Leave   -"
+        Width: =203
         X: =250
         Y: =81
         ZIndex: =12
@@ -223,10 +223,10 @@ TodayOnLeaveScreen As screen:
     Label15 As label:
         Font: =Font.Lato
         FontWeight: =FontWeight.Bold
-        Height: =65
+        Height: =78
         Size: =16
         Text: =Text(Today(),"[$-en-US]dd/mm/yyyy")
-        Width: =174
+        Width: =182
         X: =434
         Y: =81
         ZIndex: =13
