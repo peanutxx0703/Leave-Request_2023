@@ -164,27 +164,28 @@ LeaveBalanceScreen As screen:
         ZIndex: =32
 
     Label15 As label:
-        Font: =Font.Lato
+        Font: =Font.Georgia
+        FontWeight: =FontWeight.Semibold
         Height: =51
         Size: =18
         Text: ="Leave Balance   -   " & User().FullName
         Width: =361
         X: =253
-        Y: =101
+        Y: =90
         ZIndex: =34
 
     Gallery4_1 As gallery.galleryVertical:
         BorderColor: =RGBA(230, 230, 230, 1)
         DelayItemLoading: =true
         Fill: =RGBA(255, 255, 255, 1)
-        Height: =552
+        Height: =588
         Items: =Filter(Table1_15,'Name of Employee' = User().FullName)
         Layout: =Layout.Vertical
         LoadingSpinner: =LoadingSpinner.Data
-        TemplateSize: =534
-        Width: =961
-        X: =316
-        Y: =166
+        TemplateSize: =537
+        Width: =1058
+        X: =253
+        Y: =147
         ZIndex: =35
 
         Label17_54 As label:
