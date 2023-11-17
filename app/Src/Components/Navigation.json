@@ -41,7 +41,7 @@
             "Name": "galleryTemplate5",
             "Parent": "Gallery2",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 280,
+            "PublishOrderIndex": 281,
             "Rules": [
               {
                 "Category": "Design",
@@ -99,7 +99,14 @@
               "Align",
               "VerticalAlign",
               "X",
-              "Y",
+              {
+                "AFDDataSourceName": "",
+                "AutoRuleBindingEnabled": false,
+                "AutoRuleBindingString": "",
+                "InvariantPropertyName": "Y",
+                "IsLockable": false,
+                "NameMapSourceSchema": "?"
+              },
               {
                 "AFDDataSourceName": "",
                 "AutoRuleBindingEnabled": false,
@@ -127,7 +134,7 @@
             "Name": "Label2",
             "Parent": "Gallery2",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 281,
+            "PublishOrderIndex": 282,
             "Rules": [
               {
                 "Category": "Data",
@@ -263,13 +270,13 @@
               },
               {
                 "Category": "Design",
-                "InvariantScript": "20",
+                "InvariantScript": "16",
                 "Property": "X",
                 "RuleProviderType": "Unknown"
               },
               {
                 "Category": "Design",
-                "InvariantScript": "20",
+                "InvariantScript": "17",
                 "Property": "Y",
                 "RuleProviderType": "Unknown"
               },
@@ -395,7 +402,7 @@
         "Name": "Gallery2",
         "Parent": "Navigation",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 279,
+        "PublishOrderIndex": 280,
         "Rules": [
           {
             "Category": "Data",
@@ -596,7 +603,7 @@
       },
       "CurrentScreen"
     ],
-    "LastModifiedTimestamp": "638357846372757341",
+    "LastModifiedTimestamp": "638357860813895637",
     "Name": "Navigation",
     "Rules": [
       {
@@ -687,7 +694,7 @@
   "IsPcfControl": false,
   "IsPremiumPcfControl": false,
   "IsWidgetTemplate": false,
-  "LastModifiedTimestamp": "638357846372757341",
+  "LastModifiedTimestamp": "638357860813895637",
   "Name": "b6b5e691fc474668b7b6312386d8a5c2",
   "OverridableProperties": {},
   "Version": "1.0"
