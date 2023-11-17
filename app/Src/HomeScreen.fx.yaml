@@ -116,30 +116,6 @@ HomeScreen As screen:
             Y: =210
             ZIndex: =7
 
-        Label16 As label:
-            Height: =106
-            OnSelect: =Select(Parent)
-            Text: |-
-                ="Start Date:
-                
-                End Date:
-                
-                Leave Type:
-                "
-            Width: =198
-            X: =16
-            Y: =80
-            ZIndex: =8
-
-        Label17 As label:
-            Height: =31
-            OnSelect: =Select(Parent)
-            Text: =ThisItem.'End Date'
-            Width: =227
-            X: =115
-            Y: =114
-            ZIndex: =9
-
         Label26_1 As label:
             Align: =Align.Center
             BorderColor: |
