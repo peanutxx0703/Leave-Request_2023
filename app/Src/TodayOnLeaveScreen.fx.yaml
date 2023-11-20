@@ -30,18 +30,18 @@ TodayOnLeaveScreen As screen:
             Text: =ThisItem.'Created By'
             Width: =656
             X: =28
-            Y: =12
+            Y: =24
             ZIndex: =1
 
         Label27 As label:
             FontWeight: =FontWeight.Semibold
-            Height: =60
+            Height: =34
             OnSelect: =Select(Parent)
             Size: =14
             Text: =ThisItem.'Leave Type'
             Width: =541
             X: =28
-            Y: =34
+            Y: =60
             ZIndex: =2
 
         Rectangle12 As rectangle:
