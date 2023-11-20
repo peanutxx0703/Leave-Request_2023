@@ -24,9 +24,10 @@ HomeScreen As screen:
     "Gallery7 As gallery.'BrowseLayout_Vertical_ThreeTextVariant_ver5.0'":
         DelayItemLoading: =true
         Height: =601
-        Items: =Filter(Table1_14,'Created By' = User().FullName)
+        Items: =Filter(Table1_16,'Created By' = User().FullName)
         Layout: =Layout.Vertical
         LoadingSpinner: =LoadingSpinner.Data
+        OnSelect: =
         TemplatePadding: =0
         TemplateSize: =197
         Visible: =!_managerView=true
@@ -60,6 +61,7 @@ HomeScreen As screen:
             PaddingLeft: =0
             PaddingRight: =0
             PaddingTop: =0
+            Size: =13
             Text: =ThisItem.'Start Date'
             VerticalAlign: =VerticalAlign.Top
             Width: =412
