@@ -87,8 +87,17 @@ Screen1 As screen:
                             }
                         )
              )
-        Text: ="Button"
+        Text: ="Leave type"
         X: =498
         Y: =346
         ZIndex: =1
+
+    Button4 As button:
+        Height: =106
+        OnSelect: |-
+            =ClearCollect(RequesterBalanceCollection,Table({type:"Annual leave",balance:10},{type:"Medical leave",balance:10},{type:"Compassionate leave",balance:10},{type:"Paternity leave",balance:10},{type:"Maternity leave",balance:10},{type:"Hospitalization leave",balance:10},{type:"Unpaid leave",balance:0},{type:"Marriage leave",balance:10}))
+        Text: ="Requester balance"
+        X: =912
+        Y: =360
+        ZIndex: =2
 

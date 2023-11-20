@@ -39,11 +39,19 @@
             "tableName": "leaveRecord"
           }
         }
+      },
+      "F3B14CA320F2591B!4180": {
+        "dataSources": {
+          "leaveBucket_1": {
+            "tableName": "leaveBucket"
+          }
+        }
       }
     },
     "dataSources": [
       "leaveRecord",
-      "leaveBucket"
+      "leaveBucket",
+      "leaveBucket_1"
     ],
     "dependencies": {
       "fileSource": "a78fc13e-fc8c-4ac7-9145-ab499280749a"
