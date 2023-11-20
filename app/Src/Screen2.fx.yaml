@@ -573,3 +573,13 @@ Screen2 As screen:
             Y: =398
             ZIndex: =62
 
+        Rectangle6_14 As rectangle:
+            BorderColor: =RGBA(230, 230, 230, 1)
+            BorderThickness: =1
+            Fill: =RGBA(230, 230, 230, 1)
+            Height: =1
+            OnSelect: =Select(Parent)
+            Width: =951
+            Y: =98
+            ZIndex: =63
+
