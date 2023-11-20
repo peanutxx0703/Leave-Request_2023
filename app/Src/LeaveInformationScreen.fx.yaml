@@ -2,15 +2,15 @@ LeaveInformationScreen As screen:
 
     "Gallery6 As gallery.'BrowseLayout_Vertical_ThreeTextVariant_ver5.0'":
         DelayItemLoading: =true
-        Height: =617
-        Items: =Table1_4
+        Height: =567
+        Items: =Filter(Table1_4, SearchInput.Text in 'Created By')
         Layout: =Layout.Vertical
         LoadingSpinner: =LoadingSpinner.Data
         TemplatePadding: =0
         TemplateSize: =297
         Width: =1142
         X: =224
-        Y: =129
+        Y: =179
         ZIndex: =1
 
         Separator7 As rectangle:
@@ -290,4 +290,12 @@ LeaveInformationScreen As screen:
         X: =231
         Y: =84
         ZIndex: =11
+
+    SearchInput As text:
+        Default: =""
+        HintText: ="Search by Name"
+        HoverBorderColor: =RGBA(163, 179, 214, 1)
+        X: =606
+        Y: =139
+        ZIndex: =12
 
