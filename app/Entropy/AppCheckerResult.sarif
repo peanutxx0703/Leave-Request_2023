@@ -3002,19 +3002,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "EditLeaveScreen.SearchInput2.AccessibleLabel"
+                  "fullyQualifiedName": "EditLeaveScreen.SearchInput_1.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "EditLeaveScreen.SearchInput2.AccessibleLabel",
+                  "fullyQualifiedName": "EditLeaveScreen.SearchInput_1.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "EditLeaveScreen",
-                "type": "EditLeaveScreen.SearchInput2"
+                "type": "EditLeaveScreen.SearchInput_1"
               }
             }
           ],
