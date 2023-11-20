@@ -141,7 +141,7 @@ EditLeaveScreen As screen:
     "Gallery3 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
         DelayItemLoading: =true
         Height: =607
-        Items: =Filter(Table1_15, SearchInput_1.Text in 'Name of Employee')
+        Items: =Filter(Table1_15, SearchInput2.Text in 'Name of Employee')
         Layout: =Layout.Vertical
         LoadingSpinner: =LoadingSpinner.Data
         TemplatePadding: =0
@@ -214,7 +214,7 @@ EditLeaveScreen As screen:
             Width: =4
             ZIndex: =6
 
-    SearchInput_1 As text:
+    SearchInput2 As text:
         Default: =""
         DisabledBorderColor: =RGBA(217, 216, 217, 1)
         Fill: =RGBA(0, 0, 0, 0)
