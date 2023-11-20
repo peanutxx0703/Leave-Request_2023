@@ -41,7 +41,7 @@
             "Name": "galleryTemplate5",
             "Parent": "Gallery2",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 439,
+            "PublishOrderIndex": 3,
             "Rules": [
               {
                 "Category": "Design",
@@ -141,7 +141,7 @@
             "Name": "Label2",
             "Parent": "Gallery2",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 440,
+            "PublishOrderIndex": 4,
             "Rules": [
               {
                 "Category": "Data",
@@ -386,7 +386,7 @@
             "Name": "Rectangle13",
             "Parent": "Gallery2",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 441,
+            "PublishOrderIndex": 5,
             "Rules": [
               {
                 "Category": "Design",
@@ -558,7 +558,7 @@
         "Name": "Gallery2",
         "Parent": "Navigation",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 438,
+        "PublishOrderIndex": 2,
         "Rules": [
           {
             "Category": "Data",
@@ -759,7 +759,7 @@
       },
       "CurrentScreen"
     ],
-    "LastModifiedTimestamp": "638360496632543891",
+    "LastModifiedTimestamp": "638360546991765769",
     "Name": "Navigation",
     "Rules": [
       {
@@ -850,7 +850,7 @@
   "IsPcfControl": false,
   "IsPremiumPcfControl": false,
   "IsWidgetTemplate": false,
-  "LastModifiedTimestamp": "638360496632543891",
+  "LastModifiedTimestamp": "638360546991765769",
   "Name": "b6b5e691fc474668b7b6312386d8a5c2",
   "OverridableProperties": {},
   "Version": "1.0"
