@@ -1,6 +1,7 @@
 EditLeaveScreen As screen:
 
     Navigation_10 As Navigation:
+        CurrentScreen: ="Edit Leave"
         NavItem: =If(_managerView,ManagerNavigation,EmployeeNavigation)
         Y: =80
         ZIndex: =8
@@ -136,4 +137,10 @@ EditLeaveScreen As screen:
             Width: =155
             X: =1211
             ZIndex: =7
+
+    Form2 As form:
+        DataSource: =Table1_18
+        X: =364
+        Y: =138
+        ZIndex: =9
 
