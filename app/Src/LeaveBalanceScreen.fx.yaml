@@ -194,7 +194,7 @@ LeaveBalanceScreen As screen:
             Height: =46
             OnSelect: =Select(Parent)
             Text: ="Entitlement"
-            X: =150
+            X: =192
             Y: =3
             ZIndex: =2
 
@@ -204,7 +204,7 @@ LeaveBalanceScreen As screen:
             OnSelect: =Select(Parent)
             Text: ="Carried Forward"
             Width: =200
-            X: =300
+            X: =335
             Y: =3
             ZIndex: =3
 
@@ -213,7 +213,7 @@ LeaveBalanceScreen As screen:
             Height: =46
             OnSelect: =Select(Parent)
             Text: ="Total"
-            X: =500
+            X: =521
             Y: =3
             ZIndex: =4
 
@@ -222,7 +222,7 @@ LeaveBalanceScreen As screen:
             Height: =46
             OnSelect: =Select(Parent)
             Text: ="Taken"
-            X: =650
+            X: =664
             Y: =3
             ZIndex: =5
 
@@ -275,7 +275,7 @@ LeaveBalanceScreen As screen:
                 Height: =60
                 OnSelect: =Select(Parent)
                 Text: =ThisItem.'Hospitalization Leave Entitlement'
-                X: =150
+                X: =192
                 Y: =471
                 ZIndex: =51
 
@@ -284,7 +284,7 @@ LeaveBalanceScreen As screen:
                 OnSelect: =Select(Parent)
                 Text: =ThisItem.'Hospitalization Carried Forward'
                 Width: =200
-                X: =300
+                X: =335
                 Y: =471
                 ZIndex: =52
 
@@ -292,7 +292,7 @@ LeaveBalanceScreen As screen:
                 Height: =60
                 OnSelect: =Select(Parent)
                 Text: =ThisItem.'Hospitalization Leave Total Entitlement'
-                X: =500
+                X: =521
                 Y: =471
                 ZIndex: =53
 
@@ -300,7 +300,7 @@ LeaveBalanceScreen As screen:
                 Height: =60
                 OnSelect: =Select(Parent)
                 Text: =ThisItem.'Hospitalization Leave Taken'
-                X: =650
+                X: =664
                 Y: =471
                 ZIndex: =54
 
@@ -332,7 +332,7 @@ LeaveBalanceScreen As screen:
                 Height: =60
                 OnSelect: =Select(Parent)
                 Text: =ThisItem.'Maternity Leave Entitlement'
-                X: =150
+                X: =192
                 Y: =410
                 ZIndex: =45
 
@@ -341,7 +341,7 @@ LeaveBalanceScreen As screen:
                 OnSelect: =Select(Parent)
                 Text: =ThisItem.'Maternity Leave Carried Forward'
                 Width: =200
-                X: =300
+                X: =335
                 Y: =410
                 ZIndex: =46
 
@@ -349,7 +349,7 @@ LeaveBalanceScreen As screen:
                 Height: =60
                 OnSelect: =Select(Parent)
                 Text: =ThisItem.'Maternity Leave Total Entitlement'
-                X: =500
+                X: =521
                 Y: =410
                 ZIndex: =47
 
@@ -357,7 +357,7 @@ LeaveBalanceScreen As screen:
                 Height: =60
                 OnSelect: =Select(Parent)
                 Text: =ThisItem.'Maternity Leave Taken'
-                X: =650
+                X: =664
                 Y: =410
                 ZIndex: =48
 
@@ -389,7 +389,7 @@ LeaveBalanceScreen As screen:
                 Height: =60
                 OnSelect: =Select(Parent)
                 Text: =ThisItem.'Paternity Leave Entitlement'
-                X: =150
+                X: =192
                 Y: =349
                 ZIndex: =39
 
@@ -398,7 +398,7 @@ LeaveBalanceScreen As screen:
                 OnSelect: =Select(Parent)
                 Text: =ThisItem.'Paternity Leave Carried Forward'
                 Width: =200
-                X: =300
+                X: =335
                 Y: =349
                 ZIndex: =40
 
@@ -406,7 +406,7 @@ LeaveBalanceScreen As screen:
                 Height: =60
                 OnSelect: =Select(Parent)
                 Text: =ThisItem.'Paternity Leave Total Entitlement'
-                X: =500
+                X: =521
                 Y: =349
                 ZIndex: =41
 
@@ -414,7 +414,7 @@ LeaveBalanceScreen As screen:
                 Height: =60
                 OnSelect: =Select(Parent)
                 Text: =ThisItem.'Paternity Leave Taken'
-                X: =650
+                X: =664
                 Y: =349
                 ZIndex: =42
 
@@ -446,7 +446,7 @@ LeaveBalanceScreen As screen:
                 Height: =60
                 OnSelect: =Select(Parent)
                 Text: =ThisItem.'Marriage Leave Entitlement'
-                X: =150
+                X: =192
                 Y: =290
                 ZIndex: =33
 
@@ -455,7 +455,7 @@ LeaveBalanceScreen As screen:
                 OnSelect: =Select(Parent)
                 Text: =ThisItem.'Marriage Leave Carried Forward'
                 Width: =200
-                X: =300
+                X: =335
                 Y: =290
                 ZIndex: =34
 
@@ -463,7 +463,7 @@ LeaveBalanceScreen As screen:
                 Height: =60
                 OnSelect: =Select(Parent)
                 Text: =ThisItem.'Marriage Leave Total Entitlement'
-                X: =500
+                X: =521
                 Y: =290
                 ZIndex: =35
 
@@ -471,7 +471,7 @@ LeaveBalanceScreen As screen:
                 Height: =60
                 OnSelect: =Select(Parent)
                 Text: =ThisItem.'Marriage Leave Taken'
-                X: =650
+                X: =664
                 Y: =290
                 ZIndex: =36
 
@@ -503,8 +503,8 @@ LeaveBalanceScreen As screen:
                 Height: =60
                 OnSelect: =Select(Parent)
                 Text: =ThisItem.'Compassionate Leave Entitlement'
-                X: =150
-                Y: =230
+                X: =192
+                Y: =231
                 ZIndex: =27
 
             Label17_79 As label:
@@ -512,7 +512,7 @@ LeaveBalanceScreen As screen:
                 OnSelect: =Select(Parent)
                 Text: =ThisItem.'Compassionate Leave Carried Forward'
                 Width: =200
-                X: =300
+                X: =335
                 Y: =230
                 ZIndex: =28
 
@@ -520,7 +520,7 @@ LeaveBalanceScreen As screen:
                 Height: =60
                 OnSelect: =Select(Parent)
                 Text: =ThisItem.'Compassionate Leave Total Entitlement'
-                X: =500
+                X: =521
                 Y: =230
                 ZIndex: =29
 
@@ -528,7 +528,7 @@ LeaveBalanceScreen As screen:
                 Height: =60
                 OnSelect: =Select(Parent)
                 Text: =ThisItem.'Compassionate Leave Taken'
-                X: =650
+                X: =664
                 Y: =230
                 ZIndex: =30
 
@@ -560,7 +560,7 @@ LeaveBalanceScreen As screen:
                 Height: =60
                 OnSelect: =Select(Parent)
                 Text: =ThisItem.'Medical Leave Entitlement'
-                X: =150
+                X: =192
                 Y: =170
                 ZIndex: =21
 
@@ -569,7 +569,7 @@ LeaveBalanceScreen As screen:
                 OnSelect: =Select(Parent)
                 Text: =ThisItem.'Medical Carried Forward Leave'
                 Width: =200
-                X: =300
+                X: =335
                 Y: =170
                 ZIndex: =22
 
@@ -577,7 +577,7 @@ LeaveBalanceScreen As screen:
                 Height: =60
                 OnSelect: =Select(Parent)
                 Text: =ThisItem.'Medical Total Entitlement Leave'
-                X: =500
+                X: =521
                 Y: =170
                 ZIndex: =23
 
@@ -585,7 +585,7 @@ LeaveBalanceScreen As screen:
                 Height: =60
                 OnSelect: =Select(Parent)
                 Text: =ThisItem.'Medical Leave Taken'
-                X: =650
+                X: =664
                 Y: =170
                 ZIndex: =24
 
@@ -618,7 +618,7 @@ LeaveBalanceScreen As screen:
                 Height: =60
                 OnSelect: =Select(Parent)
                 Text: ="-"
-                X: =150
+                X: =192
                 Y: =110
                 ZIndex: =15
 
@@ -628,7 +628,7 @@ LeaveBalanceScreen As screen:
                 OnSelect: =Select(Parent)
                 Text: ="-"
                 Width: =200
-                X: =300
+                X: =335
                 Y: =110
                 ZIndex: =16
 
@@ -637,7 +637,7 @@ LeaveBalanceScreen As screen:
                 Height: =60
                 OnSelect: =Select(Parent)
                 Text: ="-"
-                X: =500
+                X: =521
                 Y: =110
                 ZIndex: =17
 
@@ -646,7 +646,7 @@ LeaveBalanceScreen As screen:
                 Height: =60
                 OnSelect: =Select(Parent)
                 Text: =ThisItem.'Unpaid Leave Taken'
-                X: =650
+                X: =664
                 Y: =110
                 ZIndex: =18
 
@@ -679,7 +679,7 @@ LeaveBalanceScreen As screen:
                 Height: =60
                 OnSelect: =Select(Parent)
                 Text: =ThisItem.'Annual Leave Entitlement'
-                X: =150
+                X: =192
                 Y: =50
                 ZIndex: =9
 
@@ -688,7 +688,7 @@ LeaveBalanceScreen As screen:
                 OnSelect: =Select(Parent)
                 Text: =ThisItem.'Annual Carried Forward Leave'
                 Width: =200
-                X: =300
+                X: =335
                 Y: =50
                 ZIndex: =10
 
@@ -696,7 +696,7 @@ LeaveBalanceScreen As screen:
                 Height: =60
                 OnSelect: =Select(Parent)
                 Text: =ThisItem.'Annual Total Entitlement'
-                X: =500
+                X: =521
                 Y: =50
                 ZIndex: =11
 
@@ -704,7 +704,7 @@ LeaveBalanceScreen As screen:
                 Height: =60
                 OnSelect: =Select(Parent)
                 Text: =ThisItem.'Annual Leave Taken'
-                X: =650
+                X: =664
                 Y: =50
                 ZIndex: =12
 

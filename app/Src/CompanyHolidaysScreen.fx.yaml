@@ -285,15 +285,6 @@ CompanyHolidaysScreen As screen:
         Y: =40
         ZIndex: =38
 
-        txtHoliday As text:
-            Default: =""
-            Height: =37
-            Visible: =_managerView=true
-            Width: =155
-            X: =1122
-            Y: =228
-            ZIndex: =34
-
         txtHolidayDate As text:
             Default: =""
             Height: =34
@@ -329,4 +320,13 @@ CompanyHolidaysScreen As screen:
             X: =1170
             Y: =375
             ZIndex: =37
+
+    txtHoliday As text:
+        Default: =""
+        Height: =34
+        Visible: =_managerView=true
+        Width: =155
+        X: =1126
+        Y: =235
+        ZIndex: =39
 
