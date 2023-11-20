@@ -41,7 +41,7 @@
             "Name": "galleryTemplate5",
             "Parent": "Gallery2",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 437,
+            "PublishOrderIndex": 428,
             "Rules": [
               {
                 "Category": "Design",
@@ -141,7 +141,7 @@
             "Name": "Label2",
             "Parent": "Gallery2",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 438,
+            "PublishOrderIndex": 429,
             "Rules": [
               {
                 "Category": "Data",
@@ -409,7 +409,7 @@
         "Name": "Gallery2",
         "Parent": "Navigation",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 436,
+        "PublishOrderIndex": 427,
         "Rules": [
           {
             "Category": "Data",
@@ -610,15 +610,15 @@
       },
       "CurrentScreen"
     ],
-    "LastModifiedTimestamp": "638360461362609408",
+    "LastModifiedTimestamp": "638360390837652926",
     "Name": "Navigation",
     "Rules": [
       {
         "Category": "Data",
-        "InvariantScript": "Table({Title: \"My Leave Requests\", TargetScreen: HomeScreen},{Title: \"My Leave Balance\", TargetScreen: LeaveBalanceScreen},{Title: \"Today's On Leave\", TargetScreen: TodayOnLeaveScreen},{Title: \"Leave Information\", TargetScreen: LeaveInformationScreen},{Title: \"Edit Leave\", TargetScreen: EditLeaveScreen},{Title: \"Company Holidays\", TargetScreen: CompanyHolidaysScreen},{Title: \"About\", TargetScreen: AboutScreen},{Title: \"Log Out\", TargetScreen: LoginScreen})",
+        "InvariantScript": "Table({Title: \"My Leave Requests\", TargetScreen: HomeScreen},{Title: \"My Leave Balance\", TargetScreen: LeaveBalanceScreen},{Title: \"Today's On Leave\", TargetScreen: TodayOnLeaveScreen},{Title: \"Leave Information\", TargetScreen: LeaveInformationScreen},{Title: \"Company Holidays\", TargetScreen: CompanyHolidaysScreen},{Title: \"About\", TargetScreen: AboutScreen},{Title: \"Log Out\", TargetScreen: LoginScreen})",
         "NameMap": "{\"TargetScreen\":\"TargetScreen\",\"Title\":\"Title\"}",
         "Property": "NavItem",
-        "RuleProviderType": "Unknown"
+        "RuleProviderType": "System"
       },
       {
         "Category": "Data",
@@ -701,7 +701,7 @@
   "IsPcfControl": false,
   "IsPremiumPcfControl": false,
   "IsWidgetTemplate": false,
-  "LastModifiedTimestamp": "638360461362609408",
+  "LastModifiedTimestamp": "638360390837652926",
   "Name": "b6b5e691fc474668b7b6312386d8a5c2",
   "OverridableProperties": {},
   "Version": "1.0"

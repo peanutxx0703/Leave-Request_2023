@@ -32,3 +32,12 @@ Navigation As CanvasComponent:
             Y: =17
             ZIndex: =1
 
+        Rectangle13 As rectangle:
+            Fill: =RGBA(217, 216, 217, 1)
+            Height: =2
+            OnSelect: =Select(Parent)
+            Width: =219
+            X: =2
+            Y: =71
+            ZIndex: =2
+
