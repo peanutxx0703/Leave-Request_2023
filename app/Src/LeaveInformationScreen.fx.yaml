@@ -293,6 +293,8 @@ LeaveInformationScreen As screen:
 
     SearchInput As text:
         Default: =""
+        DisabledBorderColor: =RGBA(217, 216, 217, 1)
+        Fill: =RGBA(0, 0, 0, 0)
         HintText: ="Search by Name"
         HoverBorderColor: =RGBA(163, 179, 214, 1)
         X: =606
