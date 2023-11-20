@@ -722,8 +722,7 @@ NewRequestScreen As screen:
             Items: =LeaveTypeCollection
             Layout: =Layout.Vertical
             LoadingSpinnerColor: =NewRequestLeaveTypeGallery.BorderColor
-            OnSelect: |-
-                =Patch(Table1_16,Default(Table1_16),{'Leave Type':NRLeaveTypeButton})
+            OnSelect: =Set(_selectedLeaveType, ThisItem.type)
             PressedBorderColor: =NewRequestLeaveTypeGallery.BorderColor
             PressedFill: =NewRequestLeaveTypeGallery.Fill
             ShowScrollbar: =false
@@ -734,25 +733,6 @@ NewRequestScreen As screen:
             X: =TypeRequestTitle.X-20
             Y: =135
             ZIndex: =44
-
-            NRLeaveTypeIcon As image:
-                ApplyEXIFOrientation: =false
-                Fill: =RGBA(255, 255, 255, 0)
-                FocusedBorderColor: =NRLeaveTypeIcon.BorderColor
-                FocusedBorderThickness: =0
-                Height: =17
-                HoverBorderColor: =ColorFade(NRLeaveTypeIcon.BorderColor, 20%)
-                HoverFill: =ColorFade(NRLeaveTypeIcon.Fill, 20%)
-                Image: =If(And(Not(IsBlank(_selectedLeaveType)),ThisItem.type = _selectedLeaveType), ThisItem.iconselected, ThisItem.icon)
-                OnSelect: =Select(Parent)
-                PaddingRight: =0.00
-                PaddingTop: =0.00
-                PressedBorderColor: =ColorFade(NRLeaveTypeIcon.BorderColor, -20%)
-                PressedFill: =ColorFade(NRLeaveTypeIcon.Fill, -20%)
-                Width: =20
-                X: =21
-                Y: =12
-                ZIndex: =1
 
             NRLeaveCellBK As rectangle:
                 DisabledFill: =NRLeaveCellBK.Fill
