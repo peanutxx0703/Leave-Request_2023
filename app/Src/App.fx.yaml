@@ -47,6 +47,10 @@ App As appinfo:
                     TargetScreen: TodayOnLeaveScreen
                 },
                 {
+                    Title: "Edit Leave",
+                    TargetScreen: EditLeaveScreen
+                },
+                {
                     Title: "Leave Information",
                     TargetScreen: LeaveInformationScreen
                 },
@@ -59,93 +63,82 @@ App As appinfo:
                     TargetScreen: LoginScreen
                 }
             ),
-        
             //add custom leave types to this collection to make them show up in the app
-         ClearCollect(
-            LeaveTypeCollection, 
+            ClearCollect(
+                LeaveTypeCollection,
                 Table(
-                        {
-                            type:"Annual Leave", 
-                            icon:vacation,
-                            iconselected:'vacation-selected',
-                            description:
-                            "Tips:
+                    {
+                        type: "Annual Leave",
+                        icon: vacation,
+                        iconselected: 'vacation-selected',
+                        description: "Tips:
                             1. (Employee's year of service less than 3 years) = 14 days
                             (Employee's year of service more than 3 years) = 16 days
                             (Position: (Team lead & above) && year of service more than 5 years) = 18 days
-        
                             2. Only a maximum of seven (07) days annual leave may be carried forward to the next calendar year. The excess leave unutilised shall be deemed forfeited and also The seven (7) days annual leave which has been carried forward to the next calendar year shall be cleared by end of March (the next quarter) of the next calendar year. The excess leave unutilized shall be deemed 
         forfeited.
         "
-                        }
-                        ,
-                        {
-                            type:"Medical Leave", 
-                            icon:'sick-leave', 
-                            iconselected:'sick-leave-selected',
-                            description:"Tips:
+                    },
+                    {
+                        type: "Medical Leave",
+                        icon: 'sick-leave',
+                        iconselected: 'sick-leave-selected',
+                        description: "Tips:
                             1. Medical Leave shall be defined as approved leave of absence resulting from illness, disease or injury as certified by the Company Panel Doctor / Government Medical Officer / registered medical practitioner.
         An employee shall also be entitled to paid leave after examination by a dental surgeon as defined in the Dental 
         Act 1971. An employee shall provide a medical certificate from the Government Medical Officer / registered medical 
         practitioner as evidence of absence covering all days of sickness.
         2. Total days for medical leave = 14
         ."
-                        }
-                            ,
-                        {
-                            type:"Compassionate Leave", 
-                            description:"a. Death of a member of the employee's family. First relation 
+                    },
+                    {
+                        type: "Compassionate Leave",
+                        description: "a. Death of a member of the employee's family. First relation 
         (parents/ parents-in-law/ spouse/ children)
         03 days
         b. Death of a member of the employee's family. Second relations 
         (grandparents / brothers / sisters /grandchildren)
         02 days
         In aggregate, the number of days taken under [a], [b] and [c] shall not exceed 03 days in any calendar year.."
-                        }
-                            ,
-                        {
-                            type:"Hospitalization leave", 
-                            description:"Where hospitalization is necessary 60 days (including 14 days of medical leave)."
-                        }
-                            ,
-                        {
-                            type:"Paternity Leave", 
-                            description:"Entitled to 7 days of paid paternity leave under Subsection 60FA; these days must be taken consecutively.
+                    },
+                    {
+                        type: "Hospitalization leave",
+                        description: "Where hospitalization is necessary 60 days (including 14 days of medical leave)."
+                    },
+                    {
+                        type: "Paternity Leave",
+                        description: "Entitled to 7 days of paid paternity leave under Subsection 60FA; these days must be taken consecutively.
          The requirements are:
         • The male employee must be married to the mother in question.
         • He must have been employed by the same employer for at least 12 months.
         • He must notify the employer at least 30 days from expected confinement (or as early as possible)."
-                        }
-                            ,
-                        {
-                            type:"Marriage Leave", 
-                            description:"A full-time confirmed employee who has completed a minimum of twelve (12) months of continuous service is 
+                    },
+                    {
+                        type: "Marriage Leave",
+                        description: "A full-time confirmed employee who has completed a minimum of twelve (12) months of continuous service is 
         entitled to 3 days of leave on the occasion of his first legal marriage while in the service of the Company.."
-                        }
-                            ,
-                        {
-                            type:"Unpaid Leave",
-                            description:"The Company may give sympathetic consideration to the granting of leave without pay for the following reasons:
+                    },
+                    {
+                        type: "Unpaid Leave",
+                        description: "The Company may give sympathetic consideration to the granting of leave without pay for the following reasons:
         a. Conducting the pilgrimage (Haj)
         b. Pursuit of a course of study
         c. Insufficient earned leave
-        
         As regards to (a) above, a maximum of 2 unpaid leave would be granted, subject to the following conditions:
         a. The employee must have completed as least twelve (12) months of continuous service with the 
         Company.
         b. Notice of intention to take pilgrimage leave must be given at least six (06) months prior to the intended 
         pilgrimage.
         c. Pilgrimage leave shall be limited to once every five (05) years."
-                        }
-                            ,
-                        {
-                            type:"Maternity Leave", 
-                            description:"A full-time confirmed female employee will be entitled to 98 Consecutive days of paid maternity leave. For 
+                    },
+                    {
+                        type: "Maternity Leave",
+                        description: "A full-time confirmed female employee will be entitled to 98 Consecutive days of paid maternity leave. For 
         miscarriage maternity leave only apply upon seven full months of pregnancy under the labour law.
         "
-                        }
-                    )
-         ),
+                    }
+                )
+            ),
             //defines leave start and end for requests. Default set to Now since most users will be creating new requests. Changes to reflect leave times for requests which are being edited
             Set(
                 _leaveStart,
@@ -195,27 +188,48 @@ App As appinfo:
                 }
             )
         );
-        ClearCollect(LeaveCollection, 
-             {Title: "Vacation", Detail: "Example vacation request", StartDate: Today(), EndDate: DateAdd(Today(), 6, TimeUnit.Days), LeaveType: "Vacation", Requester: _myProfile.UserPrincipalName, Approver: _myProfile.UserPrincipalName, 
-             Status: "Pending", LeaveID: _myProfile.UserPrincipalName&Text(Now(), "[$-en-US]mm-dd-yyyy-hh-mm-ss-fff")});
-        
-        ClearCollect(BalanceCollection,
-                {
-                    EmployeeEmail: _myProfile.UserPrincipalName, 
-                    EmployeeName: _myProfile.DisplayName , 
-                    Year: Text(Year(Now())), 
-                    Vacation:10, 
-                    VacationUsed:0, 
-                    Sick:8, 
-                    SickUsed:0, 
-                    Floating:8, 
-                    FloatingUsed:0, 
-                    JuryDuty:3, 
-                    JuryDutyUsed:0, 
-                    Bereavement:5, 
-                    BereavementUsed:0, 
-                    BalanceID:_myProfile.UserPrincipalName&Text(Now(), "[$-en-US]mm-dd-yyyy-hh-mm-ss-fff")
-                }
+        ClearCollect(
+            LeaveCollection,
+            {
+                Title: "Vacation",
+                Detail: "Example vacation request",
+                StartDate: Today(),
+                EndDate: DateAdd(
+                    Today(),
+                    6,
+                    TimeUnit.Days
+                ),
+                LeaveType: "Vacation",
+                Requester: _myProfile.UserPrincipalName,
+                Approver: _myProfile.UserPrincipalName,
+                Status: "Pending",
+                LeaveID: _myProfile.UserPrincipalName & Text(
+                    Now(),
+                    "[$-en-US]mm-dd-yyyy-hh-mm-ss-fff"
+                )
+            }
+        );
+        ClearCollect(
+            BalanceCollection,
+            {
+                EmployeeEmail: _myProfile.UserPrincipalName,
+                EmployeeName: _myProfile.DisplayName,
+                Year: Text(Year(Now())),
+                Vacation: 10,
+                VacationUsed: 0,
+                Sick: 8,
+                SickUsed: 0,
+                Floating: 8,
+                FloatingUsed: 0,
+                JuryDuty: 3,
+                JuryDutyUsed: 0,
+                Bereavement: 5,
+                BereavementUsed: 0,
+                BalanceID: _myProfile.UserPrincipalName & Text(
+                    Now(),
+                    "[$-en-US]mm-dd-yyyy-hh-mm-ss-fff"
+                )
+            }
         )
     Theme: =PowerAppsTheme
 

@@ -19,38 +19,6 @@
     "dependents": [],
     "id": "12f73af9-777f-4fd4-a512-da2f66fd7501"
   },
-  "4e044463-b655-4d8a-87fa-d3def16c30d2": {
-    "connectionRef": {
-      "displayName": "Excel",
-      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1667/1.0.1667.3503/excel/icon.png",
-      "id": "/providers/microsoft.powerapps/apis/shared_excel"
-    },
-    "datasets": {
-      "F3B14CA320F2591B!4176": {
-        "dataSources": {
-          "leaveBucket": {
-            "tableName": "leaveBucket"
-          }
-        }
-      },
-      "F3B14CA320F2591B!4178": {
-        "dataSources": {
-          "leaveRecord": {
-            "tableName": "leaveRecord"
-          }
-        }
-      }
-    },
-    "dataSources": [
-      "leaveRecord",
-      "leaveBucket"
-    ],
-    "dependencies": {
-      "fileSource": "a78fc13e-fc8c-4ac7-9145-ab499280749a"
-    },
-    "dependents": [],
-    "id": "4e044463-b655-4d8a-87fa-d3def16c30d2"
-  },
   "6f72918a-7921-fa64-14bf-78187ad1b172": {
     "appActions": [
       "MyProfile",
@@ -89,20 +57,6 @@
     "dependencies": {},
     "dependents": [],
     "id": "81d384ae-de03-4521-b437-163eeda7a732"
-  },
-  "a78fc13e-fc8c-4ac7-9145-ab499280749a": {
-    "connectionRef": {
-      "displayName": "OneDrive",
-      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1645/1.0.1645.3345/onedrive/icon.png",
-      "id": "/providers/microsoft.powerapps/apis/shared_onedrive"
-    },
-    "datasets": {},
-    "dataSources": [],
-    "dependencies": {},
-    "dependents": [
-      "4e044463-b655-4d8a-87fa-d3def16c30d2"
-    ],
-    "id": "a78fc13e-fc8c-4ac7-9145-ab499280749a"
   },
   "fcd20ec9-7b79-45f7-a3de-aee9bdd8bc4f": {
     "connectionRef": {

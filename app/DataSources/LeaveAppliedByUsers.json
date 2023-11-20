@@ -1,0 +1,25 @@
+[
+  {
+    "Data": "[]",
+    "IsSampleData": false,
+    "IsWritable": false,
+    "Name": "LeaveAppliedByUsers",
+    "OrderedColumnNames": [
+      "LeaveType",
+      "RequestedBy",
+      "RequestedTo",
+      "FromDate",
+      "ToDate",
+      "TotalDays",
+      "LeaveTitle",
+      "LeaveDescription",
+      "LeaveStatus",
+      "LeaveId"
+    ],
+    "OriginalName": "LeaveAppliedByUsers",
+    "OriginalSchema": "*[FromDate:s, LeaveDescription:s, LeaveId:s, LeaveStatus:s, LeaveTitle:s, LeaveType:s, RequestedBy:s, RequestedTo:s, ToDate:s, TotalDays:s]",
+    "Schema": "*[FromDate:s, LeaveDescription:s, LeaveId:s, LeaveStatus:s, LeaveTitle:s, LeaveType:s, RequestedBy:s, RequestedTo:s, ToDate:s, TotalDays:s]",
+    "Token": "dummyToken",
+    "Type": "StaticDataSourceInfo"
+  }
+]

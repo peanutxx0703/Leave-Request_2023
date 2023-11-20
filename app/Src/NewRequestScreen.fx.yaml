@@ -734,25 +734,6 @@ NewRequestScreen As screen:
             Y: =135
             ZIndex: =44
 
-            NRLeaveTypeIcon As image:
-                ApplyEXIFOrientation: =false
-                Fill: =RGBA(255, 255, 255, 0)
-                FocusedBorderColor: =NRLeaveTypeIcon.BorderColor
-                FocusedBorderThickness: =0
-                Height: =17
-                HoverBorderColor: =ColorFade(NRLeaveTypeIcon.BorderColor, 20%)
-                HoverFill: =ColorFade(NRLeaveTypeIcon.Fill, 20%)
-                Image: =If(And(Not(IsBlank(_selectedLeaveType)),ThisItem.type = _selectedLeaveType), ThisItem.iconselected, ThisItem.icon)
-                OnSelect: =Select(Parent)
-                PaddingRight: =0.00
-                PaddingTop: =0.00
-                PressedBorderColor: =ColorFade(NRLeaveTypeIcon.BorderColor, -20%)
-                PressedFill: =ColorFade(NRLeaveTypeIcon.Fill, -20%)
-                Width: =20
-                X: =21
-                Y: =12
-                ZIndex: =1
-
             NRLeaveCellBK As rectangle:
                 DisabledFill: =NRLeaveCellBK.Fill
                 Fill: =RGBA(62, 96, 170, 0)
@@ -829,6 +810,7 @@ NewRequestScreen As screen:
             HoverColor: =TypeRequestTitle.Color
             HoverFill: =TypeRequestTitle.Fill
             LineHeight: =1
+            OnSelect: =
             PaddingBottom: =0
             PaddingLeft: =0
             PaddingRight: =0
@@ -852,6 +834,7 @@ NewRequestScreen As screen:
             FocusedBorderThickness: =0
             Height: =1
             HoverFill: =NewRequestSeparator.Fill
+            OnSelect: =
             PressedFill: =NewRequestSeparator.Fill
             Width: =949
             X: =267

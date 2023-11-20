@@ -764,21 +764,6 @@ HomeScreen As screen:
         Y: =80
         ZIndex: =43
 
-    AllButton As button:
-        BorderColor: =RGBA(56, 86, 153, 1)
-        Color: =RGBA(62, 96, 170, 1)
-        Fill: =RGBA(255, 255, 255, 1)
-        OnSelect: =
-        RadiusBottomLeft: =25
-        RadiusBottomRight: =25
-        RadiusTopLeft: =25
-        RadiusTopRight: =25
-        Text: ="All"
-        Width: =142
-        X: =316
-        Y: =103
-        ZIndex: =51
-
     Header_11 As group:
         Height: =5
         Width: =5
@@ -907,6 +892,21 @@ HomeScreen As screen:
             Width: =155
             X: =1211
             ZIndex: =50
+
+    AllButton As button:
+        BorderColor: =RGBA(56, 86, 153, 1)
+        Color: =RGBA(62, 96, 170, 1)
+        Fill: =RGBA(255, 255, 255, 1)
+        OnSelect: =
+        RadiusBottomLeft: =25
+        RadiusBottomRight: =25
+        RadiusTopLeft: =25
+        RadiusTopRight: =25
+        Text: ="All"
+        Width: =142
+        X: =316
+        Y: =103
+        ZIndex: =51
 
     PendingButton As button:
         BorderColor: =RGBA(56, 86, 153, 1)
