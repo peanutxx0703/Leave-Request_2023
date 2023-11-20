@@ -722,7 +722,8 @@ NewRequestScreen As screen:
             Items: =LeaveTypeCollection
             Layout: =Layout.Vertical
             LoadingSpinnerColor: =NewRequestLeaveTypeGallery.BorderColor
-            OnSelect: =Set(_selectedLeaveType, ThisItem.type)
+            OnSelect: |-
+                =Patch(Table1_16,Default(Table1_16),{'Leave Type':NRLeaveTypeButton})
             PressedBorderColor: =NewRequestLeaveTypeGallery.BorderColor
             PressedFill: =NewRequestLeaveTypeGallery.Fill
             ShowScrollbar: =false
@@ -829,6 +830,7 @@ NewRequestScreen As screen:
             HoverColor: =TypeRequestTitle.Color
             HoverFill: =TypeRequestTitle.Fill
             LineHeight: =1
+            OnSelect: =
             PaddingBottom: =0
             PaddingLeft: =0
             PaddingRight: =0
@@ -852,6 +854,7 @@ NewRequestScreen As screen:
             FocusedBorderThickness: =0
             Height: =1
             HoverFill: =NewRequestSeparator.Fill
+            OnSelect: =
             PressedFill: =NewRequestSeparator.Fill
             Width: =949
             X: =267

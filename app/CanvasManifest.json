@@ -92,7 +92,7 @@
       "zeroalltabindexes": false
     },
     "Author": "",
-    "BindingErrorCount": 41,
+    "BindingErrorCount": 44,
     "ContainsThirdPartyPcfControls": false,
     "DefaultConnectedDataSourceMaxGetRowsCount": 500,
     "DocumentAppType": "DesktopOrTablet",
@@ -141,6 +141,7 @@
     "Collections and Variables",
     "LeaveInformationScreen",
     "Screen1",
-    "Screen2"
+    "Screen2",
+    "EditLeaveScreen"
   ]
 }
