@@ -24,7 +24,7 @@ HomeScreen As screen:
     "Gallery7 As gallery.'BrowseLayout_Vertical_ThreeTextVariant_ver5.0'":
         DelayItemLoading: =true
         Height: =601
-        Items: =Filter(Table1_16,'Created By' = User().FullName)
+        Items: =Filter(Table1_16,If(FilterByApproved = true, Status = "Approved", Status<>""),'Created By' = User().FullName)
         Layout: =Layout.Vertical
         LoadingSpinner: =LoadingSpinner.Data
         OnSelect: =
@@ -32,8 +32,8 @@ HomeScreen As screen:
         TemplateSize: =197
         Visible: =!_managerView=true
         Width: =943
-        X: =237
-        Y: =167
+        X: =224
+        Y: =164
         ZIndex: =1
 
         Title2 As label:
@@ -66,7 +66,7 @@ HomeScreen As screen:
             VerticalAlign: =VerticalAlign.Top
             Width: =412
             X: =135
-            Y: =50
+            Y: =73
             ZIndex: =2
 
         Body1 As label:
@@ -758,56 +758,6 @@ HomeScreen As screen:
             Y: =378
             ZIndex: =29
 
-    "FilterGallery As gallery.'BrowseLayout_Horizontal_TwoTextOneImageVariant_ver4.0'":
-        DisabledBorderColor: =FilterGallery.BorderColor
-        DisabledFill: =FilterGallery.Fill
-        Height: =46
-        HoverBorderColor: =FilterGallery.BorderColor
-        HoverFill: =FilterGallery.Fill
-        Items: |-
-            =Table({Filter: "All"}, {Filter: "Pending"}, {Filter: "Approved"}, {Filter: "Declined"})
-        LoadingSpinnerColor: =FilterGallery.BorderColor
-        PressedBorderColor: =FilterGallery.BorderColor
-        PressedFill: =FilterGallery.Fill
-        ShowScrollbar: =false
-        TemplatePadding: =0
-        TemplateSize: =140
-        Width: =564
-        X: =302
-        Y: =97
-        ZIndex: =42
-
-        FilterButton As button:
-            BorderColor: =RGBA(10, 106, 204, 1)
-            Color: =If(_requestTypeFilter=ThisItem.Filter,RGBA(255, 255, 255, 1),RGBA(10, 106, 204, 1))
-            DisabledBorderColor: =ColorFade(FilterButton.BorderColor, 70%)
-            Fill: =If(_requestTypeFilter=ThisItem.Filter,RGBA(0, 71, 144, 1),RGBA(255, 255, 255, 1))
-            FocusedBorderColor: =FilterButton.BorderColor
-            FocusedBorderThickness: =2
-            Font: =Font.Lato
-            FontWeight: =FontWeight.Bold
-            Height: =36
-            HoverBorderColor: =ColorFade(FilterButton.BorderColor, 20%)
-            HoverColor: =FilterButton.Color
-            HoverFill: =ColorFade(FilterButton.Fill, 20%)
-            OnSelect: |-
-                =If(ThisItem.Filter <> _requestTypeFilter,
-                Set(_showDetails, false); 
-                Set(_requestTypeFilter, ThisItem.Filter))
-            PressedBorderColor: =FilterButton.Fill
-            PressedColor: =If(_requestTypeFilter=ThisItem.Filter,RGBA(255, 255, 255, 1),RGBA(10, 106, 204, 1))
-            PressedFill: =FilterButton.Color
-            RadiusBottomLeft: =25
-            RadiusBottomRight: =25
-            RadiusTopLeft: =25
-            RadiusTopRight: =25
-            Size: =14
-            Text: =ThisItem.Filter
-            Width: =116
-            X: =12
-            Y: =6
-            ZIndex: =1
-
     Navigation_5 As Navigation:
         CurrentScreen: ="My Leave Requests"
         NavItem: =If(_managerView,ManagerNavigation,EmployeeNavigation)
@@ -942,4 +892,68 @@ HomeScreen As screen:
             Width: =155
             X: =1211
             ZIndex: =50
+
+    AllButton As button:
+        BorderColor: =RGBA(56, 86, 153, 1)
+        Color: =RGBA(62, 96, 170, 1)
+        Fill: =RGBA(255, 255, 255, 1)
+        OnSelect: =
+        RadiusBottomLeft: =25
+        RadiusBottomRight: =25
+        RadiusTopLeft: =25
+        RadiusTopRight: =25
+        Text: ="All"
+        Width: =142
+        X: =316
+        Y: =103
+        ZIndex: =51
+
+    PendingButton As button:
+        BorderColor: =RGBA(56, 86, 153, 1)
+        Color: =RGBA(62, 96, 170, 1)
+        Fill: =RGBA(255, 255, 255, 1)
+        OnSelect: |-
+            =
+            UpdateContext({FilterByPending:!FilterByPending})
+        RadiusBottomLeft: =25
+        RadiusBottomRight: =25
+        RadiusTopLeft: =25
+        RadiusTopRight: =25
+        Text: ="Pending"
+        Width: =142
+        X: =475
+        Y: =103
+        ZIndex: =52
+
+    ApprovedButton As button:
+        BorderColor: =RGBA(56, 86, 153, 1)
+        Color: =RGBA(62, 96, 170, 1)
+        Fill: =RGBA(255, 255, 255, 1)
+        OnSelect: |-
+            =UpdateContext({FilterByApproved:!FilterByApproved})
+        RadiusBottomLeft: =25
+        RadiusBottomRight: =25
+        RadiusTopLeft: =25
+        RadiusTopRight: =25
+        Text: ="Approved"
+        Width: =142
+        X: =638
+        Y: =103
+        ZIndex: =53
+
+    DeclinedButton As button:
+        BorderColor: =RGBA(56, 86, 153, 1)
+        Color: =RGBA(62, 96, 170, 1)
+        Fill: =RGBA(255, 255, 255, 1)
+        OnSelect: |-
+            =UpdateContext({FilterByDeclined:!FilterByDeclined})
+        RadiusBottomLeft: =25
+        RadiusBottomRight: =25
+        RadiusTopLeft: =25
+        RadiusTopRight: =25
+        Text: ="Declined"
+        Width: =142
+        X: =806
+        Y: =103
+        ZIndex: =54
 
