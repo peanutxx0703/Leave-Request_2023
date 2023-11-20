@@ -1,0 +1,20 @@
+[
+  {
+    "Data": "[]",
+    "IsSampleData": false,
+    "IsWritable": false,
+    "Name": "BalanceLeave",
+    "OrderedColumnNames": [
+      "ID",
+      "LeaveType",
+      "TotalLeave",
+      "LeaveDescription",
+      "LeaveId"
+    ],
+    "OriginalName": "BalanceLeave",
+    "OriginalSchema": "*[ID:s, LeaveDescription:s, LeaveId:s, LeaveType:s, TotalLeave:s]",
+    "Schema": "*[ID:s, LeaveDescription:s, LeaveId:s, LeaveType:s, TotalLeave:s]",
+    "Token": "dummyToken",
+    "Type": "StaticDataSourceInfo"
+  }
+]
