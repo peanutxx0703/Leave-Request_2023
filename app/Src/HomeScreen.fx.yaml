@@ -21,39 +21,6 @@ HomeScreen As screen:
     Size: =1 + CountRows(App.SizeBreakpoints) - CountIf(App.SizeBreakpoints, Value >= HomeScreen.Width)
     Width: =Max(App.Width, App.DesignWidth)
 
-    "ButtonFilter As gallery.'BrowseLayout_Vertical_OneTextOneImageVariant_ver5.0'":
-        DelayItemLoading: =true
-        Height: =87
-        Items: |-
-            =Table({Filter: "All"}, {Filter: "Pending"}, {Filter: "Approved"}, {Filter: "Rejected"})
-        Layout: =Layout.Vertical
-        LoadingSpinner: =LoadingSpinner.Data
-        TemplatePadding: =0
-        TemplateSize: =22
-        Width: =807
-        WrapCount: =4
-        X: =195
-        Y: =63
-        ZIndex: =1
-
-        Button5 As button:
-            BorderColor: =RGBA(62, 96, 170, 1)
-            BorderThickness: =3
-            Color: =RGBA(62, 96, 170, 1)
-            Fill: =RGBA(255, 255, 255, 1)
-            Font: =Font.'Lato Black'
-            Height: =37
-            OnSelect: =Select(Parent)
-            RadiusBottomLeft: =35
-            RadiusBottomRight: =35
-            RadiusTopLeft: =35
-            RadiusTopRight: =35
-            Text: =ThisItem.Filter
-            Width: =110
-            X: =80
-            Y: =42
-            ZIndex: =6
-
     "Gallery7 As gallery.'BrowseLayout_Vertical_ThreeTextVariant_ver5.0'":
         DelayItemLoading: =true
         Height: =601
@@ -191,6 +158,39 @@ HomeScreen As screen:
             X: =639
             Y: =112
             ZIndex: =10
+
+    "ButtonFilter As gallery.'BrowseLayout_Vertical_OneTextOneImageVariant_ver5.0'":
+        DelayItemLoading: =true
+        Height: =87
+        Items: |-
+            =Table({Filter: "All"}, {Filter: "Pending"}, {Filter: "Approved"}, {Filter: "Rejected"})
+        Layout: =Layout.Vertical
+        LoadingSpinner: =LoadingSpinner.Data
+        TemplatePadding: =0
+        TemplateSize: =22
+        Width: =807
+        WrapCount: =4
+        X: =195
+        Y: =63
+        ZIndex: =1
+
+        Button5 As button:
+            BorderColor: =RGBA(62, 96, 170, 1)
+            BorderThickness: =3
+            Color: =RGBA(62, 96, 170, 1)
+            Fill: =RGBA(255, 255, 255, 1)
+            Font: =Font.'Lato Black'
+            Height: =37
+            OnSelect: =Select(Parent)
+            RadiusBottomLeft: =35
+            RadiusBottomRight: =35
+            RadiusTopLeft: =35
+            RadiusTopRight: =35
+            Text: =ThisItem.Filter
+            Width: =110
+            X: =80
+            Y: =42
+            ZIndex: =6
 
     Rectangle3 As rectangle:
         DisabledFill: =Rectangle3.Fill
